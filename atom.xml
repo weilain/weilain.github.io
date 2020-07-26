@@ -18,8 +18,8 @@
   
   <entry>
     <title>记一次Centos7.5升级OpenSSH8.0p1</title>
-    <link href="https://www.webpages.show/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1Centos7.5%E5%8D%87%E7%BA%A7OpenSSH8.0p1"/>
-    <id>https://www.webpages.show/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1Centos7.5%E5%8D%87%E7%BA%A7OpenSSH8.0p1</id>
+    <link href="https://www.webpages.show/2020/07/26/Centos7.5%E5%8D%87%E7%BA%A7SpenSSH8.0p1/"/>
+    <id>https://www.webpages.show/2020/07/26/Centos7.5%E5%8D%87%E7%BA%A7SpenSSH8.0p1/</id>
     <published>2020-07-26T06:27:20.248Z</published>
     <updated>2020-07-26T07:35:39.763Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>gitlab配置域名并https访问</title>
-    <link href="https://www.webpages.show/posts/gitlab%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E5%B9%B6https%E8%AE%BF%E9%97%AE"/>
-    <id>https://www.webpages.show/posts/gitlab%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E5%B9%B6https%E8%AE%BF%E9%97%AE</id>
+    <link href="https://www.webpages.show/2020/07/24/Gitlab%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8Dhttps%E8%AE%BF%E9%97%AE/"/>
+    <id>https://www.webpages.show/2020/07/24/Gitlab%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8Dhttps%E8%AE%BF%E9%97%AE/</id>
     <published>2020-07-24T04:07:59.376Z</published>
     <updated>2020-07-26T07:48:30.386Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>GitLab轻松创建一个Merge Request</title>
-    <link href="https://www.webpages.show/posts/GitLab%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAMerge%20Request"/>
-    <id>https://www.webpages.show/posts/GitLab%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAMerge%20Request</id>
+    <link href="https://www.webpages.show/2020/07/23/GitLab%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAMergeRequest/"/>
+    <id>https://www.webpages.show/2020/07/23/GitLab%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAMergeRequest/</id>
     <published>2020-07-23T06:02:15.790Z</published>
     <updated>2020-07-26T07:47:50.131Z</updated>
     
@@ -100,8 +100,8 @@
   
   <entry>
     <title>nginx 返回码 426 upgrade required 处理</title>
-    <link href="https://www.webpages.show/posts/nginx%20%E8%BF%94%E5%9B%9E%E7%A0%81%20426%20upgrade%20required%20%E5%A4%84%E7%90%86"/>
-    <id>https://www.webpages.show/posts/nginx%20%E8%BF%94%E5%9B%9E%E7%A0%81%20426%20upgrade%20required%20%E5%A4%84%E7%90%86</id>
+    <link href="https://www.webpages.show/2020/07/23/nginx%E8%BF%94%E5%9B%9E%E7%A0%81426-upgrade-required%E5%A4%84%E7%90%86/"/>
+    <id>https://www.webpages.show/2020/07/23/nginx%E8%BF%94%E5%9B%9E%E7%A0%81426-upgrade-required%E5%A4%84%E7%90%86/</id>
     <published>2020-07-23T05:18:35.625Z</published>
     <updated>2020-07-26T07:52:00.718Z</updated>
     
@@ -128,8 +128,8 @@
   
   <entry>
     <title>常见的重定向方式</title>
-    <link href="https://www.webpages.show/posts/%E5%B8%B8%E8%A7%81%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%B9%E5%BC%8F"/>
-    <id>https://www.webpages.show/posts/%E5%B8%B8%E8%A7%81%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%B9%E5%BC%8F</id>
+    <link href="https://www.webpages.show/2020/07/23/%E5%B8%B8%E8%A7%81%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%B9%E5%BC%8F/"/>
+    <id>https://www.webpages.show/2020/07/23/%E5%B8%B8%E8%A7%81%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%B9%E5%BC%8F/</id>
     <published>2020-07-23T05:17:02.236Z</published>
     <updated>2020-07-26T07:52:44.679Z</updated>
     
@@ -157,8 +157,8 @@
   
   <entry>
     <title>nginx rewrite 用法，用rewrite去除URL中的特定参数</title>
-    <link href="https://www.webpages.show/posts/nginx%20rewrite%20%E7%94%A8%E6%B3%95%EF%BC%8C%E7%94%A8rewrite%E5%8E%BB%E9%99%A4URL%E4%B8%AD%E7%9A%84%E7%89%B9%E5%AE%9A%E5%8F%82%E6%95%B0"/>
-    <id>https://www.webpages.show/posts/nginx%20rewrite%20%E7%94%A8%E6%B3%95%EF%BC%8C%E7%94%A8rewrite%E5%8E%BB%E9%99%A4URL%E4%B8%AD%E7%9A%84%E7%89%B9%E5%AE%9A%E5%8F%82%E6%95%B0</id>
+    <link href="https://www.webpages.show/2020/07/23/nginx-rewrite%E7%94%A8%E6%B3%95%EF%BC%8C%E7%94%A8rewrite%E5%8E%BB%E9%99%A4URL%E4%B8%AD%E7%9A%84%E7%89%B9%E5%AE%9A%E5%8F%82%E6%95%B0/"/>
+    <id>https://www.webpages.show/2020/07/23/nginx-rewrite%E7%94%A8%E6%B3%95%EF%BC%8C%E7%94%A8rewrite%E5%8E%BB%E9%99%A4URL%E4%B8%AD%E7%9A%84%E7%89%B9%E5%AE%9A%E5%8F%82%E6%95%B0/</id>
     <published>2020-07-23T05:15:39.917Z</published>
     <updated>2020-07-26T07:50:31.615Z</updated>
     
@@ -185,8 +185,8 @@
   
   <entry>
     <title>Nginx的location匹配</title>
-    <link href="https://www.webpages.show/posts/Nginx%E7%9A%84location%E5%8C%B9%E9%85%8D.md"/>
-    <id>https://www.webpages.show/posts/Nginx%E7%9A%84location%E5%8C%B9%E9%85%8D.md</id>
+    <link href="https://www.webpages.show/2020/07/23/Nginx%E7%9A%84location%E5%8C%B9%E9%85%8D/"/>
+    <id>https://www.webpages.show/2020/07/23/Nginx%E7%9A%84location%E5%8C%B9%E9%85%8D/</id>
     <published>2020-07-23T05:13:59.462Z</published>
     <updated>2020-07-26T07:49:37.504Z</updated>
     
@@ -213,8 +213,8 @@
   
   <entry>
     <title>利用docker实现mysql主从同步读写分离，附赠docker搭建mycat读写分离</title>
-    <link href="https://www.webpages.show/posts/%E5%88%A9%E7%94%A8docker%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%EF%BC%8C%E9%99%84%E8%B5%A0docker%E6%90%AD%E5%BB%BAmycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB"/>
-    <id>https://www.webpages.show/posts/%E5%88%A9%E7%94%A8docker%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%EF%BC%8C%E9%99%84%E8%B5%A0docker%E6%90%AD%E5%BB%BAmycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB</id>
+    <link href="https://www.webpages.show/2020/07/23/%E5%88%A9%E7%94%A8docker%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB,%E9%99%84%E8%B5%A0docker%E6%90%AD%E5%BB%BAmycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/"/>
+    <id>https://www.webpages.show/2020/07/23/%E5%88%A9%E7%94%A8docker%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB,%E9%99%84%E8%B5%A0docker%E6%90%AD%E5%BB%BAmycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/</id>
     <published>2020-07-23T05:12:26.889Z</published>
     <updated>2020-07-26T07:52:23.157Z</updated>
     
@@ -244,8 +244,8 @@
   
   <entry>
     <title>Nginx rewrite模块深入浅出详解</title>
-    <link href="https://www.webpages.show/posts/Nginx%20rewrite%E6%A8%A1%E5%9D%97%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E8%AF%A6%E8%A7%A3"/>
-    <id>https://www.webpages.show/posts/Nginx%20rewrite%E6%A8%A1%E5%9D%97%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E8%AF%A6%E8%A7%A3</id>
+    <link href="https://www.webpages.show/2020/07/23/Nginx-rewrite%E6%A8%A1%E5%9D%97%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://www.webpages.show/2020/07/23/Nginx-rewrite%E6%A8%A1%E5%9D%97%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E8%AF%A6%E8%A7%A3/</id>
     <published>2020-07-22T16:00:00.000Z</published>
     <updated>2020-07-26T07:49:09.863Z</updated>
     
@@ -272,8 +272,8 @@
   
   <entry>
     <title>nginx expires配置详解</title>
-    <link href="https://www.webpages.show/posts/nginx%20expires%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3"/>
-    <id>https://www.webpages.show/posts/nginx%20expires%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3</id>
+    <link href="https://www.webpages.show/2020/07/23/nginx-expires%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://www.webpages.show/2020/07/23/nginx-expires%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</id>
     <published>2020-07-22T16:00:00.000Z</published>
     <updated>2020-07-26T07:50:08.216Z</updated>
     
@@ -302,8 +302,8 @@
   
   <entry>
     <title>nginx之proxy_pass指令完全拆解</title>
-    <link href="https://www.webpages.show/posts/nginx%E4%B9%8Bproxy_pass%E6%8C%87%E4%BB%A4%E5%AE%8C%E5%85%A8%E6%8B%86%E8%A7%A3"/>
-    <id>https://www.webpages.show/posts/nginx%E4%B9%8Bproxy_pass%E6%8C%87%E4%BB%A4%E5%AE%8C%E5%85%A8%E6%8B%86%E8%A7%A3</id>
+    <link href="https://www.webpages.show/2020/07/23/nginx%E4%B9%8Bproxy_pass%E6%8C%87%E4%BB%A4%E5%AE%8C%E5%85%A8%E6%8B%86%E8%A7%A3/"/>
+    <id>https://www.webpages.show/2020/07/23/nginx%E4%B9%8Bproxy_pass%E6%8C%87%E4%BB%A4%E5%AE%8C%E5%85%A8%E6%8B%86%E8%A7%A3/</id>
     <published>2020-07-22T16:00:00.000Z</published>
     <updated>2020-07-26T07:50:57.035Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>nginx的配置</title>
-    <link href="https://www.webpages.show/posts/nginx%E7%9A%84%E9%85%8D%E7%BD%AE"/>
-    <id>https://www.webpages.show/posts/nginx%E7%9A%84%E9%85%8D%E7%BD%AE</id>
+    <link href="https://www.webpages.show/2020/07/23/nginx%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://www.webpages.show/2020/07/23/nginx%E7%9A%84%E9%85%8D%E7%BD%AE/</id>
     <published>2020-07-22T16:00:00.000Z</published>
     <updated>2020-07-26T07:51:29.564Z</updated>
     

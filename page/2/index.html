@@ -1,157 +1,389 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>奇怪的运气</title><meta name="description"><meta name="author" content="Hermoso"><meta name="copyright" content="Hermoso"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.webpages.show/page/2/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//ta.qq.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="奇怪的运气"><meta property="og:url" content="https://www.webpages.show/page/2/"><meta property="og:site_name" content="奇怪的运气"><meta property="og:description"><meta property="og:image" content="https://www.webpages.show/img/avatar.png"><meta property="article:published_time" content="2020-07-27T09:56:32.577Z"><meta property="article:modified_time" content="2020-07-27T09:56:32.577Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
-  }
-}
-var activateLightMode = function () {
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
-  }
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
 
-var getCookies = function (name) {
-  const value = `; ${document.cookie}`
-  const parts = value.split(`; ${name}=`)
-  if (parts.length === 2) return parts.pop().split(';').shift()
-}
+  
+  <title>奇怪的运气</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="奇怪的运气">
+<meta property="og:url" content="https://www.webpages.show/page/2/index.html">
+<meta property="og:site_name" content="奇怪的运气">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hermoso">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="奇怪的运气" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-var autoChangeMode = 'false'
-var t = getCookies('theme')
-if (autoChangeMode === '1') {
-  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+<meta name="generator" content="Hexo 4.2.1"></head>
 
-  if (t === undefined) {
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport) {
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour <= 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if (Cookies.get('theme') === undefined) {
-        e.matches ? activateDarkMode() : activateLightMode()
-      }
-    })
-  } else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else if (autoChangeMode === '2') {
-  now = new Date()
-  hour = now.getHours()
-  isNight = hour <= 6 || hour >= 18
-  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else {
-  if (t === 'dark') activateDarkMode()
-  else if (t === 'light') activateLightMode()
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
-  google_ad_client: 'ca-pub-1735624267069342',
-  enable_page_level_ads: 'true'
-});</script><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e2029a2eb21d1795ed16065e96ddb171";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">奇怪的运气</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.webpages.show"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-nginx之proxy_pass指令完全拆解" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/p/d881e309/" class="article-date">
+  <time datetime="2020-07-22T16:00:00.000Z" itemprop="datePublished">2020-07-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Nginx/">Nginx</a>
+  </div>
 
-ga('create', 'UA-173128262-1', 'auto');
-ga('send', 'pageview');
-</script><script src="https://tajs.qq.com/stats?sId=66574592" charset="UTF-8"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  bookmark: {
-    message_prev: '按',
-    message_next: '键将本页加入书签'
-  },
-  runtime_unit: '天',
-  runtime: false,
-  copyright: undefined,
-  ClickShowText: undefined,
-  medium_zoom: true,
-  fancybox: true,
-  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  baiduPush: false,
-  highlightCopy: true,
-  highlightLang: true,
-  isPhotoFigcaption: true,
-  islazyload: true,
-  isanchor: true    
-}</script><script>var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isSidebar: false
-  }</script><noscript><style>
-#nav {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="奇怪的运气" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">13</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> book</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://image.bestzuo.cn/images/e189f8eb561c69547c79fc4cd9316cbb.jpg!getwebp)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">奇怪的运气</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> book</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">奇怪的运气</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS鏈接"><i class="fa fa-rss"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/d881e309/" title="nginx之proxy_pass指令完全拆解">     <img class="post_bg" data-src="http://qe493by94.bkt.clouddn.com/banner/DuCkyvMVsAAOG-P.jpg%20%28873%C3%971200%29%28DDE93%29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx之proxy_pass指令完全拆解"></a></div><div class="recent-post-info"><a class="article-title" href="/p/d881e309/" title="nginx之proxy_pass指令完全拆解">nginx之proxy_pass指令完全拆解</a><div class="article-meta-wrap"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-07-23 00:00:00"><i class="far fa-calendar-alt"></i>2020-07-23</span><span class="article-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-07-26 18:46:00"><i class="fas fa-history"></i>2020-07-26</span></time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Nginx/">Nginx</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/proxy-pass/">proxy_pass</a></span></div><div class="content">一、 功能12Nginx 的ngx_stream_proxy_module和ngx_http_proxy_module两个模块中，都有 proxy_pass 指令。其主要功能是为后端做代理，协议转发，请求转发等。
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/p/d881e309/">nginx之proxy_pass指令完全拆解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-功能"><a href="#一、-功能" class="headerlink" title="一、 功能"></a>一、 功能</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Nginx 的ngx_stream_proxy_module和ngx_http_proxy_module两个模块中，都有 proxy_pass 指令。</span><br><span class="line">其主要功能是为后端做代理，协议转发，请求转发等。</span><br></pre></td></tr></table></figure>
 
 
-二、 用法和区别
-官网介绍
+<h2 id="二、-用法和区别"><a href="#二、-用法和区别" class="headerlink" title="二、 用法和区别"></a>二、 用法和区别</h2><ol>
+<li>官网介绍</li>
+</ol>
+<h3 id="ngx-stream-proxy-module-的-proxy-pass"><a href="#ngx-stream-proxy-module-的-proxy-pass" class="headerlink" title="ngx_stream_proxy_module 的 proxy_pass"></a>ngx_stream_proxy_module 的 proxy_pass</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：proxy_pass address;</span><br><span class="line">默认值：—</span><br><span class="line">场景：server 段</span><br><span class="line">说明：设置代理服务器的地址。代理地址可以是域名或者IP加端口，也可以是一个UNIX的socket路径</span><br></pre></td></tr></table></figure>
 
-ngx_stream_proxy_module 的 proxy_pass1234语法：proxy_pass address;默认值：—场景：server 段说明：设置代理服务器的地址。代理地址可以是域名或者IP加端口，也可以是一个UNIX的socket路径
+<h3 id="ngx-http-proxy-module-的-proxy-pass"><a href="#ngx-http-proxy-module-的-proxy-pass" class="headerlink" title="ngx_http_proxy_module 的 proxy_pass"></a>ngx_http_proxy_module 的 proxy_pass</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：proxy_pass URL;</span><br><span class="line">默认值：—</span><br><span class="line">场景：location 段，location中的if段，limit_except段</span><br><span class="line">说明：设置后端代理服务器的地址和协议，还可以附加可选的URI映射。协议可以是 http 或者 https。地址可以是域名或者IP，可以附加指定端口，也可以是UNIX的socket路径，路径要放在unix: 和 : 之间</span><br></pre></td></tr></table></figure>
 
-ngx_http_proxy_module 的 proxy_pass1234语法：proxy_pass URL;默认值：—场景：location 段，location中的if段，limit_except段说明：设置后端代理服务器的地址和协议，还可以附加可选的URI映射。协议可以是 http 或者 https。地址可以是域名或者IP，可以附加指定端口，也可以是UNIX的socket路径，路径要放在unix: 和 : 之间
+<h2 id="2-区别"><a href="#2-区别" class="headerlink" title="2. 区别"></a>2. 区别</h2><p>从上面的各自说明可以看出两个 proxy_pass 指令都是做后端的代理配置。</p>
+<p>除了应用场景的段不同之外，ngx_stream_proxy_module 的 proxy_pass 只能转发域名或IP加端口的请求，即端口转发。</p>
+<p>ngx_http_proxy_module 的 proxy_pass 除了包含前者的功能外，还可以实现协议转发，如 http 和 https 与 UNIX socket 三者的相互转发，另外还有很实用的URI转发</p>
+<h2 id="3-用法示例"><a href="#3-用法示例" class="headerlink" title="3. 用法示例"></a>3. 用法示例</h2><p>3.1 ngx_stream_proxy_module 的 proxy_pass</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8000;</span><br><span class="line">    proxy_pass 127.0.0.1:8080; # IP+端口转发</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 8000;</span><br><span class="line">    proxy_pass test.com:8080; # 域名+端口转发</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen [::1]:8000;</span><br><span class="line">    proxy_pass unix:&#x2F;tmp&#x2F;stream.socket; # UNIX socket转发</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-2. 区别从上面的各自说明可以看出两个 proxy_pass 指令 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/p/b0225828/" title="nginx的配置">     <img class="post_bg" data-src="http://qe493by94.bkt.clouddn.com/banner/%E6%B5%B7%E8%B4%BC%E7%8E%8B%E8%B7%AF%E9%A3%9E%E7%94%B5%E8%84%91%E5%A3%81%E7%BA%B8%28D9F19%29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx的配置"></a></div><div class="recent-post-info"><a class="article-title" href="/p/b0225828/" title="nginx的配置">nginx的配置</a><div class="article-meta-wrap"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-07-23 00:00:00"><i class="far fa-calendar-alt"></i>2020-07-23</span><span class="article-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-07-26 18:46:00"><i class="fas fa-history"></i>2020-07-26</span></time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Nginx/">Nginx</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a></span></div><div class="content">常用的命令123456789nginx -h   # 帮助nginx -t   # 验证配置文件的正确性nginx -v   # 查看nginx的版本nginx -c filename  # 按指定的配置文件启动，默认的路径conf&#x2F;nginx.confnginx -s reload  # 重新载入配置文件nginx -s reopen  # 重启nginxnginx -s stop    # 关闭nginxnginx -s quit    # 退出
+<p>3.2 ngx_http_proxy_module 的 proxy_pass</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen      80;</span><br><span class="line">    server_name www.test.com;</span><br><span class="line"></span><br><span class="line">    # 正常代理，不修改后端url的</span><br><span class="line">    location &#x2F;some&#x2F;path&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 修改后端url地址的代理（本例后端地址中，最后带了一个斜线)</span><br><span class="line">    location &#x2F;testb &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;www.other.com:8801&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 使用 if in location</span><br><span class="line">    location &#x2F;google &#123;</span><br><span class="line">        if ( $geoip_country_code ~ (RU|CN) ) &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;www.google.hk;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location &#x2F;limit&#x2F; &#123;</span><br><span class="line">        # 没有匹配 limit_except 的，代理到 unix:&#x2F;tmp&#x2F;backend.socket:&#x2F;uri&#x2F;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;unix:&#x2F;tmp&#x2F;backend.socket:&#x2F;uri&#x2F;;;</span><br><span class="line"></span><br><span class="line">        # 匹配到请求方法为: PUT or DELETE, 代理到9080</span><br><span class="line">        limit_except PUT DELETE &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:9080;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>ngx_http_proxy_module.proxy_pass 的 URI 转发映射分析1<br>准备文件 /data/www/test/test.php 如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &#39;$_SERVER[REQUEST_URI]:&#39; . $_SERVER[&#39;REQUEST_URI&#39;];</span><br></pre></td></tr></table></figure>
+
+<p>通过查看 $_SERVER[‘REQUEST_URI’] 的值，可以看到每次请求的后端的 request_uri 的值，进行验证。</p>
+<p>Nginx 配置文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen      80;</span><br><span class="line">    server_name www.test.com;</span><br><span class="line"></span><br><span class="line">    # 情形A</span><br><span class="line">    # 访问 http:&#x2F;&#x2F;www.test.com&#x2F;testa&#x2F;aaaa</span><br><span class="line">    # 后端的request_uri为: &#x2F;testa&#x2F;aaaa</span><br><span class="line">    location ^~ &#x2F;testa&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    # 情形B</span><br><span class="line">    # 访问 http:&#x2F;&#x2F;www.test.com&#x2F;testb&#x2F;bbbb</span><br><span class="line">    # 后端的request_uri为: &#x2F;bbbb</span><br><span class="line">    location ^~ &#x2F;testb&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 情形C</span><br><span class="line">    # 下面这段location是正确的</span><br><span class="line">    location ~ &#x2F;testc &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 情形D</span><br><span class="line">    # 下面这段location是错误的</span><br><span class="line">    #</span><br><span class="line">    # nginx -t 时，会报如下错误: </span><br><span class="line">    #</span><br><span class="line">    # nginx: [emerg] &quot;proxy_pass&quot; cannot have URI part in location given by regular </span><br><span class="line">    # expression, or inside named location, or inside &quot;if&quot; statement, or inside </span><br><span class="line">    # &quot;limit_except&quot; block in &#x2F;opt&#x2F;app&#x2F;nginx&#x2F;conf&#x2F;vhost&#x2F;test.conf:17</span><br><span class="line">    # </span><br><span class="line">    # 当location为正则表达式时，proxy_pass 不能包含URI部分。本例中包含了&quot;&#x2F;&quot;</span><br><span class="line">    location ~ &#x2F;testd &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801&#x2F;;   # 记住，location为正则表达式时，不能这样写！！！</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 情形E</span><br><span class="line">    # 访问 http:&#x2F;&#x2F;www.test.com&#x2F;ccc&#x2F;bbbb</span><br><span class="line">    # 后端的request_uri为: &#x2F;aaa&#x2F;ccc&#x2F;bbbb</span><br><span class="line">    location &#x2F;ccc&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801&#x2F;aaa$request_uri;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 情形F</span><br><span class="line">    # 访问 http:&#x2F;&#x2F;www.test.com&#x2F;namea&#x2F;ddd</span><br><span class="line">    # 后端的request_uri为: &#x2F;test?namea&#x3D;ddd</span><br><span class="line">    location &#x2F;namea&#x2F; &#123;</span><br><span class="line">        rewrite    &#x2F;namea&#x2F;([^&#x2F;]+) &#x2F;test?namea&#x3D;$1 break;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # 情形G</span><br><span class="line">    # 访问 http:&#x2F;&#x2F;www.test.com&#x2F;nameb&#x2F;eee</span><br><span class="line">    # 后端的request_uri为: &#x2F;test?nameb&#x3D;eee</span><br><span class="line">    location &#x2F;nameb&#x2F; &#123;</span><br><span class="line">        rewrite    &#x2F;nameb&#x2F;([^&#x2F;]+) &#x2F;test?nameb&#x3D;$1 break;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;127.0.0.1:8801&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    access_log &#x2F;data&#x2F;logs&#x2F;www&#x2F;www.test.com.log;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen      8801;</span><br><span class="line">    server_name www.test.com;</span><br><span class="line">    </span><br><span class="line">    root        &#x2F;data&#x2F;www&#x2F;test;</span><br><span class="line">    index       index.php index.html;</span><br><span class="line"></span><br><span class="line">    rewrite ^(.*)$ &#x2F;test.php?u&#x3D;$1 last;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files $uri &#x3D;404;</span><br><span class="line">        fastcgi_pass unix:&#x2F;tmp&#x2F;php-cgi.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        include fastcgi.conf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    access_log &#x2F;data&#x2F;logs&#x2F;www&#x2F;www.test.com.8801.log;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结</p>
+<p>情况A和情况B对比，可以看出URI最后的 / 对 URI 映射的影响<br>情况D说明，location 为正则表达式时，proxy_pass 不能包含 URI<br>情况E，可以通过 $request_uri 添加或改变请求的 URI<br>情况F和G通过 rewrite 配合 break 对 URL 和 URI 进行改写</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.webpages.show/p/d881e309/" data-id="ckd4a8akj000kq8z84l3hdxra" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proxy-pass/" rel="tag">proxy_pass</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-nginx的配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/p/b0225828/" class="article-date">
+  <time datetime="2020-07-22T16:00:00.000Z" itemprop="datePublished">2020-07-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Nginx/">Nginx</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/p/b0225828/">nginx的配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a><strong>常用的命令</strong></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nginx -h   # 帮助</span><br><span class="line">nginx -t   # 验证配置文件的正确性</span><br><span class="line">nginx -v   # 查看nginx的版本</span><br><span class="line">nginx -c filename  # 按指定的配置文件启动，默认的路径conf&#x2F;nginx.conf</span><br><span class="line"></span><br><span class="line">nginx -s reload  # 重新载入配置文件</span><br><span class="line">nginx -s reopen  # 重启nginx</span><br><span class="line">nginx -s stop    # 关闭nginx</span><br><span class="line">nginx -s quit    # 退出</span><br></pre></td></tr></table></figure>
 
 
 
-nginx的配置文件的详解nginx的配置分为四个部分：main(全区设置)，server(主机配置)，upstream(负载均衡服务器设置)，和location(URL匹配特定位置设置)。1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/p/37369/" title="GitLab轻松创建一个Merge Request">     <img class="post_bg" data-src="http://qe493by94.bkt.clouddn.com/banner/%E7%94%B5%E8%84%91%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8%288ABB2%29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitLab轻松创建一个Merge Request"></a></div><div class="recent-post-info"><a class="article-title" href="/p/37369/" title="GitLab轻松创建一个Merge Request">GitLab轻松创建一个Merge Request</a><div class="article-meta-wrap"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2018-12-22 05:25:23"><i class="far fa-calendar-alt"></i>2018-12-22</span><span class="article-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-07-26 19:09:44"><i class="fas fa-history"></i>2020-07-26</span></time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Gitlab/">Gitlab</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Gitlab/">Gitlab</a></span></div><div class="content">## 简写说明- MR = Merge Request
-- 主仓 = 组织创建的仓库（下文中是 awesome-php 组织创建的 awesome-one 仓库）什么是Merge Request- 相信很多人都不太懂这个 MR 到底是什么，通俗地说，MR 就是一个 merge 请求。
-- 创建一个 MR 当然就可以理解为创建一个合并请求。MR 的存在主要是为了权限控制。Forking Workflow- 用 Git 的同学最开始接触的想必是 Git Workflow 吧。
+<h1 id="nginx的配置文件的详解"><a href="#nginx的配置文件的详解" class="headerlink" title="nginx的配置文件的详解"></a>nginx的配置文件的详解</h1><pre><code>nginx的配置分为四个部分：main(全区设置)，server(主机配置)，upstream(负载均衡服务器设置)，和location(URL匹配特定位置设置)。</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br></pre></td><td class="code"><pre><span class="line">#定义Nginx运行的用户和用户组</span><br><span class="line">user www www;</span><br><span class="line">#pid文件</span><br><span class="line">#进程文件</span><br><span class="line">pid &#x2F;var&#x2F;run&#x2F;nginx.pid;</span><br><span class="line">#nginx进程数，建议设置为等于CPU总核心数。</span><br><span class="line">#&#x3D;&#x3D;worker进程数，通常设置等同于CPU数量，auto为自动检测</span><br><span class="line">worker_processes 8;</span><br><span class="line">worker_processes auto;</span><br><span class="line">#一个nginx进程打开的最多文件描述符数目，理论值应该是最多打开文件数（系统的值ulimit -n）与nginx进程数相除，但是nginx分配请求并不均匀，所以建议与ulimit -n的值保持一致。</span><br><span class="line">#&#x3D;&#x3D;worker进程打开最大文件数，可CPU*10000设置</span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line">#worker_rlimit_nofile 100000;</span><br><span class="line">#全局错误日志</span><br><span class="line">error_log  logs&#x2F;error.log;</span><br><span class="line"># error_log  logs&#x2F;error.log  info; # 可以设置级别</span><br><span class="line"></span><br><span class="line"># 设置前台运行，默认后台运行</span><br><span class="line">daemon off;</span><br><span class="line"></span><br><span class="line">#工作模式与连接数上限</span><br><span class="line">#events模块中包含nginx中所有处理连接的设置</span><br><span class="line">events &#123;</span><br><span class="line">    #&#x3D;&#x3D;worker进程同时打开的最大连接数，可CPU*2048设置</span><br><span class="line">    worker_connections 2048;</span><br><span class="line">    #&#x3D;&#x3D;告诉nginx收到一个新链接通知后接受尽可能多的链接</span><br><span class="line">    multi_accept on;</span><br><span class="line">    #&#x3D;&#x3D;设置用于复用客户端线程的轮训方法</span><br><span class="line">    #参考事件模型，use [ kqueue | rtsig | epoll | &#x2F;dev&#x2F;poll | select | poll ]; epoll模型是Linux 2.6以上版本内核中的高性能网络I&#x2F;O模型，如果跑在FreeBSD上面，就用kqueue模型。</span><br><span class="line">    use epoll;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#http模块控制着nginx http处理的所有核心特性</span><br><span class="line">http &#123;</span><br><span class="line">    include mime.types; #文件扩展名与文件类型映射表</span><br><span class="line">    default_type application&#x2F;octet-stream; #默认文件类型</span><br><span class="line">    #charset utf-8; #默认编码</span><br><span class="line">    server_names_hash_bucket_size 128;     #服务器名字的hash表大小</span><br><span class="line">    #上传文件大小限制</span><br><span class="line">    large_client_header_buffers 4 64k;</span><br><span class="line">    #&#x3D;&#x3D;允许客户端请求的最大单文件字节数</span><br><span class="line">    client_max_body_size 8m;</span><br><span class="line">    #&#x3D;&#x3D;冲区代理缓冲用户端请求的最大字节数</span><br><span class="line">    client_header_buffer_size 32k;</span><br><span class="line">    sendfile on; #开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I&#x2F;O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。</span><br><span class="line">    autoindex on; #开启目录列表访问，合适下载服务器，默认关闭。</span><br><span class="line">    tcp_nopush on; #防止网络阻塞</span><br><span class="line">    tcp_nodelay on; #防止网络阻塞</span><br><span class="line">    keepalive_timeout 120; #长连接超时时间，单位是秒</span><br><span class="line">    </span><br><span class="line">    #日志格式设定</span><br><span class="line">    log_format access &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;</span><br><span class="line">                      &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;</span><br><span class="line">                      &#39;&quot;$http_user_agent&quot; $http_x_forwarded_for&#39;;</span><br><span class="line">    #定义本虚拟主机的访问日志</span><br><span class="line">    access_log  &#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log  main;</span><br><span class="line">    #FastCGI相关参数是为了改善网站的性能：减少资源占用，提高访问速度。下面参数看字面意思都能理解。</span><br><span class="line">    fastcgi_connect_timeout 300;</span><br><span class="line">    fastcgi_send_timeout 300;</span><br><span class="line">    fastcgi_read_timeout 300;</span><br><span class="line">    fastcgi_buffer_size 64k;</span><br><span class="line">    fastcgi_buffers 4 64k;</span><br><span class="line">    fastcgi_busy_buffers_size 128k;</span><br><span class="line">    fastcgi_temp_file_write_size 128k;</span><br><span class="line"></span><br><span class="line">    #gzip模块设置</span><br><span class="line">    #&#x3D;&#x3D;设置nginx采用gzip压缩的形式发送数据，减少发送数据量，但会增加请求处理时间及CPU处理时间，需要权衡</span><br><span class="line">    gzip on; #开启gzip压缩输出</span><br><span class="line">    gzip_min_length 1k; #最小压缩文件大小</span><br><span class="line">    gzip_buffers 4 16k; #压缩缓冲区</span><br><span class="line">    gzip_http_version 1.0; #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）</span><br><span class="line">    #&#x3D;&#x3D;设置数据压缩等级，1-9之间，9最慢压缩比最大</span><br><span class="line">    gzip_comp_level 2; #压缩等级</span><br><span class="line">    #压缩类型，默认就已经包含text&#x2F;html，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。</span><br><span class="line">    gzip_types text&#x2F;plain text&#x2F;css text&#x2F;xml text&#x2F;javascript  application&#x2F;json application&#x2F;x-javascript application&#x2F;xml application&#x2F;xml+rss</span><br><span class="line">    #&#x3D;&#x3D;加vary给代理服务器使用，针对有的浏览器支持压缩，有个不支持，根据客户端的HTTP头来判断是否需要压缩</span><br><span class="line">    gzip_vary on;</span><br><span class="line">    #开启限制IP连接数的时候需要使用</span><br><span class="line">    #limit_zone crawler $binary_remote_addr 10m; </span><br><span class="line">    #nginx在压缩资源之前，先查找是否有预先gzip处理过的资源</span><br><span class="line">    #!gzip_static on;</span><br><span class="line">    #为指定的客户端禁用gzip功能</span><br><span class="line">    gzip_disable &quot;MSIE[1-6]\.&quot;;</span><br><span class="line">    #允许或禁止压缩基于请求和相应的响应流，any代表压缩所有请求</span><br><span class="line">    gzip_proxied any;</span><br><span class="line">    #&#x3D;&#x3D;设置对数据启用压缩的最少字节数，如果请求小于10240字节则不压缩，会影响请求速度</span><br><span class="line">    gzip_min_length 10240;</span><br><span class="line"></span><br><span class="line">    #&#x3D;&#x3D;开发缓存的同时也指定了缓存文件的最大数量，20s如果文件没有请求则删除缓存</span><br><span class="line">    open_file_cache max&#x3D;100000 inactive&#x3D;20s;</span><br><span class="line">    #&#x3D;&#x3D;指多长时间检查一次缓存的有效信息</span><br><span class="line">    open_file_cache_valid 60s;</span><br><span class="line">    #&#x3D;&#x3D;文件缓存最小的访问次数，只有访问超过5次的才会被缓存</span><br><span class="line">    open_file_cache_min_uses 5;</span><br><span class="line">    #当搜索一个文件时是否缓存错误信息</span><br><span class="line">    open_file_cache_errors on;</span><br><span class="line"></span><br><span class="line">    #&#x3D;&#x3D;允许客户端请求的最大单文件字节数</span><br><span class="line">    client_max_body_size 8m;</span><br><span class="line">    #&#x3D;&#x3D;冲区代理缓冲用户端请求的最大字节数</span><br><span class="line">    client_header_buffer_size 32k;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    upstream blog.ha97.com &#123;</span><br><span class="line">    #ip_hash;</span><br><span class="line">    #weight参数表示权重值，权值越高被分配到的几率越大</span><br><span class="line">    server 192.168.80.121:80 weight&#x3D;3;</span><br><span class="line">    server 192.168.80.122:80 weight&#x3D;2;</span><br><span class="line">    server 192.168.80.123:80 weight&#x3D;3;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #对 &quot;&#x2F;&quot; 启用反向代理</span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;127.0.0.1:88;</span><br><span class="line">    proxy_redirect off;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    #以下是一些反向代理的配置，可选。</span><br><span class="line">    #允许客户端请求的最大单文件字节数</span><br><span class="line">    client_max_body_size 10m;</span><br><span class="line">    #缓冲区代理缓冲用户端请求的最大字节数，</span><br><span class="line">    client_body_buffer_size 128k;</span><br><span class="line">    #&#x3D;&#x3D;nginx跟后端服务器连接超时时间(代理连接超时)</span><br><span class="line">    proxy_connect_timeout 60;</span><br><span class="line">    #&#x3D;&#x3D;连接成功后，后端服务器响应时间(代理接收超时)</span><br><span class="line">    proxy_read_timeout 120;</span><br><span class="line">    #&#x3D;&#x3D;后端服务器数据回传时间(代理发送超时)</span><br><span class="line">    proxy_send_timeout 20;</span><br><span class="line">    #&#x3D;&#x3D;设置代理服务器（nginx）保存用户头信息的缓冲区大小</span><br><span class="line">    proxy_buffer_size 32k;</span><br><span class="line">    #&#x3D;&#x3D;proxy_buffers缓冲区，网页平均在32k以下的设置</span><br><span class="line">    proxy_buffers 4 128k;</span><br><span class="line">    #&#x3D;&#x3D;高负荷下缓冲大小（proxy_buffers*2）</span><br><span class="line">    proxy_busy_buffers_size 256k;</span><br><span class="line">    #&#x3D;&#x3D;设定缓存文件夹大小，大于这个值，将从upstream服务器传</span><br><span class="line">    proxy_temp_file_write_size 256k;</span><br><span class="line">    #&#x3D;&#x3D;1G内存缓冲空间，3天不用删除，最大磁盘缓冲空间2G</span><br><span class="line">    proxy_cache_path &#x2F;home&#x2F;cache levels&#x3D;1:2 keys_zone&#x3D;cache_one:1024m inactive&#x3D;3d max_size&#x3D;2g;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #设定负载均衡服务器列表</span><br><span class="line">    upstream nginx.test.com&#123;</span><br><span class="line">        #后端服务器访问规则</span><br><span class="line">        #ip_hash;</span><br><span class="line">        #weight参数表示权重值，权值越高被分配到的几率越大</span><br><span class="line">        #server 10.11.12.116:80 weight&#x3D;5;</span><br><span class="line">        #PC_Local</span><br><span class="line">        server 10.11.12.116:80;</span><br><span class="line">        #PC_Server</span><br><span class="line">        server 10.11.12.112:80;</span><br><span class="line">        #Notebook</span><br><span class="line">        #server 10.11.12.106:80;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #虚拟主机设定模块（挂载多个站点，只需要配置多个server及upstream节点即可）</span><br><span class="line">    server &#123;</span><br><span class="line">        #监听80端口</span><br><span class="line">        listen 80;</span><br><span class="line">        #定义使用nginx.test.com访问</span><br><span class="line">        server_name nginx.test.com;</span><br><span class="line">        #设定本虚拟主机的访问日志</span><br><span class="line">        access_log logs&#x2F;nginx.test.com.access.log;</span><br><span class="line">        </span><br><span class="line">        #默认请求</span><br><span class="line">        # 语法规则：location [&#x3D;|~|~*|^~] &#x2F;uri&#x2F; &#123;...&#125; 先匹配普通location，在匹配正则location</span><br><span class="line">        # &#x3D; 开头表示精确匹配</span><br><span class="line">        # ^~ 开头表示uri以某个常规字符串开头，理解为匹配url路径即可，无需考虑编解码</span><br><span class="line">        # ~ 开头表示区分大小写的正则匹配</span><br><span class="line">        # ~* 开头表示不区分大小写的正则匹配</span><br><span class="line">        # !~ 开头表示区分大小写的不匹配的正则</span><br><span class="line">        # !~* 开头表示不区分大小写的不匹配的正则</span><br><span class="line">        # &#x2F; 通用匹配，任何请求都会被匹配到</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            #限制IP访问</span><br><span class="line">            deny 192.168.0.2；</span><br><span class="line">            allow 192.168.0.0&#x2F;24;</span><br><span class="line">            allow 192.168.1.1;</span><br><span class="line">            deny all;</span><br><span class="line">            #定义服务器的默认网站根目录位置</span><br><span class="line">            root html;</span><br><span class="line">            #定义首页索引文件的名称</span><br><span class="line">            index index.html index.htm;</span><br><span class="line">            #定义后端负载服务器组</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;nginx.test.com;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #定义错误提示页面</span><br><span class="line">        error_page 500 502 503 504 &#x2F;50x.html;</span><br><span class="line">        location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">            root html;</span><br><span class="line">        &#125;</span><br><span class="line">        #静态文件，nginx自己处理</span><br><span class="line">        location ~ ^&#x2F;(images|javascript|js|css|flash|media|static)&#x2F;&#123;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;virtual&#x2F;htdocs;</span><br><span class="line">            #过期时间1天</span><br><span class="line">            expires 1d;</span><br><span class="line">            #关闭媒体文件日志</span><br><span class="line">            access_log off;</span><br><span class="line">            log_not_found off;</span><br><span class="line">        &#125;</span><br><span class="line">        #设定查看Nginx状态的地址</span><br><span class="line">        location &#x2F;NginxStatus &#123;</span><br><span class="line">            #!stub_status on; #无此关键字</span><br><span class="line">            access_log off;</span><br><span class="line">            auth_basic &quot;NginxStatus&quot;;</span><br><span class="line">            auth_basic_user_file conf&#x2F;htpasswd;</span><br><span class="line">        &#125;</span><br><span class="line">        #禁止访问的文件.htxxx</span><br><span class="line">        location ~ &#x2F;\.ht &#123;</span><br><span class="line">            deny all;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    #网站较多的情况下ngxin又不会请求瓶颈可以考虑挂多个站点，并把虚拟主机配置单独放在一个文件内，引入进来</span><br><span class="line">    #include website.conf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="对域名的匹配规则"><a href="#对域名的匹配规则" class="headerlink" title="对域名的匹配规则"></a>对域名的匹配规则</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server_name location;      # 匹配本地主机ip；</span><br><span class="line">server_name www.baidu.com; # 精确配置  </span><br><span class="line">server_name *.baidu.com;   # 以通配符开头的配置  </span><br><span class="line">server_name baidu.*;       # 以通配符结尾的配置  </span><br><span class="line">server_name  ~^(?&lt;user&gt;.+)\.example\.net$;  #正则的配置，必须以波浪线为开头</span><br></pre></td></tr></table></figure>
+<h1 id="路由对location的匹配规则"><a href="#路由对location的匹配规则" class="headerlink" title="路由对location的匹配规则"></a>路由对location的匹配规则</h1><h4 id="贪婪原则：匹配尽可能长的路径；"><a href="#贪婪原则：匹配尽可能长的路径；" class="headerlink" title="贪婪原则：匹配尽可能长的路径；"></a>贪婪原则：匹配尽可能长的路径；</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        root &#x2F;data&#x2F;www;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location &#x2F;images&#x2F; &#123;</span><br><span class="line">        root &#x2F;data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># &#x2F;images&#x2F;匹配到第二个；</span><br></pre></td></tr></table></figure>
+
+<h4 id="通配规则"><a href="#通配规则" class="headerlink" title="通配规则"></a>通配规则</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">以&#x3D;开头，表示精确匹配；</span><br><span class="line">以^~开头，表示uri以某个常规字符串开头，不是正则匹配；</span><br><span class="line">以~开头，表示区分大小写的正则匹配；</span><br><span class="line">以~*开头，表示不区分大小写的正则匹配；</span><br><span class="line">&#x2F;，表示通用匹配, 如果没有其它匹配,任何请求都会匹配到；</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 如果有两个开头一样的路由，有可能匹配不到</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line"></span><br><span class="line">location &#x2F;eeg</span><br><span class="line"></span><br><span class="line">location &#x2F;eegabc</span><br><span class="line"></span><br><span class="line"># 上面会造成&#x2F;eegabc匹配失败</span><br></pre></td></tr></table></figure>
+<h1 id="nginx的日志设置规则"><a href="#nginx的日志设置规则" class="headerlink" title="nginx的日志设置规则"></a>nginx的日志设置规则</h1><h4 id="主要分为access-log和error-log"><a href="#主要分为access-log和error-log" class="headerlink" title="主要分为access_log和error_log;"></a>主要分为access_log和error_log;</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">access log : 记录了哪些用户，哪些页面以及用户浏览器、ip和其他的访问信息</span><br><span class="line">默认值: access_log logs&#x2F;access.log combined;  # 表示配置的路径和格式</span><br><span class="line">配置段: http, server, location, if in location, limit_except</span><br><span class="line"></span><br><span class="line">error log : 记录服务器错误日志</span><br><span class="line">默认值: error_log logs&#x2F;error.log error;  # 表示配置的路径和级别，有[debug | info | notice | warn | error | crit | alert | emerg]八个级别;</span><br><span class="line">配置段: main, http, server, location</span><br></pre></td></tr></table></figure>
+<h1 id="负载均衡的规则"><a href="#负载均衡的规则" class="headerlink" title="负载均衡的规则"></a>负载均衡的规则</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#设定负载均衡服务器列表</span><br><span class="line">upstream test&#123;</span><br><span class="line">    #后端服务器访问规则</span><br><span class="line">    #ip_hash;   # 根据ip的hash规则分配，主要是当需要会话保持的时候，session是不能共享的；</span><br><span class="line">    #weight参数表示权重值，权值越高被分配到的几率越大，服务器的运算能力有时不是一样的；</span><br><span class="line">    #server 10.11.12.116:80 weight&#x3D;5;</span><br><span class="line">    #PC_Local</span><br><span class="line">    server 10.11.12.116:80 max_fails&#x3D;3 fail_timeout&#x3D;30; </span><br><span class="line">    # max_fails:最多的转发失败的次数，如果转发失败超过次数，就认为该服务器挂掉；</span><br><span class="line">    # fail_timeout：请求失败暂停的服务时间，在这个时间内会暂时放弃转发给该服务器；</span><br><span class="line">    #PC_Server</span><br><span class="line">    server 10.11.12.112:80 down;  # down:暂时不参与负载均衡；</span><br><span class="line">    server 10.11.12.112:80 backup;  # backup:备用服务器，当其他所有的机器忙的时候，会启用备用服务器；</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.webpages.show/p/b0225828/" data-id="ckd4a8akl000oq8z8fyqneb62" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-GitLab轻松创建一个MergeRequest" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/p/37369/" class="article-date">
+  <time datetime="2018-12-21T21:25:23.000Z" itemprop="datePublished">2018-12-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Gitlab/">Gitlab</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/p/37369/">GitLab轻松创建一个Merge Request</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="简写说明"><a href="#简写说明" class="headerlink" title="## 简写说明"></a>## 简写说明</h3><pre><code>- MR = Merge Request
+- 主仓 = 组织创建的仓库（下文中是 awesome-php 组织创建的 awesome-one 仓库）</code></pre><h3 id="什么是Merge-Request"><a href="#什么是Merge-Request" class="headerlink" title="什么是Merge Request"></a>什么是Merge Request</h3><pre><code>- 相信很多人都不太懂这个 MR 到底是什么，通俗地说，MR 就是一个 merge 请求。
+- 创建一个 MR 当然就可以理解为创建一个合并请求。MR 的存在主要是为了权限控制。</code></pre><h3 id="Forking-Workflow"><a href="#Forking-Workflow" class="headerlink" title="Forking Workflow"></a>Forking Workflow</h3><pre><code>- 用 Git 的同学最开始接触的想必是 Git Workflow 吧。
 - 什么是 Git Workflow？其实就是多人在同一个仓库上进行代码托管，然后仓库存在多个分支，一般来说每个新功能会创建一个分支，然后根据不同的阶段合并到不同环境对应的分支上，对功能需求进行测试、验收以及上线。
 - 当开发团队规模较小的时候，使用 Git Workflow 无疑是相对适合的，优点是相对灵活。但是当团队人数达到一定程度，项目较多之后，这种工作流就会暴露本身的局限性，权限管理比较混乱。
 - 这个时候，Forking Workflow 就应运而生了。
-- 什么是 Forking Workflow ？Fo ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Hermoso</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">13</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">5</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS鏈接"><i class="fa fa-rss"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/p/2651b0bd/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://image.bestzuo.cn/images/a9ef882d283cbf31531ab67c99867811.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="hexo-douban 插件使用与问题" alt="hexo-douban 插件使用与问题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/p/2651b0bd/" title="hexo-douban 插件使用与问题">hexo-douban 插件使用与问题</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-27 11:18:13">2020-07-27</time></div></a></div><div class="aside-recent-post"><a href="/p/12223247/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://image.bestzuo.cn/images/20200701171240.jpg!getwebp" onerror="this.onerror=null;this.src='/img/404.jpg'" title="记一次Centos7.5升级OpenSSH8.0p1" alt="记一次Centos7.5升级OpenSSH8.0p1"/></div><div class="aside-post-title"><div class="aside-post_title" href="/p/12223247/" title="记一次Centos7.5升级OpenSSH8.0p1">记一次Centos7.5升级OpenSSH8.0p1</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-26 14:27:20">2020-07-26</time></div></a></div><div class="aside-recent-post"><a href="/p/5e94d2a7/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="http://qe493by94.bkt.clouddn.com/banner/%E7%94%B5%E8%84%91%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8%288ABB2%29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="gitlab配置域名并https访问" alt="gitlab配置域名并https访问"/></div><div class="aside-post-title"><div class="aside-post_title" href="/p/5e94d2a7/" title="gitlab配置域名并https访问">gitlab配置域名并https访问</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-24 12:07:59">2020-07-24</time></div></a></div><div class="aside-recent-post"><a href="/p/328665dd/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://image.bestzuo.cn/images/fbbc2b1b3c3e45f4f9bd9c5accef8e18.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="nginx 返回码 426 upgrade required 处理" alt="nginx 返回码 426 upgrade required 处理"/></div><div class="aside-post-title"><div class="aside-post_title" href="/p/328665dd/" title="nginx 返回码 426 upgrade required 处理">nginx 返回码 426 upgrade required 处理</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-23 13:18:35">2020-07-23</time></div></a></div><div class="aside-recent-post"><a href="/p/bb2a8a2e/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://image.bestzuo.cn/images/4d7fc21317c284975952a390b22a4af3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="常见的重定向方式" alt="常见的重定向方式"/></div><div class="aside-post-title"><div class="aside-post_title" href="/p/bb2a8a2e/" title="常见的重定向方式">常见的重定向方式</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-23 13:17:02">2020-07-23</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Gitlab/"><span class="card-category-list-name">Gitlab</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mysql/"><span class="card-category-list-name">Mysql</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Nginx/"><span class="card-category-list-name">Nginx</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/OpenSSH/"><span class="card-category-list-name">OpenSSH</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li>
-                       
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href='/tags/Gitlab/' style='font-size:18px; color:rgb(131, 192, 143)'>Gitlab</a><a href='/tags/OpenSSh/' style='font-size:16px; color:rgb(70, 156, 49)'>OpenSSh</a><a href='/tags/docker/' style='font-size:21px; color:rgb(170, 9, 186)'>docker</a><a href='/tags/douban/' style='font-size:17px; color:rgb(178, 160, 81)'>douban</a><a href='/tags/expires/' style='font-size:19px; color:rgb(36, 60, 60)'>expires</a><a href='/tags/hexo/' style='font-size:20px; color:rgb(4, 82, 180)'>hexo</a><a href='/tags/https/' style='font-size:20px; color:rgb(62, 165, 113)'>https</a><a href='/tags/location/' style='font-size:20px; color:rgb(132, 80, 147)'>location</a><a href='/tags/mycat/' style='font-size:19px; color:rgb(182, 16, 120)'>mycat</a><a href='/tags/mysql/' style='font-size:21px; color:rgb(133, 61, 186)'>mysql</a><a href='/tags/nginx/' style='font-size:18px; color:rgb(170, 114, 137)'>nginx</a><a href='/tags/proxy-pass/' style='font-size:17px; color:rgb(164, 192, 99)'>proxy_pass</a><a href='/tags/rewrite/' style='font-size:19px; color:rgb(160, 15, 179)'>rewrite</a><a href='/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/' style='font-size:20px; color:rgb(181, 197, 56)'>返回码</a><a href='/tags/%E9%87%8D%E5%AE%9A%E5%90%91/' style='font-size:19px; color:rgb(196, 117, 152)'>重定向</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/12/"><span class="card-archive-list-date">十二月 2018</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">13</div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">18.2k</div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.bestzuo.cn/images/e189f8eb561c69547c79fc4cd9316cbb.jpg!getwebp)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Hermoso</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">简</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="false" src="/js/third-party/piao.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
-if (subtitleEffect) { 
-  var typed = new Typed("#subtitle", {
-    strings: "今日事&#44;今日做,Never put off till tomorrow what you can do today".split(","),
-    startDelay: 300,
-    typeSpeed: 150,
-    loop: true,
-    backSpeed: 50
-  })
-} else {
-  document.getElementById("subtitle").innerHTML = '今日事&#44;今日做'
-}</script><script>var endLoading = function () {
-  document.body.style.overflow = 'auto';
-  document.getElementById('loading-box').classList.add("loaded")
-}
-window.addEventListener('load',endLoading)</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+- 什么是 Forking Workflow ？Forking Workflow 就是存在一个主仓，其他开发人员把主仓 Fork 一份到自己的仓库中，然后在自己的仓库中进行功能开发，开发完成后提交 Merge Request ，然后团队 Review ，确认没问题之后进行合并更新操作。
+- 相比 Git Workflow ，Forking Workflow 可以更好地管理主仓代码，保证主仓代码的安全、一致性等，且可以杜绝分支过多引发的其他问题。</code></pre><h3 id="怎么创建Merge-Request"><a href="#怎么创建Merge-Request" class="headerlink" title="怎么创建Merge Request"></a>怎么创建Merge Request</h3><p>言归正传，让我们看看怎么创建 MR。在我朋友圈中有大L和小L两位小伙伴，分别使用 Git Workflow 和 Forking Workflow 两种不同的 Git 工作流。中国传统敬老爱幼，那么就由使用 Forking Workflow 的小L为我们演示一下怎么创建一个 MR。</p>
+<h4 id="Forking-Workflow-1"><a href="#Forking-Workflow-1" class="headerlink" title="Forking Workflow"></a>Forking Workflow</h4><p>此时使用 Forking Workflow 的小L同学接到一个需求，小L思路清晰，他首先查看主仓（ awesome-php 名下的 awesome-one 仓库，下文一律使用主仓称呼），然后基于主仓 Fork 一个属于自己的仓库：</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/3xuci.gif">
+<p>此时小L个人（也就是zmcdbp）名下也有了一个 awesome-one 仓库，小L接着要做的事自然就是 Clone 自己的仓库到本地：</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/opt6u.gif">
+<p>突然接到的需求需要开发一个 phpinfo 页面，遵循 Forking Workflow 规范的小L的做法是先基于本地的 master 分支衍生一个 feature-phpinfo 的功能分支，然后在该分支上进行开发，开发完成后添加更改的代码到缓存区，提交 commit ：<br> <img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/1ahdl.gif"><br>完成本地提交之后，接下来要进行远程分支的提交，小L提交到了自己名下的仓库中（也就是zmcdbp/aweosme-one），分支名称与本地分支保持同步，方便日后翻阅查找（此处因为小L名下的 awesome-one 仓库中尚未存在 feature-phpinfo 分支，所以在 push 操作的时候需要带上 -u 参数告诉 GitLab 需要创建一个名叫 feature-phpinfo 的远程分支）：</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/8nlll.gif">
+<p>push 成功之后小L选择了回到 GitLab Web 中查看刚刚提交了更新的仓库：</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/cn083.jpg">
+<p>小L很开心，因为发现他名下的 awesome-one 仓库 中已经多了一个远程分支 feature-phpinfo。接下来小L要把这个已经开发好的功能分支合并到主仓中以便后续进行功能测试以及产品验收等步骤。首先小L创建了一个 MR （因为本地分支是推送到了小L从主仓中 Fork 出来的个人仓库中，所以创建 MR 的动作也应该在自己仓库的 GitLab Web 页面中进行）：</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/3u644.gif">
+<p>创建 MR 的页面信息量相当大，懒癌晚期的小L选择了只关注 Title、Description、Source branch、Target branch 以及 Remove source branch when merge request is accept 这几项，如果你比较勤快当然也可以对其他配置项进行详细配置。懒癌晚期的小L关注的这几项配置都是什么呢？Title 当然就是本次 MR 的简要说明，Description 自然就是详细说明，里面可以填写本次合并主要功能以及相关负责人员等（支持 Markdown 噢！），Source branch 英语超赞的你肯定已经猜到这个就是我们要发起合并的分支，Target branch 自然就是接受合并的分支啦，Remove… 说的就是当本次 MR 被接受之后，自动删除发起合并的分支，是不是超贴心！小L对自己比较关注的几项配置进行简单填写后，点击下方的提交按钮，创建 MR 的操作就完成啦！连懒癌晚期的小L都能轻松创建，是不是超简单！</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/wt2xg.gif">
+<p>但是聪明的你肯定发现了事情似乎并没有这么简单！Target branch 默认是 master 分支并且似乎无法更改，那么如果需要合并到其他如 dev 分支的话该怎么办呢？没关系，点击 Target branch 旁边的 Change branches 就可以对 Source branch 和 Target branch 进行更改啦！（合并请求不单单可以向主仓发起，还可以对自己仓库内存在的两个分支进行发起，或者对主仓派生的其他仓库中的分支发起）</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/vgibb.gif">
+<p>在 Forking Workflow 中一个 MR 的诞生差不多需要经历的就这么多，当然还有更多细节由于篇幅问题没有一一细说，还请见谅。</p>
+<h3 id="Git-Workflow"><a href="#Git-Workflow" class="headerlink" title="Git Workflow"></a>Git Workflow</h3><p>组织把比较重要的 hello world 需求留给了我们成熟稳重使用 Git Workflow 的大L同学，大L不假思索地访问了主仓的页面并进行了 Clone 操作，然后在本地创建了一个需要进行功能开发的 feature-hello-world 分支。注意，大L是从主仓 Clone，而小L是从自己 Fork 出来的仓库 Clone。</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/3ujuq.gif">
+<p>接着大L迅速完成了开发工作，与小L的本地提交操作类似，把更改的文件添加到缓存区，然后添加 commit。</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/64rxz.gif">
+<p>完成了本地提交后，大L选择了把新开发的功能分支推送到远程仓库中。（与小L类似，因为远程仓库中尚未存在与本地同名的分支，所以需要添加 -u 参数创建远程分支）</p>
+<img src= "/img/loading.gif" data-src="http://qdwuxlf4l.bkt.clouddn.com/images/6pnyx.gif">
+<p>完成推送到远程仓库的操作后，大L打开了主仓的页面然后点击旁边出现的 Create Merge Request 按钮来创建一个 MR。进入到创建页面之后，大L的操作就跟小L点击创建 MR 按钮后的操作一致了，在这就不再重复了。（都是姓L的，一样的姓，一样的病【懒癌晚期】）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.webpages.show/p/37369/" data-id="ckd4a8ak80002q8z80isn94ui" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gitlab/" rel="tag">Gitlab</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gitlab/">Gitlab</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenSSH/">OpenSSH</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitlab/" rel="tag">Gitlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenSSh/" rel="tag">OpenSSh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/douban/" rel="tag">douban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expires/" rel="tag">expires</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/location/" rel="tag">location</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mycat/" rel="tag">mycat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy-pass/" rel="tag">proxy_pass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rewrite/" rel="tag">rewrite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/" rel="tag">返回码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91/" rel="tag">重定向</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Gitlab/" style="font-size: 15px;">Gitlab</a> <a href="/tags/OpenSSh/" style="font-size: 10px;">OpenSSh</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/douban/" style="font-size: 10px;">douban</a> <a href="/tags/expires/" style="font-size: 10px;">expires</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/location/" style="font-size: 10px;">location</a> <a href="/tags/mycat/" style="font-size: 10px;">mycat</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 20px;">nginx</a> <a href="/tags/proxy-pass/" style="font-size: 10px;">proxy_pass</a> <a href="/tags/rewrite/" style="font-size: 15px;">rewrite</a> <a href="/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/" style="font-size: 10px;">返回码</a> <a href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91/" style="font-size: 10px;">重定向</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/p/2651b0bd/">hexo-douban 插件使用与问题</a>
+          </li>
+        
+          <li>
+            <a href="/p/12223247/">记一次Centos7.5升级OpenSSH8.0p1</a>
+          </li>
+        
+          <li>
+            <a href="/p/5e94d2a7/">gitlab配置域名并https访问</a>
+          </li>
+        
+          <li>
+            <a href="/p/328665dd/">nginx 返回码 426 upgrade required 处理</a>
+          </li>
+        
+          <li>
+            <a href="/p/bb2a8a2e/">常见的重定向方式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Hermoso<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

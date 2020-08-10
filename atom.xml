@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.webpages.show/"/>
-  <updated>2020-08-05T07:53:06.966Z</updated>
+  <updated>2020-08-10T07:00:09.177Z</updated>
   <id>https://www.webpages.show/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
+    <link href="https://www.webpages.show/p/6ea05e36/"/>
+    <id>https://www.webpages.show/p/6ea05e36/</id>
+    <published>2020-08-10T07:00:09.177Z</published>
+    <updated>2020-08-10T07:00:09.177Z</updated>
+    
+    <content type="html"><![CDATA[<h3><span id="前言">前言</span></h3><p>Hexo默认会对<code>/source/</code>里的所有页面应用主题模板渲染，但有一些前端作品或demo页我们不希望经过渲染，而是能保持完全自定义的样子</p><p>例如：</p><ol><li>主题内渲染，添加的模块仍在主题内，主题头部信息依然存在，仅仅是在特定区域进行渲染（适合添加 about 页面）</li><li>完全页面渲染，在主题内点击对应链接跳转到一个完全崭新的页面（我需要的）</li></ol><h3><span id="hexo-的执行逻辑">hexo 的执行逻辑</span></h3><p>source 文件夹下存放了待被转化的 markdown 文件，在执行<code>hexo g</code>命令时，source 目录下的文件将被转化为 html 文件。</p><h3><span id="介绍两种方法">介绍两种方法：</span></h3><p>一. 使用Hexo提供的跳过渲染配置，适用于整个目录的设置。</p><p>具体步骤，打开博客根目录<code>_config.yml</code>，找到其中<code>skip_render</code>项，这个项目用来配置<code>/source/</code>中需要跳过渲染的文件或目录，</p><p>例如希望跳过<code>/source/navi/</code>里的所有文件渲染（这样我们就可以将自己的作品放在这个文件夹中，然后可以通过自己的网址/navi/…访问了)</p><p>可以配置为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: navi&#x2F;**</span><br></pre></td></tr></table></figure><ul><li><code>source/navi/</code>目录下添加「工具盒」源文件</li><li>在站点配置文件<code>_config.yml</code>中配置<code>skin_render</code>项，如：<code>skip_render: navi/**</code>，这样projects文件夹下的所以文件内容将不会转化为 html，直接被 copy 到 public 文件夹</li><li>在「工具盒」文件夹下添加 index.html 文件用于渲染自定义页面</li></ul><p>完成以上步骤即可点击「工具盒」菜单导航，完成自定义页面的展示。</p><p>修改了配置但生成出来的内容不一定及时应用了新配置，最好在生成之前执行一下<code>hexo clean</code>命令，清除掉旧的生成文件和缓存。</p><p>二. 给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。</p><p>例如我们要使 <code>about</code> 页面跳过渲染，创建 <code>/source/about/index.md</code>，将这个页面的相关 HTML 代码写进<code>.md</code>文件并保存，然后在 <code>index.md</code> 的头部写入：，</p><p>避免渲染的办法就是在文件头部<code>Front-matter</code>里添加如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br><span class="line">&#123;% raw %&#125;</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">xx HTML代码 xx</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>PS：<code>Front-matter</code> 是 <code>.md</code> 文件最上方以 — 分隔的区域，用于指定个别文件的变量，官方文档：<a href="https://hexo.io/docs/front-matter" target="_blank" rel="noopener">https://hexo.io/docs/front-matter</a><br><code>.md</code>文件中的 HTML 代码要用 <code>` 和 `</code> 包起来，使其能正确编译里面的代码　　</p></blockquote><p>这样，这个文件就不会经过模板渲染，最终发布到<code>/public/</code>里的文件就是去掉标记后的文件的样子。</p><p>但是这种未尝试！ 推荐第一种</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;Hexo默认会对&lt;code&gt;/source/&lt;/code&gt;里的所有页面应用主题模板渲染，但有一些前端作品或demo页我们不希望经过渲染，而是能保持完全自定义的样子&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo修剪地址栏</title>
@@ -550,36 +579,6 @@
       <category term="nginx" scheme="https://www.webpages.show/tags/nginx/"/>
     
       <category term="rewrite" scheme="https://www.webpages.show/tags/rewrite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx expires配置详解</title>
-    <link href="https://www.webpages.show/p/492994d9/"/>
-    <id>https://www.webpages.show/p/492994d9/</id>
-    <published>2020-07-22T16:00:00.000Z</published>
-    <updated>2020-07-26T10:46:00.134Z</updated>
-    
-    <content type="html"><![CDATA[<p>expires起到控制页面缓存的作用，合理的配置expires可以减少很多服务器的请求</p><p>要配置expires，可以在http段中或者server段中或者location段中加入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.(gif|jpg|jpeg|png|bmp|ico)$ &#123;</span><br><span class="line">           root &#x2F;var&#x2F;www&#x2F;img&#x2F;;</span><br><span class="line">           expires 30d;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure><p>控制图片等过期时间为30天，当然这个时间可以设置的更长。具体视情况而定</p><p>比如</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.(wma|wmv|asf|mp3|mmf|zip|rar|swf|flv)$ &#123;</span><br><span class="line">               root &#x2F;var&#x2F;www&#x2F;upload&#x2F;;</span><br><span class="line">               expires max;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure><p>expires 指令可以控制 HTTP 应答中的“ Expires ”和“ Cache-Control ”的头标（起到控制页面缓存的作用）</p><p>语法：expires [time|epoch|max|pff]</p><p>默认值：off</p><p>expires指令控制HTTP应答中的“Expires”和“Cache-Control”Header头部信息，启动控制页面缓存的作用</p><p>time:可以使用正数或负数。“Expires”头标的值将通过当前系统时间加上设定time值来设定。</p><p>time值还控制”Cache-Control”的值：</p><p>负数表示no-cache</p><p>正数或零表示max-age=time</p><p>epoch：指定“Expires”的值为 1 January,1970,00:00:01 GMT</p><p>max:指定“Expires”的值为31 December2037 23:59:59GMT,”Cache-Control”的值为10年。</p><p>-1：指定“Expires”的值为当前服务器时间-1s，即永远过期。</p><p>off：不修改“Expires”和”Cache-Control”的值</p><p>expires使用了特定的时间，并且要求服务器和客户端的是中严格同步。</p><p>而Cache-Control是用max-age指令指定组件被缓存多久。</p><p>对于不支持http1.1的浏览器，还是需要expires来控制。所以最好能指定两个响应头。但HTTP规范规定max-age指令将重写expires头。</p><p>nginx 静态资源缓存设置<br>May 13, 2018<br>nginx 静态资源缓存 常用配置示例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~.*\.(js|css|html|png|jpg)$ &#123;</span><br><span class="line">    expires 3d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面是 nginx 静态资源缓存 说明:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">expires 3d; &#x2F;&#x2F; 表示缓存 3 天</span><br><span class="line"></span><br><span class="line">expires 3h; &#x2F;&#x2F; 表示缓存 3 小时</span><br><span class="line"></span><br><span class="line">expires max; &#x2F;&#x2F; 表示缓存 10 年</span><br><span class="line"></span><br><span class="line">expires -1; &#x2F;&#x2F; 表示永远过期。</span><br></pre></td></tr></table></figure><p>如果设置为 -1 在 js、css 等静态文件在没有修改的情况下返回的是 http 304.</p><p>如果修改返回 http 200</p><p>http 304：自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。</p><p>http 200：服务器已成功处理了请求，这表示服务器提供了请求的内容。</p><p>如果不想让代理或浏览器缓存，加 no-cache 参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~.*\.(js|css|html|png|jpg)$ &#123;</span><br><span class="line">    add_header Cache-Control no-cache;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样浏览器 F5 刷新时，nginx 静态资源缓存 设置返回的状态码就是 http 200，而不是 http 304</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;expires起到控制页面缓存的作用，合理的配置expires可以减少很多服务器的请求&lt;/p&gt;
-&lt;p&gt;要配置expires，可以在http段中或者server段中或者location段中加入&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
-      
-    
-    </summary>
-    
-    
-      <category term="Nginx" scheme="https://www.webpages.show/categories/Nginx/"/>
-    
-    
-      <category term="nginx" scheme="https://www.webpages.show/tags/nginx/"/>
-    
-      <category term="expires" scheme="https://www.webpages.show/tags/expires/"/>
     
   </entry>
   

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="viggo & hermoso">
-    <title>导航</title>
+    <title>工具盒</title>
     <meta name="keywords" content="https://www.webpages.show,百宝箱,在线工具箱,素材资源网站,网站导航">
     <meta name="description" content="WebStack - 收集国内外优秀资源网站，https://www.webpages.show">
     <link rel="icon" type="image/png" href="https://cn.webpages.show/img/favicon.png">
@@ -140,28 +140,19 @@
                             关于博主</a></li> -->
                     <li><a id="tp-weather-widget" style="padding:28px 20px"></a>
                         <script>
-                            ! function (e, t, n, a, o, i, c, r) {
-                                r = function () {
-                                        i = t.createElement(n), c = t.getElementsByTagName(n)[0], i.src = o, i.charset =
-                                            "utf-8", i.async = 1, c.parentNode.insertBefore(i, c)
-                                    }, e.SeniverseWeatherWidgetObject = a, e[a] || (e[a] = function () {
-                                        (e[a].q = e[a].q || []).push(arguments)
-                                    }), e[a].l = +new Date, e.attachEvent ? e.attachEvent("onload", r) : e
-                                    .addEventListener("load", r, !1)
-                            }(window, document, "script", "SeniverseWeatherWidget",
-                                "http://cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt(((new Date).getTime() /
-                                    1e8).toString(), 10)), window.SeniverseWeatherWidget("show", {
-                                flavor: "slim",
-                                location: "WX4FBXXFKE4F",
-                                geolocation: !0,
-                                language: "auto",
-                                unit: "c",
-                                theme: "auto",
-                                token: "a39cd5a0-4024-4cb2-85c6-0250317058db",
-                                hover: "enabled",
-                                container: "tp-weather-widget"
+                            (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+                            window.SeniverseWeatherWidget('show', {
+                              flavor: "slim",
+                              location: "WX4FBXXFKE4F",
+                              geolocation: true,
+                              language: "auto",
+                              unit: "c",
+                              theme: "auto",
+                              token: "a5d702db-f70b-4620-9223-177f26212629",
+                              hover: "enabled",
+                              container: "tp-weather-widget"
                             })
-                        </script>
+                          </script>
                     </li>
                 </ul>
             </nav>

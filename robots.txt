@@ -12,5 +12,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://www.webpages.show/sitemap.xml
-Sitemap: https://www.webpages.show/baidusitemap.xml
+Sitemap: http://www.webpages.show/sitemap.xml
+Sitemap: http://www.webpages.show/baidusitemap.xml

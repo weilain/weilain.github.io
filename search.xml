@@ -4,6 +4,106 @@
   
     
     <entry>
+      <title>linux查看磁盘使用情况命令</title>
+      <link href="/p/59ce9c6a/"/>
+      <url>/p/59ce9c6a/</url>
+      
+        <content type="html"><![CDATA[<h3><span id="统一磁盘整体情况包括磁盘大小已使用可用">统一磁盘整体情况，包括磁盘大小，已使用，可用</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -hT</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -hT</span><br><span class="line">Filesystem     Type      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1      ext4       40G   28G   11G  73% &#x2F;</span><br><span class="line">devtmpfs       devtmpfs  7.8G     0  7.8G   0% &#x2F;dev</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;dev&#x2F;shm</span><br><span class="line">tmpfs          tmpfs     7.8G  1.8M  7.8G   1% &#x2F;run</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;sys&#x2F;fs&#x2F;cgroup</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;1002</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;0</span><br></pre></td></tr></table></figure><h3><span id="查看指定目录">查看指定目录</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h &#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -h &#x2F;usr&#x2F;</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1        40G   28G   11G  73% &#x2F;</span><br></pre></td></tr></table></figure><h3><span id="具体查看文件夹的占用情况">具体查看文件夹的占用情况</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du --max-depth&#x3D;1 -h</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du --max-depth&#x3D;1 -h</span><br><span class="line">8.0K.&#x2F;.docker</span><br><span class="line">688M.&#x2F;logs</span><br><span class="line">12K.&#x2F;.oracle_jre_usage</span><br><span class="line">12K.&#x2F;.ssh</span><br><span class="line">16K.&#x2F;.local</span><br><span class="line">2.3G.&#x2F;.m2</span><br><span class="line">40K.&#x2F;.java</span><br><span class="line">2.5G</span><br></pre></td></tr></table></figure><h3><span id="计算文件夹大小">计算文件夹大小</span></h3><p>快算显示目录整体占用大小,想查看指定目录，直接在命令后根目录即可.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du -sh &#x2F;usr&#x2F;</span><br><span class="line">5.1G&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><blockquote><p>注：其中<code>df -h</code>和<code>du -sh</code>使用较多，一个统计整体磁盘情况，一个看单独目录点用情况.<br>命令<code>du --max-depth=1 -h</code>查看了目录下文件夹占用情况，使用较少，可以用<code>du -sh</code>代替.</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Gitlab 403 forbidden</title>
+      <link href="/p/12130977/"/>
+      <url>/p/12130977/</url>
+      
+        <content type="html"><![CDATA[<p>搭建的Gitlab。但今天打开页面的时候显示的是空白页面，上面还有一次文本<code>Forbidden</code>。</p><img src= "/img/loading.gif" data-src="http://qiniu.webpages.show/images/LeanCloud.jpg"><h3><span id="原因">原因：</span></h3><pre><code>Gitlab使用rack_attack做了并发访问的限制。</code></pre><h3><span id="解决方案">解决方案：</span></h3><p>将Gitlab的IP设置为白名单即可。<br>步骤如下：<br>    * 打开<code>/etc/gitlab/gitlab.rb</code>文件。<br>    * 查找gitlab_rails[‘<code>rack_attack_git_basic_auth</code>‘]关键词。<br>    * 取消注释<br>    * 修改ip_whitelist白名单属性，加入Gitlab部署的IP地址。<br>        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gitlab_rails[&#39;rack_attack_git_basic_auth&#39;] &#x3D; &#123;</span><br><span class="line"> &#39;enabled&#39; &#x3D;&gt; true,</span><br><span class="line"> &#39;ip_whitelist&#39; &#x3D;&gt; [&quot;127.0.0.1&quot;,&quot;Gitlab部署的IP地址&quot;],</span><br><span class="line"> &#39;maxretry&#39; &#x3D;&gt; 300,</span><br><span class="line"> &#39;findtime&#39; &#x3D;&gt; 5,</span><br><span class="line"> &#39;bantime&#39; &#x3D;&gt; 60</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p><ul><li>配置好后，执行gitlab-ctl reconfigure即可。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Gitlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>查询DNS的记录 查看域名解析是否正常</title>
+      <link href="/p/3d65889c/"/>
+      <url>/p/3d65889c/</url>
+      
+        <content type="html"><![CDATA[<p>#nslookup命令用于查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。</p><h4><span id="直接查询">直接查询</span></h4><p>查询一个域名的A记录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup domain [dns-server]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nslookup www.google.com 8.8.8.8</span><br><span class="line">Server:8.8.8.8</span><br><span class="line">Address:8.8.8.8#53</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">Name:www.google.com</span><br><span class="line">Address: 172.217.5.196</span><br></pre></td></tr></table></figure><h4><span id="查询其他记录">查询其他记录</span></h4><p>指定参数，查询其他记录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup -qt&#x3D;type domain [dns-server]</span><br></pre></td></tr></table></figure><p>其中，type可以是以下这些类型：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">A 地址记录</span><br><span class="line">AAAA 地址记录</span><br><span class="line">AFSDB Andrew文件系统数据库服务器记录</span><br><span class="line">ATMA ATM地址记录</span><br><span class="line">CNAME 别名记录</span><br><span class="line">HINFO 硬件配置记录，包括CPU、操作系统信息</span><br><span class="line">ISDN 域名对应的ISDN号码</span><br><span class="line">MB 存放指定邮箱的服务器</span><br><span class="line">MG 邮件组记录</span><br><span class="line">MINFO 邮件组和邮箱的信息记录</span><br><span class="line">MR 改名的邮箱记录</span><br><span class="line">MX 邮件服务器记录</span><br><span class="line">NS 名字服务器记录</span><br><span class="line">PTR 反向记录</span><br><span class="line">RP 负责人记录</span><br><span class="line">RT 路由穿透记录</span><br><span class="line">SRV TCP服务器信息记录</span><br><span class="line">TXT 域名对应的文本信息</span><br><span class="line">X25 域名对应的X.25地址记录</span><br></pre></td></tr></table></figure><h4><span id="查询更具体的信息">查询更具体的信息</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup –d [其他参数] domain [dns-server]</span><br></pre></td></tr></table></figure><p>只要在查询的时候，加上-d参数，即可查询域名的缓存。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> nslookup </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTTrack - 克隆任意网站</title>
+      <link href="/p/8a11f10a/"/>
+      <url>/p/8a11f10a/</url>
+      
+        <content type="html"><![CDATA[<p>HTTrack可以克隆指定网站－把整个网站下载到本地。</p><p>可以用在离线浏览上，也可以用来收集信息（甚至有网站使用隐藏的密码文件）。</p><p>一些仿真度极高的伪网站（为了骗取用户密码），也是使用类似工具做的。<br>Linux默认安装了HTTrack. 如没有可以自行下载安装。<br>Liunx 安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum provides httrack</span><br><span class="line">yum install httrack</span><br></pre></td></tr></table></figure><p>MacOS zsh:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install httrack</span><br></pre></td></tr></table></figure><p>HTTrack帮助：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack --help</span><br></pre></td></tr></table></figure><p>使用示例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack https:&#x2F;&#x2F;www.webpages.show&#x2F;navi -O &#x2F;tmp</span><br></pre></td></tr></table></figure><p>上面命令克隆了网站路径下所有内容，不带路径克隆所有内容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTrack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
       <link href="/p/6ea05e36/"/>
       <url>/p/6ea05e36/</url>

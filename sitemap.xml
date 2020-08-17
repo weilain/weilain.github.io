@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.webpages.show/p/c6a81268/</loc>
+    <loc>https://www.webpages.show/p/c2e90d73/</loc>
     
     <lastmod>2020-08-17</lastmod>
     
@@ -263,6 +263,13 @@
   </url>
   
   <url>
+    <loc>https://www.webpages.show/tags/https/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.webpages.show/tags/HTTrack/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -292,13 +299,6 @@
   
   <url>
     <loc>https://www.webpages.show/tags/rewrite/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.webpages.show/tags/https/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -375,13 +375,6 @@
   </url>
   
   <url>
-    <loc>https://www.webpages.show/tags/nslookup/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.webpages.show/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -389,7 +382,7 @@
   </url>
   
   <url>
-    <loc>https://www.webpages.show/tags/oh-my-zsh/</loc>
+    <loc>https://www.webpages.show/tags/nslookup/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -417,7 +410,21 @@
   </url>
   
   <url>
+    <loc>https://www.webpages.show/tags/oh-my-zsh/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.webpages.show/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.webpages.show/tags/shell/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -468,6 +475,13 @@
   </url>
   
   <url>
+    <loc>https://www.webpages.show/categories/Mysql/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.webpages.show/categories/oh-my-zsh/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -475,7 +489,7 @@
   </url>
   
   <url>
-    <loc>https://www.webpages.show/categories/Mysql/</loc>
+    <loc>https://www.webpages.show/categories/script/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

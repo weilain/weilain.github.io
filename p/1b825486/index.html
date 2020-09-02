@@ -205,16 +205,16 @@ if (autoChangeMode === '1') {
 <p>编辑 <code>themes/butterfly/layout/includes/widget/index.pug</code> 文件，在你想要显示的位置插入以下代码:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if theme.aside.card_map</span><br><span class="line">        !&#x3D;partial(&#39;includes&#x2F;widget&#x2F;card_map&#39;, &#123;&#125;, &#123;cache:theme.fragment_cache&#125;)</span><br></pre></td></tr></table></figure>
 
-<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/card1.jpg">
+<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/card1.jpg">
 
 <blockquote>
 <p>注意格式</p>
 </blockquote>
 <p>编辑 <code>butterfly/_config.yml</code> 文件，在 <code>card_webinfo</code> 下面添加一行 <code>card_map: true</code></p>
-<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/card2.jpg">
+<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/card2.jpg">
 
 <p>编辑 <code>themes/Butterfly/languages/zh-CN.yml</code> 文件 (请根据你的网站语言选择)，找到 <code>aside</code> 下对应格式添加 <code>card_map: 访客地图</code> (后面的文本可自定义)</p>
-<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/card3.jpg">
+<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/card3.jpg">
 
 <p>如果不想显示，直接把 <code>butterfly/_config.yml</code> 文件的 <code>card_map: true</code> 改为 <code>card_map: false</code> 即可</p>
 <h3><span id="页脚跳动的">页脚跳动的♥</span></h3><p>编辑博客根目录<code>themes/Butterfly/layout/includes/footer.pug</code>文件，将</p>

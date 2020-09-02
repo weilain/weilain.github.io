@@ -178,7 +178,7 @@ if (autoChangeMode === '1') {
 <li>apiserver将其他组件通信产生的事件、状态都保存到了与etcd数据库中</li>
 <li>其他组件与apiserver周期性watch事件。</li>
 </ul>
-<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/images/image-94cf1a9a.png">
+<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/image-94cf1a9a.png">
 
 <p>图片解释：</p>
 <p><code>kubectl</code>通过读取集群配置文件 <code>~/.kube/config</code> 将请求发给<code>apiserver</code>，之后<code>apiserver</code>将创建pod的属性信息写入到<code>etcd</code>中，<code>etcd</code>会响应一个状态给<code>apiserver</code>，保存<code>etcd</code>成功会在控制台显示<code>pod/&lt;pod名称&gt; created</code>，之后调度组件<code>scheduler</code>上线，负责将新的<code>pod</code>分配到合适的节点上，调度之后，将结果响应给<code>apiserver</code>，<code>apiserver</code>再将结果保存到<code>etcd</code>中，<code>kubelet</code>当发现有个<code>pod</code>被绑定到自己的节点上时，就会调用<code>docker</code>的<code>api</code>去创建容器，容器创建之后，<code>docekr</code>会返回一个状态给<code>kubelet</code>，创建成功之后，<code>kubelet</code>再通知<code>apiserver</code>容器状态，之后<code>apiserver</code>再将状态写入到<code>etcd</code>中，之后就可以使用<code>kubelet get pod</code>去查看<code>pod</code>的状态了</p>
@@ -191,7 +191,7 @@ if (autoChangeMode === '1') {
 <blockquote>
 <p><code>kubectl</code> <code>( .kube/config)</code> -&gt; <code>apiserver</code> -&gt; <code>write etcd</code> -&gt; <code>scheduler</code> -&gt; 调度结果响应给<code>apiserver</code> -&gt; <code>kubelet</code> 发现有分配到我的节点<code>pod</code> -&gt; 调用<code>docker api</code>创建容器 -&gt; 通知<code>apiserver</code> 容器状态</p>
 </blockquote>
-<h2><span id="影响pod调度的因素">影响Pod调度的因素</span></h2><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/images/image-d5fa9f73.png">
+<h2><span id="影响pod调度的因素">影响Pod调度的因素</span></h2><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/image-d5fa9f73.png">
 
 <p>参数解释：</p>
 <ul>
@@ -205,7 +205,7 @@ if (autoChangeMode === '1') {
 <blockquote>
 <p>注意：调度器（schedulerName）除了使用自己的一些默认行为和默认策略之外，也会参考其他调度策略的值（主要参考）。</p>
 </blockquote>
-<h3><span id="resources资源限制">resources：资源限制</span></h3><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/images/image-9167643a.png">
+<h3><span id="resources资源限制">resources：资源限制</span></h3><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/image-9167643a.png">
 
 <p>Pod和Container的资源请求和限制：</p>
 <ul>
@@ -230,7 +230,7 @@ if (autoChangeMode === '1') {
 <p>扩展：查看当前节点的资源信息：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl describe node &lt;node-name&gt;</span><br></pre></td></tr></table></figure>
 
-<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/images/image-8b44afcd.png">
+<img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/image-8b44afcd.png">
 
 <blockquote>
 <p>注意： 若pod没有配置resources值，则pod可以使用宿主机所有资源，并且调度不参考配额</p>
@@ -371,7 +371,7 @@ if (autoChangeMode === '1') {
 <p>yaml示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: Pod</span><br><span class="line">metadata:</span><br><span class="line">  name: pod-example</span><br><span class="line">  labels:</span><br><span class="line">    app: nginx</span><br><span class="line">spec:</span><br><span class="line">  nodeName: k8s-node2</span><br><span class="line">  containers:</span><br><span class="line">  - name: nginx</span><br><span class="line">    image: nginx:1.15</span><br></pre></td></tr></table></figure>
 
-<h3><span id="daemonset守护进程集">DaemonSet（守护进程集）</span></h3><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/images/image-88e599f6.png">
+<h3><span id="daemonset守护进程集">DaemonSet（守护进程集）</span></h3><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show//images/image-88e599f6.png">
 
 <p><code>DaemonSet</code>功能：</p>
 <ul>

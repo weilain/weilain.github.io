@@ -3536,10 +3536,10 @@ _:future,
   color: var(--white);
 }
 #nav a {
-  color: var(--black);
+  color: var(--white);
 }
 #nav a:hover {
-  color: var(--black);
+  color: var(--white);
 }
 #nav.fixed {
   position: fixed;

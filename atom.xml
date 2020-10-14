@@ -6,7 +6,7 @@
   <link href="https://www.webpages.show/atom.xml" rel="self"/>
   
   <link href="https://www.webpages.show/"/>
-  <updated>2020-09-01T16:46:25.000Z</updated>
+  <updated>2020-10-13T16:00:00.000Z</updated>
   <id>https://www.webpages.show/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>selenium基础-打开百度进行搜索</title>
+    <link href="https://www.webpages.show/p/1f7c743b/"/>
+    <id>https://www.webpages.show/p/1f7c743b/</id>
+    <published>2020-10-13T16:00:00.000Z</published>
+    <updated>2020-10-13T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>安装Python3</p></li><li><p>安装selenium</p><div class="note warning"><p>注意不同的python版本</p></div></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install selenium</span><br></pre></td></tr></table></figure><ol start="3"><li>下载谷歌驱动ChromeDriver包，放到Python的目录下</li></ol><div class="note success"><p><a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a></p></div><div class="note warning"><p>mac 安装路径解压到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;local&#x2F;bin</span><br></pre></td></tr></table></figure><p>windows 解压到与 python.exe 同级</p></div><ol start="4"><li>编写代码，如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># coding: utf-8</span><br><span class="line"></span><br><span class="line">from selenium import webdriver  # 浏览器驱动器</span><br><span class="line">from selenium.webdriver.common.by import By  # 定位器</span><br><span class="line">from selenium.webdriver.common.keys import Keys  # 键盘对象</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC  # 判断器</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait  # 浏览器等待对像</span><br><span class="line">import time</span><br><span class="line"># 创建一个谷歌浏览器对象</span><br><span class="line">browser &#x3D; webdriver.Chrome()</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    # 浏览器对象打开百度地址</span><br><span class="line">    browser.get(&quot;https:&#x2F;&#x2F;www.baidu.com&quot;)</span><br><span class="line">    # 查找id为 &#39;kw&#39;的标签，即输入框</span><br><span class="line">    inputs &#x3D; browser.find_element_by_id(&quot;kw&quot;)</span><br><span class="line">    # 在输入框中填入&#39;Python&#39;</span><br><span class="line">    inputs.send_keys(&quot;Python&quot;)</span><br><span class="line">    # &#39;按下&#39;回车键（第一种）</span><br><span class="line">    inputs.send_keys(Keys.ENTER)</span><br><span class="line">    # 点击&#39;百度一下&#39;（第二种）</span><br><span class="line">    # browser.find_element_by_id(&quot;su&quot;).click()</span><br><span class="line">    # 创建一个等待对像，超时时间为10秒，调用的时间间隔为0.5</span><br><span class="line">    wait &#x3D; WebDriverWait(browser, 10, 0.5)</span><br><span class="line">    # 每隔0.5秒检查一次，直到页面元素出现id为&#39;content_left&#39;的标签</span><br><span class="line">    wait.until(EC.presence_of_all_elements_located((By.ID, &quot;content_left&quot;)))</span><br><span class="line">except Exception as e:</span><br><span class="line">    print (e)</span><br><span class="line">else:</span><br><span class="line">    # 打印请求的url</span><br><span class="line">    print (browser.current_url)</span><br><span class="line">    # 打印所有cookies</span><br><span class="line">    print (browser.get_cookies())</span><br><span class="line">finally:</span><br><span class="line">    # 等待10秒</span><br><span class="line">    time.sleep(10)</span><br><span class="line">    # 关闭浏览器对象</span><br><span class="line">    browser.close()</span><br></pre></td></tr></table></figure><div class="note warning"><p>py2与py3 print 语法不同 </p></div></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装Python3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装selenium&lt;/p&gt;
+&lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;注意不同的python版本&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;high</summary>
+      
+    
+    
+    
+    <category term="python" scheme="https://www.webpages.show/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://www.webpages.show/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>开往下一个世界 — 友链接力</title>
@@ -524,33 +557,6 @@
     
     
     <category term="Gitlab" scheme="https://www.webpages.show/tags/Gitlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gitlab配置域名并https访问</title>
-    <link href="https://www.webpages.show/p/5e94d2a7/"/>
-    <id>https://www.webpages.show/p/5e94d2a7/</id>
-    <published>2020-07-28T12:46:25.000Z</published>
-    <updated>2020-07-28T12:46:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3><span id="gitlab默认nginx80端口">Gitlab默认Nginx80端口</span></h3><p>如果机器未占有80端口，可以直接替换成域名，解析后就可以直接访问。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;^external_url&quot; &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb #查看当前绑定的域名或者IP</span><br><span class="line">vim &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb   #打开配置文件</span><br><span class="line"># external_url &#39;http:&#x2F;&#x2F;192.168.174.131&#39;  #替换   #修改成域名访问</span><br><span class="line">external_url &#39;http:&#x2F;&#x2F;gitlab.inewmaker.com&#39;  </span><br><span class="line">gitlab-ctl reconfigure   #重新跑一下配置</span><br></pre></td></tr></table></figure><p>如果机器80端口以占有，需要修改gitlab端口。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;&#39;listen_port&quot; &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb   #查看默认端口</span><br><span class="line">vim &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb   #打开配置文件</span><br><span class="line">nginx[&#39;listen_port&#39;] &#x3D; 800     #找到取消注释，修改端口</span><br><span class="line">gitlab-ctl reconfigure   #重新跑一下配置</span><br></pre></td></tr></table></figure><p>由于更改端口，域名解析不到。提供方式使用云服务中的负载均衡。</p><h3><span id="gitlab配置https">Gitlab配置HTTPS</span></h3><p>   注：<br>   gitlab最新是开启https会自动配置，但只有三个月有效期<br>   使用自己设的加密证书应设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用自己设的加密证书应设置</span><br><span class="line">vim &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb</span><br><span class="line"></span><br><span class="line">letsencrypt[&#39;enable&#39;] &#x3D; false</span><br><span class="line">letsencrypt[&#39;auto_renew&#39;] &#x3D; false</span><br></pre></td></tr></table></figure><pre><code>在/etc/gitlab/gitlab.rb禁用自动更新。否则，gitlab-ctl reconfigure 可能会尝试更新证书，从而覆盖它们。如果gitlab自签的证书过期，替换的一定要禁用自动更新</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;etc&#x2F;gitlab&#x2F;ssl   #把申请的证书放在这里</span><br><span class="line">vim  &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb   #打开配置文件</span><br><span class="line">external_url &#39;external_url &#39;https:&#x2F;&#x2F;gitlab.inewmaker.com&#39;  # 注：一定要HTTPS</span><br><span class="line">nginx[&#39;redirect_http_to_https&#39;]&#x3D; true   #取消注释改为 true</span><br><span class="line">nginx[&#39;ssl_certificate&#39;] &#x3D; &quot;&#x2F;etc&#x2F;gitlab&#x2F;ssl&#x2F;gitlab.pem&quot;    #放置对应的证书密钥</span><br><span class="line">nginx[&#39;ssl_certificate_key&#39;] &#x3D; &quot;&#x2F;etc&#x2F;gitlab&#x2F;ssl&#x2F;gitlab.key&quot; #放置对应的证书密钥</span><br><span class="line">gitlab-ctl reconfigure  #使配置生效</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl restart  # 使配置生效 #</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3&gt;&lt;span id=&quot;gitlab默认nginx80端口&quot;&gt;Gitlab默认Nginx80端口&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;如果机器未占有80端口，可以直接替换成域名，解析后就可以直接访问。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl</summary>
-      
-    
-    
-    
-    <category term="Gitlab" scheme="https://www.webpages.show/categories/Gitlab/"/>
-    
-    
-    <category term="Gitlab" scheme="https://www.webpages.show/tags/Gitlab/"/>
-    
-    <category term="https" scheme="https://www.webpages.show/tags/https/"/>
     
   </entry>
   

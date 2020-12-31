@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>google-authenticator</title>
+      <link href="/p/6b915d25/"/>
+      <url>/p/6b915d25/</url>
+      
+        <content type="html"><![CDATA[<p>安装方式一：<br>Liunx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install google-authenticator </span><br></pre></td></tr></table></figure><p>ubuntu</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo add-apt-repository universe</span><br><span class="line">sudo apt install libpam-google-authenticator</span><br></pre></td></tr></table></figure><p>安装方式二：<br>Liunx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git make gcc libtool pam-devel qrencode ntpdate</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;google-authenticator-libpam.git</span><br><span class="line">cd   google-authenticator-libpam&#x2F;</span><br><span class="line">.&#x2F;bootstrap.sh</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure><p>ubuntu</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get  -y install autoconf  git make gcc libtool libpam0g-dev qrencode ntpdate</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;google-authenticator-libpam.git</span><br><span class="line">cd   google-authenticator-libpam&#x2F;</span><br><span class="line">.&#x2F;bootstrap.sh</span><br><span class="line">.&#x2F;configure</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure><p>配置ssh</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config    #ubuntu   sudo</span><br></pre></td></tr></table></figure><p>修改如下的配置项：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ChallengeResponseAuthentication yes</span><br><span class="line">UsePAM yes</span><br></pre></td></tr></table></figure><p>配置PAM</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;pam.d&#x2F;sshd      #ubuntu   sudo</span><br></pre></td></tr></table></figure><p>Liunx</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#%PAM-1.0</span><br><span class="line">auth      required     pam_google_authenticator.so   #添加至第一行</span><br></pre></td></tr></table></figure><p>ubuntu</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth      required      pam_google_authenticator.so       #末尾添加</span><br></pre></td></tr></table></figure><p>重启ssh</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd     #ubuntu   sudo</span><br></pre></td></tr></table></figure><p>配置google authenticator<br>首要条件：先切换到你需要设置的帐号 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-authenticator</span><br></pre></td></tr></table></figure><pre><code>Do you want authentication tokens to be time-based (y/n)  #基于时间生成身份验证#已经安装qrencode会产生一个二维码，二维码连接也可以URL显示Your new secret key is ：***********   # 密钥keyYour verification code is : #code 动态码Your emergency scratch codes are:  #  生成5 个紧急救助码Do you want me to update your &quot;/root/.google_authenticator&quot; file? (y/n)  #一直确认下去# 生成了一个 .google_authenticator 文件your chances to notice or even prevent man-in-the-middle attacks (y/n)  #一直确认下去Do you want to do so? (y/n)   #一直确认下去Do you want to enable rate-limiting? (y/n)  #设置完成#上面的意思大概为：禁止多次使用相同的身份验证，限制每30秒登录一次，移动端每30秒更新一次，移动端和客户端时间误差30秒，30秒内不能超过3次登录。</code></pre><p>如果需要删除一个用户的Google验证，删除这个用户下产生的<code>home/.google_authenticator</code>文件即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 奇怪的知识点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> google </tag>
+            
+            <tag> authenticator </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>awk和sed截取nginx和tomcat时间段日志</title>
+      <link href="/p/31397f6f/"/>
+      <url>/p/31397f6f/</url>
+      
+        <content type="html"><![CDATA[<h4><span id="nginx日志截取示例">nginx日志截取示例</span></h4><p>日志路径：/usr/local/nginx/logs, 截取access.log中2019年3月24日17点00~02之间的日志：<br>　写法1：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat access.log | awk &#39;$4 &gt;&#x3D;&quot;[24&#x2F;Mar&#x2F;2019:17:00:00&quot; &amp;&amp; $4 &lt;&#x3D;&quot;[24&#x2F;Mar&#x2F;2019:17:02:00&quot;&#39;</span><br></pre></td></tr></table></figure><p>　写法2：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat access.log | egrep &quot;24&#x2F;Mar&#x2F;2019&quot; | awk -F&#39;:&#39; &#39;$2 &#x3D; 17 &amp;&amp; $3 &gt;&#x3D; 00 &amp;&amp; $3 &lt;&#x3D; 02&#39;</span><br></pre></td></tr></table></figure><p>　写法3：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat access.log |egrep &quot;24&#x2F;Mar&#x2F;2019&quot; |sed -n &#39;&#x2F;17:00:00&#x2F;,&#x2F;17:02:00&#x2F;p&#39;</span><br></pre></td></tr></table></figure><h4><span id="tomcat日志截取示例">tomcat日志截取示例</span></h4><p>日志路径：/usr/local/tomcat/logs, 截取catalina.out中2019年3月24日17点00~02之间的日志：<br>    写法1：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n &#39;&#x2F;2019-03-24 17:00:&#x2F;,&#x2F;2019-03-24 17:02:&#x2F;p&#39;  catalina.out</span><br></pre></td></tr></table></figure><p>  写法2：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat catalina.out| egrep &quot;2019-03-24&quot; | awk -F&#39;:&#39; &#39;$2 &#x3D; 17 &amp;&amp; $3 &gt;&#x3D; 00 &amp;&amp; $3 &lt;&#x3D; 02&#39;</span><br></pre></td></tr></table></figure></p><h4><span id="awk统计nginx日志的ip访问量">awk统计nginx日志的ip访问量</span></h4><pre><code>nginx日志事先截取一部分：tail -n500 access.log &gt;access.log1</code></pre><p>第一种：使用awk sort，$1表示以空格为分割符的第一列，也就是文件中的ip地址，使用sort对结果排序，uniq -c进行计数，最后sort -n是以“数字”来排序，针对统计后的访问次数来排序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;print $1&#125;&#39; access.log1|sort |uniq -c|sort -n</span><br></pre></td></tr></table></figure><p>第二种：awk for,即数组; 默认变量为0，对每一行的$1作为key，count数组++，实现ip的计数。计数结束后END。然后把结果打印出来，最后sort -n以“数字”排序。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;count[$1]++;&#125;END&#123;for(i in count)&#123;printf(&quot;%s\t%s\n&quot;, count[i], i);&#125;&#125;&#39; access.log1|sort -n</span><br></pre></td></tr></table></figure><h4><span id="取nginx日志访问接口次数">取nginx日志访问接口次数</span></h4><p>通过上面的方法将某个时间段日志取出来，查询该时间段访问接口最多的前10：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"> #统计接口的访问次数</span><br><span class="line"> TODAY&#x3D;&#96;date +%d&#x2F;%b&#x2F;%Y&#96;</span><br><span class="line"> cat $1 |awk -F &#39;&quot;&#39; &#39;&#123;print $2&#125;&#39;|awk &#39;&#123;split($2,res,&quot;?&quot;) ; print res[1] &#125;&#39;|sort|uniq -c|sort -gr |head -n10</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> awk </tag>
+            
+            <tag> sed </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>selenium基础-打开百度进行搜索</title>
       <link href="/p/1f7c743b/"/>
       <url>/p/1f7c743b/</url>
@@ -877,6 +933,110 @@
     
     
     <entry>
+      <title>git使用规范</title>
+      <link href="/p/69df4022/"/>
+      <url>/p/69df4022/</url>
+      
+        <content type="html"><![CDATA[<p>新建项目</p><pre><code> 项目负责人在项目组下面新建项目（以下简称‘主项目’），所有参与该项目开发的人员，必须fork此项目到自己的工程（以下简称‘fork项目’），然后进行开发。</code></pre><p>主项目分支</p><pre><code> 主项目建立hotfix、release、dev、test四个分支。</code></pre><p>dev分支</p><pre><code> dev是开发分支，开发分支是更新最频繁的分支，开发人员正在开发的代码都必须且只能提交Merge Request（以下简称MR）到这个分支。</code></pre><p>test分支</p><pre><code> test是测试分支，用于发布测试环境。项目完成一个或多个功能点或者用户故事时，由负责测试版本发布的人员先从dev分支合并到test分支，然后发布到测试环境。</code></pre><p>hotfix分支</p><pre><code> hotfix是热修复分支，用于修复线上bug。开发人员提交的修复代码提交MR时选择该分支。当问题确定被修复后，项目负责人再将hotfix分支的代码同步到dev和master分支。</code></pre><p>release分支</p><pre><code> release分支是版本发布分支，用于发布线上版本时，由负责版本发布的人先从master分支合并到release分支，然后发布到正式环境。</code></pre><p>commit规范</p><pre><code> 每次的commit按照【标签】该次提交主要内容进行提交 标签分为5类：  * feature （新功能）  * bug （bug修复）  * refactor （重构）  * other (其他)  * tag（版本tag）</code></pre><p>fork项目规范</p><pre><code> * master 分支不要作为开发分支，master分支可以对应主项目的master * 从master分支切一个新的dev分支作为开发分支，dev分支可以跟主项目的dev分支对应 * 按照功能点，可以从dev分支切出功能分支，命名以feature-[功能]的形式，当一个功能点完成后，才合并到dev分支，这就避免了一个功能点还未完成，但另一个功能点需要上线的情况 * 每次的PR为一个功能点，避免review比较困难。</code></pre><p>分支结构</p><pre><code>综上，项目的分支结构大致如下： 主项目：   * master  * dev  * test  * hotfix  * release fork项目：  * master  * dev  * feature-xxx  * feature-yyy</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Gitlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gitlab的备份、恢复</title>
+      <link href="/p/5851b21/"/>
+      <url>/p/5851b21/</url>
+      
+        <content type="html"><![CDATA[<h4><span id="数据备份">数据备份 ：</span></h4><p><code>/etc/gitlab/gitlab.rb</code>配置文件，查看一个和备份相关的配置项：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab_rails[&#39;backup_path&#39;] &#x3D; &quot;&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;backups&quot;  #备份目录可以修改</span><br></pre></td></tr></table></figure><p>默认备份出文件的路径，可以通过修改该配置，并执行<code>gitlab-ctl restart </code>重启服务生效</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create   #备份</span><br></pre></td></tr></table></figure><p>加到<code>crontab</code>中定时执行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 2 * * * &#x2F;opt&#x2F;gitlab&#x2F;bin&#x2F;gitlab-rake gitlab:backup:create  &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1</span><br></pre></td></tr></table></figure><p>gitlab-ce自身集成的有自动删除备份配置。打开<code>/etc/gitlab/gitlab.rb</code>配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab_rails[&#39;backup_keep_time&#39;] &#x3D; 604800</span><br></pre></td></tr></table></figure><p>设置备份保留7天（7x3600x24=604800）秒为单位。</p><h4><span id="数据恢复">数据恢复：</span></h4><p>停掉数据连接服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl stop unicorn</span><br><span class="line">gitlab-ctl stop sidekiq</span><br></pre></td></tr></table></figure><p>恢复</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:restore BACKUP&#x3D;备份编号</span><br></pre></td></tr></table></figure><blockquote><p>注：1、到底那个是备份编号？  — _gitlab之前的部分都是；<br>      2、644默认权限。</p></blockquote><p>查看恢复状态：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-rake gitlab:check SANITIZE&#x3D;true</span><br></pre></td></tr></table></figure><p>重启服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl start unicorn</span><br><span class="line">gitlab-ctl start sidekiq</span><br><span class="line">或</span><br><span class="line">gitlab-ctl restart</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Gitlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gitlab升级</title>
+      <link href="/p/cc5f8722/"/>
+      <url>/p/cc5f8722/</url>
+      
+        <content type="html"><![CDATA[<h4><span id="备份gitlab">备份GitLab</span></h4><p>修改默认备份目录：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">默认备份目录是&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;backups，如果不想修改可以略过此步</span><br></pre></td></tr></table></figure><p>编辑文件<code>/etc/gitlab/gitlab.rb</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gitlab_rails[&#39;backup_path&#39;] &#x3D;  &quot;&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;backups&quot; #默认备份目录</span><br><span class="line">gitlab_rails[&#39;backup_path&#39;] &#x3D; &quot;&#x2F;home&#x2F;backups&quot; #修改后的备份目录</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl reconfigure   # 重载配置文件</span><br></pre></td></tr></table></figure><p>执行备份:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create   #备份完成以.tar包的放在备份目录</span><br></pre></td></tr></table></figure><p>升级暂停部分服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl stop unicorn</span><br><span class="line">gitlab-ctl stop sidekiq</span><br><span class="line">gitlab-ctl stop nginx</span><br></pre></td></tr></table></figure><p>下载需要的<a href="https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/">Gitlab</a>版本安装包：<br>安装命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ubuntu&#x2F;Debian系统：dpkg -i gitlab_x.x.x-omnibus.xxx.deb</span><br><span class="line">CentOS系统： rpm -Uvh gitlab-x.x.x_xxx.rpm    #U代表升级</span><br></pre></td></tr></table></figure><p>自动读取备份</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl reconfigure  #重建</span><br><span class="line">gitlab-ctl restart  #启动服务</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Gitlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx配置Jenkins域名访问</title>
+      <link href="/p/f700fae8/"/>
+      <url>/p/f700fae8/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line"> </span><br><span class="line">    listen 80;</span><br><span class="line">    server_name jenkins.domain.tld;</span><br><span class="line">     </span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line"> </span><br><span class="line">      proxy_set_header        Host $host:$server_port;</span><br><span class="line">      proxy_set_header        X-Real-IP $remote_addr;</span><br><span class="line">      proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">      proxy_set_header        X-Forwarded-Proto $scheme;</span><br><span class="line"> </span><br><span class="line">      # Fix the &quot;It appears that your reverse proxy set up is broken&quot; error.</span><br><span class="line">      proxy_pass          http:&#x2F;&#x2F;127.0.0.1:8080;</span><br><span class="line">      proxy_read_timeout  90;</span><br><span class="line"> </span><br><span class="line">      #proxy_redirect      http:&#x2F;&#x2F;127.0.0.1:8080 https:&#x2F;&#x2F;jenkins.domain.tld;</span><br><span class="line">  </span><br><span class="line">      # Required for new HTTP-based CLI</span><br><span class="line">      proxy_http_version 1.1;</span><br><span class="line">      proxy_request_buffering off;</span><br><span class="line">      # workaround for https:&#x2F;&#x2F;issues.jenkins-ci.org&#x2F;browse&#x2F;JENKINS-45651</span><br><span class="line">      add_header &#39;X-SSH-Endpoint&#39; &#39;jenkins.domain.tld:50022&#39; always;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">upstream jenkins &#123;</span><br><span class="line">  server 127.0.0.1:8080 fail_timeout&#x3D;0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">server &#123;</span><br><span class="line">  listen 80;</span><br><span class="line">  server_name jenkins.domain.tld;</span><br><span class="line">  #return 301 https:&#x2F;&#x2F;$host$request_uri;</span><br><span class="line">rewrite ^(.*)$ https:&#x2F;&#x2F;$host$1 permanent;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl;</span><br><span class="line">  server_name jenkins.domain.tld;</span><br><span class="line"> </span><br><span class="line">  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;server.crt;</span><br><span class="line">  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;server.key;</span><br><span class="line"> </span><br><span class="line">  location &#x2F; &#123;</span><br><span class="line">    proxy_set_header        Host $host:$server_port;</span><br><span class="line">    proxy_set_header        X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_set_header        X-Forwarded-Proto $scheme;</span><br><span class="line">    proxy_redirect http:&#x2F;&#x2F; https:&#x2F;&#x2F;;</span><br><span class="line">    proxy_pass              http:&#x2F;&#x2F;jenkins;</span><br><span class="line">    # Required for new HTTP-based CLI</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    proxy_request_buffering off;</span><br><span class="line">    proxy_buffering off; # Required for HTTP-based CLI to work over SSL</span><br><span class="line">    # workaround for https:&#x2F;&#x2F;issues.jenkins-ci.org&#x2F;browse&#x2F;JENKINS-45651</span><br><span class="line">    add_header &#39;X-SSH-Endpoint&#39; &#39;jenkins.domain.tld:50022&#39; always;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+          <category> Jenkins </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jenkins </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>GitLab轻松创建一个Merge Request</title>
       <link href="/p/37369/"/>
       <url>/p/37369/</url>
@@ -906,12 +1066,12 @@
       <link href="/p/36a8252d/"/>
       <url>/p/36a8252d/</url>
       
-        <content type="html"><![CDATA[<div class="note warning"><p>1、刷机有风险，如果变砖请自行解决；<br>2、固件版本来源于<a href="http://koolshare.cn;/">http://koolshare.cn；</a><br>3、教程网页打开之后不要随意刷新（毕竟刷机过程中大部分时间处于断网状态）；<br>4、网件路由器设置相比TP-Link、D-Link（其它的我没用过，不会。）等复杂一些；<br>5、刷梅林固件过程也比较繁琐，一定要按顺序操作；<br>6、刷完梅林固件之后需要离线安装上网工具才能上网；<br>7、梅林过渡固件版本（R7000_380.70_0-X7.9.1-koolshare.chk）；<br>8、梅林固件版本（R7000_380.70_0-X7.9.1-koolshare.trx）；<br>9、上网工具版本（shadowsocks_4.1.7）；<br>10、(OFW)固件版本（Merling-R7000-back-to-ofw.trx）；<br>11、官方固件版本（R7000-V1.0.9.42_10.2.44.chk）；<br>12、其它固件版本请自行解决；<br>13、以上固件及工具链接在教程中附上；</p></div><h3><span id="准备工作">准备工作：</span></h3><p>1、准备过渡固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.chk">R7000_380.70_0-X7.9.1-koolshare.chk</a>）；<br>2、准备新版固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.trx">R7000_380.70_0-X7.9.1-koolshare.trx</a>，如果过渡固件跟新版固件是相同版本，这一条可以忽略）；<br>3、准备工具离线包（<a href="https://github.com/hq450/fancyss_history_package/raw/master/fancyss_arm/shadowsocks_4.1.7.tar.gz">shadowsocks_4.1.7.tar.gz</a>）；<br>4、用于搭建上网的国外vps一台，博主使用的是（<a href="https://bwh88.net/">搬瓦工</a>）的vps，</p><h3><span id="刷机过程顺序概要">刷机过程顺序概要：</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网件原厂固件→还原出厂设置→刷梅林过渡固件→还原出厂设置→刷梅林新版→还原出厂设置→格式化JFFS分区→上网</span><br></pre></td></tr></table></figure><h4><span id="第一步打开网页httpwwwrouterloginnet-进入网件后台">第一步：打开网页 进入网件后台</span></h4><p>步骤：高级→管理→备份设置→擦除（恢复出厂设置)</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1.png"><h4><span id="第二步刷入过渡固件后缀是chk-r7000_38070_0-x791-koolsharechk">第二步：刷入过渡固件，后缀是.chk。（R7000_380.70_0-X7.9.1-koolshare.chk）</span></h4><p>步骤：高级→管理→路由器升级→浏览→上传</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2.png"><p>无视警告信息，点“是”。这里根据官方固件版本不同，提示会有区别，总之，点“是”就行了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R3.png"><p>等待重启</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R4.png"><h4><span id="第三步进入梅林后台等待浏览器会自动打开后台设置界面">第三步：进入梅林后台，等待浏览器会自动打开后台设置界面。</span></h4><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R5.png"><p>恭喜你，到这里已经成功了一大半了。按照提示修改密码。<br>然后点击下一步。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R6.png"><p>因为我这里是光纤入户（路由连路由），不存在账号密码什么的，所以界面直接跳过“网络设置”到“路由器设置”了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R7.png"><p>随意设置无线网络的名称和密码，因为等会还要一次还原出厂设置的，点击“应用本页面设置”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R8.png"><p>可以看到路由器WAN IP和无线设置，点击“完成”，就可以看到梅林后台设置主页面了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R9.png"><h4><span id="第四步准备梅林固件第一次出厂还原">第四步：准备梅林固件第一次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R10.png"><p>等待重启。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11.png"><p>重启后需要刷入正式版固件。固件版本后缀是.trx。（这里固件版本是R7000_380.70_0-X7.9.1-koolshare.trx）</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11-1.png"><h4><span id="第五步刷入梅林新版固件">第五步：刷入梅林新版固件</span></h4><p>步骤：高级设置→系统管理→固件升级→选择固件版本→上传。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1-2.png"><p>等待固件升级，之后会重启。<br>进入梅林后台，等待浏览器会自动打开后台设置界面。账号admin，密码是升级之前设置的密码。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R13.png"><h4><span id="第六步梅林固件第二次出厂还原">第六步：梅林固件第二次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复。<br>等待恢复结束之后登录梅林固件后台，准备JFFS分区格式化。<br>步骤：高级设置→系统管理→系统设置内勾选：Format JFFS partition at next boot（下次重启格式化jffs分区） 和 Enable JFFS custom scripts and configs（开启jffs自定义脚本），（分别点是）点击下方“应用本页面设置”，成功应用后重启路由器；</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R14.png"><h4><span id="第七步更新软件中心准备装插件">第七步：更新软件中心，准备装插件。</span></h4><p>重启完成后重新登入后台，打开路由器设置界面，进入“软件中心”，首先点击“更新”按钮，将更新软件中心到最新版本，然后即可安装并使用插件。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R15.png"><h4><span id="第八步安装离线包">第八步：安装离线包。</span></h4><p>进入软件中心→离线安装，选择上网工具文件（shadowsocks_4.1.7.tar.gz），上传并安装。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R16.png"><p>安装完毕之后返回到软件中心，可以看到上网图标了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R17.png"><p>点开“上网”</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R18.png"><p>按需添加节点类型。我这里是×××兼容SS，所以我直接添加SS节点。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R19.png"><p>点击“更新管理”中间那个“立即更新”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R20.png"><p>上网规则更新中…</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2-1.png"><p>开启“上网开关”，启用gfwlist模式。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R22.png"><p>运行状态：“国内链接”及“国外链接”都显示正确。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R23.png"><p>就可以连接Wi-Fi上网了。</p>]]></content>
+        <content type="html"><![CDATA[<div class="note warning"><p>1、刷机有风险，如果变砖请自行解决；<br>2、固件版本来源于<a href="http://koolshare.cn;/">http://koolshare.cn；</a><br>3、教程网页打开之后不要随意刷新（毕竟刷机过程中大部分时间处于断网状态）；<br>4、网件路由器设置相比TP-Link、D-Link（其它的我没用过，不会。）等复杂一些；<br>5、刷梅林固件过程也比较繁琐，一定要按顺序操作；<br>6、刷完梅林固件之后需要离线安装上网工具才能上网；<br>7、梅林过渡固件版本（R7000_380.70_0-X7.9.1-koolshare.chk）；<br>8、梅林固件版本（R7000_380.70_0-X7.9.1-koolshare.trx）；<br>9、上网工具版本（shadowsocks_4.1.7）；<br>10、(OFW)固件版本（Merling-R7000-back-to-ofw.trx）；<br>11、官方固件版本（R7000-V1.0.9.42_10.2.44.chk）；<br>12、其它固件版本请自行解决；<br>13、以上固件及工具链接在教程中附上；</p></div><h4><span id="准备工作">准备工作：</span></h4><p>1、准备过渡固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.chk">R7000_380.70_0-X7.9.1-koolshare.chk</a>）；<br>2、准备新版固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.trx">R7000_380.70_0-X7.9.1-koolshare.trx</a>，如果过渡固件跟新版固件是相同版本，这一条可以忽略）；<br>3、准备工具离线包（<a href="https://github.com/hq450/fancyss_history_package/raw/master/fancyss_arm/shadowsocks_4.1.7.tar.gz">shadowsocks_4.1.7.tar.gz</a>）；<br>4、用于搭建上网的国外vps一台，博主使用的是（<a href="https://bwh88.net/">搬瓦工</a>）的vps，</p><h4><span id="刷机过程顺序概要">刷机过程顺序概要：</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网件原厂固件→还原出厂设置→刷梅林过渡固件→还原出厂设置→刷梅林新版→还原出厂设置→格式化JFFS分区→上网</span><br></pre></td></tr></table></figure><h4><span id="第一步打开网页httpwwwrouterloginnet-进入网件后台">第一步：打开网页 进入网件后台</span></h4><p>步骤：高级→管理→备份设置→擦除（恢复出厂设置)</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1.png"><h4><span id="第二步刷入过渡固件后缀是chk-r7000_38070_0-x791-koolsharechk">第二步：刷入过渡固件，后缀是.chk。（R7000_380.70_0-X7.9.1-koolshare.chk）</span></h4><p>步骤：高级→管理→路由器升级→浏览→上传</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2.png"><p>无视警告信息，点“是”。这里根据官方固件版本不同，提示会有区别，总之，点“是”就行了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R3.png"><p>等待重启</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R4.png"><h4><span id="第三步进入梅林后台等待浏览器会自动打开后台设置界面">第三步：进入梅林后台，等待浏览器会自动打开后台设置界面。</span></h4><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R5.png"><p>恭喜你，到这里已经成功了一大半了。按照提示修改密码。<br>然后点击下一步。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R6.png"><p>因为我这里是光纤入户（路由连路由），不存在账号密码什么的，所以界面直接跳过“网络设置”到“路由器设置”了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R7.png"><p>随意设置无线网络的名称和密码，因为等会还要一次还原出厂设置的，点击“应用本页面设置”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R8.png"><p>可以看到路由器WAN IP和无线设置，点击“完成”，就可以看到梅林后台设置主页面了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R9.png"><h4><span id="第四步准备梅林固件第一次出厂还原">第四步：准备梅林固件第一次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R10.png"><p>等待重启。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11.png"><p>重启后需要刷入正式版固件。固件版本后缀是.trx。（这里固件版本是R7000_380.70_0-X7.9.1-koolshare.trx）</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11-1.png"><h4><span id="第五步刷入梅林新版固件">第五步：刷入梅林新版固件</span></h4><p>步骤：高级设置→系统管理→固件升级→选择固件版本→上传。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1-2.png"><p>等待固件升级，之后会重启。<br>进入梅林后台，等待浏览器会自动打开后台设置界面。账号admin，密码是升级之前设置的密码。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R13.png"><h4><span id="第六步梅林固件第二次出厂还原">第六步：梅林固件第二次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复。<br>等待恢复结束之后登录梅林固件后台，准备JFFS分区格式化。<br>步骤：高级设置→系统管理→系统设置内勾选：Format JFFS partition at next boot（下次重启格式化jffs分区） 和 Enable JFFS custom scripts and configs（开启jffs自定义脚本），（分别点是）点击下方“应用本页面设置”，成功应用后重启路由器；</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R14.png"><h4><span id="第七步更新软件中心准备装插件">第七步：更新软件中心，准备装插件。</span></h4><p>重启完成后重新登入后台，打开路由器设置界面，进入“软件中心”，首先点击“更新”按钮，将更新软件中心到最新版本，然后即可安装并使用插件。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R15.png"><h4><span id="第八步安装离线包">第八步：安装离线包。</span></h4><p>进入软件中心→离线安装，选择上网工具文件（shadowsocks_4.1.7.tar.gz），上传并安装。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R16.png"><p>安装完毕之后返回到软件中心，可以看到上网图标了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R17.png"><p>点开“上网”</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R18.png"><p>按需添加节点类型。我这里是×××兼容SS，所以我直接添加SS节点。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R19.png"><p>点击“更新管理”中间那个“立即更新”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R20.png"><p>上网规则更新中…</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2-1.png"><p>开启“上网开关”，启用gfwlist模式。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R22.png"><p>运行状态：“国内链接”及“国外链接”都显示正确。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R23.png"><p>就可以连接Wi-Fi上网了。</p>]]></content>
       
       
       <categories>
           
-          <category> 奇怪的知识点 -  奇怪的知识点 </category>
+          <category> 奇怪的知识点 </category>
           
       </categories>
       
@@ -921,6 +1081,31 @@
             <tag> R7000 </tag>
             
             <tag> Netgear网件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gitlab 存储仓库目录设置及数据迁移</title>
+      <link href="/p/2c54d1ec/"/>
+      <url>/p/2c54d1ec/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>注：一开始没有考虑到把gitlab划分好存储目录，占用系统磁盘，由于gitlab是默认安装的，随着公司代码越来越多，导致gitlab数据目录空间不足</p></blockquote><p>磁盘空间：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@gitlab ~]# df -hT</span><br><span class="line">Filesystem     Type      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1      ext4       40G   25G   13G  67% &#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure><blockquote><p>注：因为使用的阿里云服务，所以考虑另挂载一块磁盘专用于gitlab存储。<br>  ······ 云盘挂载，磁盘分区就直接略过。</p></blockquote><h3><span id="设置存储仓库数据">设置存储仓库数据</span></h3><p>默认情况下omnibus-gitlab 将仓库数据存储在 <code>/var/opt/gitlab/git-data</code>目录下，仓库存放在子目录 <code>repositories</code>里面。 以可以通过修改<code>/etc/gitlab/gitlab.rb</code> 的这一行来自定义 git-data 的父目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@gitlab ~]#  vim &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb </span><br><span class="line"># 把注释取消然后指定新的仓库存储位置</span><br><span class="line">git_data_dirs(&#123; &quot;default&quot; &#x3D;&gt; &#123; &quot;path&quot; &#x3D;&gt; &quot;&#x2F;home&#x2F;gitlab-data&quot; &#125; &#125;)</span><br></pre></td></tr></table></figure><blockquote><p>注： /home/gitlab-data 是我新挂载的目录，<br>注意 ：目标路径和其子路径必须不能为软链接。</p></blockquote><h3><span id="使设置生效">使设置生效</span></h3><p>1.1 ，在没有数据的情况下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@gitlab ~]#  gitlab-ctl stop</span><br><span class="line">[root@gitlab ~]# gitlab-ctl reconfigure &#x2F;&#x2F;使修改生效</span><br></pre></td></tr></table></figure><p>1.2，如果 <code>/var/opt/gitlab/git-data</code> 目录已经存在Git仓库数据， 你可以用下面的命令把数据迁移到新的位置:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 准备迁移之前要停止GitLab服务，防止用户写入数据。</span><br><span class="line">[root@gitlab ~]# gitlab-ctl stop</span><br><span class="line"></span><br><span class="line"># 注意 &#39;repositories&#39;后面不带斜杠，而</span><br><span class="line"># &#39;&#x2F;home&#x2F;gitlab-data&#39;后面是有斜杠的。</span><br><span class="line">[root@gitlab ~]# rsync -av &#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;git-data&#x2F;repositories &#x2F;home&#x2F;gitlab-data&#x2F;</span><br><span class="line"></span><br><span class="line"># 如果需要修复权限设置，</span><br><span class="line"># 可运行下面的命令进行修复。</span><br><span class="line">[root@gitlab ~]# gitlab-ctl reconfigure</span><br><span class="line"></span><br><span class="line"># 再次检查下  &#x2F;home&#x2F;gitlab-data 的目录. 正常情况应该有下面这个子目录:</span><br><span class="line"># repositories</span><br><span class="line"></span><br><span class="line">[root@gitlab ~]# ls  &#x2F;home&#x2F;gitlab-data&#x2F;</span><br><span class="line">repositories</span><br><span class="line"># 完工! 启动GitLab，验证下是否能</span><br><span class="line"># 通过web访问Git仓库。</span><br><span class="line">[root@gitlab ~]# gitlab-ctl start</span><br></pre></td></tr></table></figure><h3><span id="设置存储仓库数据的备用目录">设置存储仓库数据的备用目录</span></h3><blockquote><p>注意的是：自GitLab 8.10开始,可以通过在<code>/etc/gitlab/gitlab.rb</code>文件中添加下面的几行配置， 来增加多个 git 数据存储目录。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git_data_dirs(&#123;</span><br><span class="line">  &quot;default&quot; &#x3D;&gt; &#123; &quot;path&quot; &#x3D;&gt; &quot;&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;git-data&quot; &#125;,  &#x2F;&#x2F;默认存储目录</span><br><span class="line">  &quot;alternative&quot; &#x3D;&gt; &#123; &quot;path&quot; &#x3D;&gt; &quot; &#x2F;home&#x2F;gitlab-data&quot; &#125;     &#x2F;&#x2F;备用存储目录</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Gitlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gitlab </tag>
             
         </tags>
       

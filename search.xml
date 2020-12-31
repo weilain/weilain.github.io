@@ -900,6 +900,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>Netgear网件R7000路由器折腾上网</title>
+      <link href="/p/36a8252d/"/>
+      <url>/p/36a8252d/</url>
+      
+        <content type="html"><![CDATA[<div class="note warning"><p>1、刷机有风险，如果变砖请自行解决；<br>2、固件版本来源于<a href="http://koolshare.cn;/">http://koolshare.cn；</a><br>3、教程网页打开之后不要随意刷新（毕竟刷机过程中大部分时间处于断网状态）；<br>4、网件路由器设置相比TP-Link、D-Link（其它的我没用过，不会。）等复杂一些；<br>5、刷梅林固件过程也比较繁琐，一定要按顺序操作；<br>6、刷完梅林固件之后需要离线安装上网工具才能上网；<br>7、梅林过渡固件版本（R7000_380.70_0-X7.9.1-koolshare.chk）；<br>8、梅林固件版本（R7000_380.70_0-X7.9.1-koolshare.trx）；<br>9、上网工具版本（shadowsocks_4.1.7）；<br>10、(OFW)固件版本（Merling-R7000-back-to-ofw.trx）；<br>11、官方固件版本（R7000-V1.0.9.42_10.2.44.chk）；<br>12、其它固件版本请自行解决；<br>13、以上固件及工具链接在教程中附上；</p></div><h3><span id="准备工作">准备工作：</span></h3><p>1、准备过渡固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.chk">R7000_380.70_0-X7.9.1-koolshare.chk</a>）；<br>2、准备新版固件（<a href="http://firmware.koolshare.cn/Koolshare_Merlin_Legacy_380/Netgear/R7000/X7.9.1/R7000_380.70_0-X7.9.1-koolshare.trx">R7000_380.70_0-X7.9.1-koolshare.trx</a>，如果过渡固件跟新版固件是相同版本，这一条可以忽略）；<br>3、准备工具离线包（<a href="https://github.com/hq450/fancyss_history_package/raw/master/fancyss_arm/shadowsocks_4.1.7.tar.gz">shadowsocks_4.1.7.tar.gz</a>）；<br>4、用于搭建上网的国外vps一台，博主使用的是（<a href="https://bwh88.net/">搬瓦工</a>）的vps，</p><h3><span id="刷机过程顺序概要">刷机过程顺序概要：</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网件原厂固件→还原出厂设置→刷梅林过渡固件→还原出厂设置→刷梅林新版→还原出厂设置→格式化JFFS分区→上网</span><br></pre></td></tr></table></figure><h4><span id="第一步打开网页httpwwwrouterloginnet-进入网件后台">第一步：打开网页 进入网件后台</span></h4><p>步骤：高级→管理→备份设置→擦除（恢复出厂设置)</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1.png"><h4><span id="第二步刷入过渡固件后缀是chk-r7000_38070_0-x791-koolsharechk">第二步：刷入过渡固件，后缀是.chk。（R7000_380.70_0-X7.9.1-koolshare.chk）</span></h4><p>步骤：高级→管理→路由器升级→浏览→上传</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2.png"><p>无视警告信息，点“是”。这里根据官方固件版本不同，提示会有区别，总之，点“是”就行了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R3.png"><p>等待重启</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R4.png"><h4><span id="第三步进入梅林后台等待浏览器会自动打开后台设置界面">第三步：进入梅林后台，等待浏览器会自动打开后台设置界面。</span></h4><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R5.png"><p>恭喜你，到这里已经成功了一大半了。按照提示修改密码。<br>然后点击下一步。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R6.png"><p>因为我这里是光纤入户（路由连路由），不存在账号密码什么的，所以界面直接跳过“网络设置”到“路由器设置”了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R7.png"><p>随意设置无线网络的名称和密码，因为等会还要一次还原出厂设置的，点击“应用本页面设置”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R8.png"><p>可以看到路由器WAN IP和无线设置，点击“完成”，就可以看到梅林后台设置主页面了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R9.png"><h4><span id="第四步准备梅林固件第一次出厂还原">第四步：准备梅林固件第一次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R10.png"><p>等待重启。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11.png"><p>重启后需要刷入正式版固件。固件版本后缀是.trx。（这里固件版本是R7000_380.70_0-X7.9.1-koolshare.trx）</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R11-1.png"><h4><span id="第五步刷入梅林新版固件">第五步：刷入梅林新版固件</span></h4><p>步骤：高级设置→系统管理→固件升级→选择固件版本→上传。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R1-2.png"><p>等待固件升级，之后会重启。<br>进入梅林后台，等待浏览器会自动打开后台设置界面。账号admin，密码是升级之前设置的密码。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R13.png"><h4><span id="第六步梅林固件第二次出厂还原">第六步：梅林固件第二次出厂还原。</span></h4><p>步骤：高级设置→系统管理→恢复。<br>等待恢复结束之后登录梅林固件后台，准备JFFS分区格式化。<br>步骤：高级设置→系统管理→系统设置内勾选：Format JFFS partition at next boot（下次重启格式化jffs分区） 和 Enable JFFS custom scripts and configs（开启jffs自定义脚本），（分别点是）点击下方“应用本页面设置”，成功应用后重启路由器；</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R14.png"><h4><span id="第七步更新软件中心准备装插件">第七步：更新软件中心，准备装插件。</span></h4><p>重启完成后重新登入后台，打开路由器设置界面，进入“软件中心”，首先点击“更新”按钮，将更新软件中心到最新版本，然后即可安装并使用插件。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R15.png"><h4><span id="第八步安装离线包">第八步：安装离线包。</span></h4><p>进入软件中心→离线安装，选择上网工具文件（shadowsocks_4.1.7.tar.gz），上传并安装。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R16.png"><p>安装完毕之后返回到软件中心，可以看到上网图标了。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R17.png"><p>点开“上网”</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R18.png"><p>按需添加节点类型。我这里是×××兼容SS，所以我直接添加SS节点。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R19.png"><p>点击“更新管理”中间那个“立即更新”。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R20.png"><p>上网规则更新中…</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R2-1.png"><p>开启“上网开关”，启用gfwlist模式。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R22.png"><p>运行状态：“国内链接”及“国外链接”都显示正确。</p><img src= "/img/loading.gif" data-lazy-src="http://qiniu.webpages.show/images/R23.png"><p>就可以连接Wi-Fi上网了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 奇怪的知识点 -  奇怪的知识点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> R7000 </tag>
+            
+            <tag> Netgear网件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

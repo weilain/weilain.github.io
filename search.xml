@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>GitHub 图床的正确用法，通过 jsDelivr CDN 全球加速</title>
+      <link href="/p/7fa69db0/"/>
+      <url>/p/7fa69db0/</url>
+      
+        <content type="html"><![CDATA[<p>创建一个 GitHub 公共仓库作为图床仓库，上传提交图片到仓库中</p><p>在要使用 GitHub 图床图片的地方将链接换为 </p><div class="note primary no-icon"><p><a href="https://cdn.jsdelivr.net/gh/%7Buser%7D/%7Brepo%7D/%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84">https://cdn.jsdelivr.net/gh/{user}/{repo}/图片路径</a></p></div><p>举个栗子</p><p>比如 GitHub 官方仓库 <code>github/explore</code> 下话题 GitHub 图片原始路径是：</p><div class="note default"><p><a href="https://github.com/weilain/cdn-photo/blob/main/banner/bannar.jpg">https://github.com/weilain/cdn-photo/blob/main/banner/bannar.jpg</a></p></div><p>访问起来贼慢。</p><p>使用 jsDelivr 加速后的地址：</p><div class="note success"><p><a href="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/banner/bannar.jpg">https://cdn.jsdelivr.net/gh/weilain/cdn-photo/banner/bannar.jpg</a> </p></div><p>访问速度飞起，享受 <code>jsDelivr</code> 提供的全球 <code>CDN</code> 加速。</p><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/jsdelivr-sdy8y2.png" alt="github--lena"></p><p>hexo 内容 markdown 写法</p><p>文章内引用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![github--lena](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;weilain&#x2F;cdn-photo&#x2F;img&#x2F;3xuci.gif)</span><br></pre></td></tr></table></figure><p>封面引用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cover: &#39;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;weilain&#x2F;cdn-photo&#x2F;covers&#x2F;gitlab2.png&#39;</span><br></pre></td></tr></table></figure><p>jsDelivr 还支持加载指定文件版本和自动压缩 JS，具体用法可以参考<a href="https://www.jsdelivr.com/features?utm_source=ld246.com#gh">官方教程</a>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jsDelivr </tag>
+            
+            <tag> CDN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>google-authenticator</title>
       <link href="/p/6b915d25/"/>
       <url>/p/6b915d25/</url>

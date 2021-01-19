@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>林中的小屋</title>
+  <title>hermoso</title>
   
   
-  <link href="https://www.webpages.show/atom.xml" rel="self"/>
+  <link href="https://imszz.com/atom.xml" rel="self"/>
   
-  <link href="https://www.webpages.show/"/>
+  <link href="https://imszz.com/"/>
   <updated>2021-01-14T02:00:00.000Z</updated>
-  <id>https://www.webpages.show/</id>
+  <id>https://imszz.com/</id>
   
   <author>
     <name>Hermoso</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>解决github图片不显示问题</title>
-    <link href="https://www.webpages.show/p/32e6fc54/"/>
-    <id>https://www.webpages.show/p/32e6fc54/</id>
+    <link href="https://imszz.com/p/32e6fc54/"/>
+    <id>https://imszz.com/p/32e6fc54/</id>
     <published>2021-01-13T16:00:00.000Z</published>
     <updated>2021-01-14T02:00:00.000Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="Github" scheme="https://www.webpages.show/categories/Github/"/>
+    <category term="Github" scheme="https://imszz.com/categories/Github/"/>
     
     
-    <category term="Github" scheme="https://www.webpages.show/tags/Github/"/>
+    <category term="Github" scheme="https://imszz.com/tags/Github/"/>
     
   </entry>
   
   <entry>
     <title>GitHub 图床的正确用法，通过 jsDelivr CDN 全球加速</title>
-    <link href="https://www.webpages.show/p/7fa69db0/"/>
-    <id>https://www.webpages.show/p/7fa69db0/</id>
+    <link href="https://imszz.com/p/7fa69db0/"/>
+    <id>https://imszz.com/p/7fa69db0/</id>
     <published>2021-01-13T12:46:25.000Z</published>
     <updated>2021-01-13T16:00:00.000Z</updated>
     
@@ -60,19 +60,19 @@
     
     
     
-    <category term="Github" scheme="https://www.webpages.show/categories/Github/"/>
+    <category term="Github" scheme="https://imszz.com/categories/Github/"/>
     
     
-    <category term="jsDelivr" scheme="https://www.webpages.show/tags/jsDelivr/"/>
+    <category term="jsDelivr" scheme="https://imszz.com/tags/jsDelivr/"/>
     
-    <category term="CDN" scheme="https://www.webpages.show/tags/CDN/"/>
+    <category term="CDN" scheme="https://imszz.com/tags/CDN/"/>
     
   </entry>
   
   <entry>
     <title>google-authenticator</title>
-    <link href="https://www.webpages.show/p/6b915d25/"/>
-    <id>https://www.webpages.show/p/6b915d25/</id>
+    <link href="https://imszz.com/p/6b915d25/"/>
+    <id>https://imszz.com/p/6b915d25/</id>
     <published>2020-11-28T12:46:25.000Z</published>
     <updated>2020-11-29T12:46:25.000Z</updated>
     
@@ -87,19 +87,19 @@
     
     
     
-    <category term="奇怪的知识点" scheme="https://www.webpages.show/categories/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <category term="奇怪的知识点" scheme="https://imszz.com/categories/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-    <category term="google" scheme="https://www.webpages.show/tags/google/"/>
+    <category term="google" scheme="https://imszz.com/tags/google/"/>
     
-    <category term="authenticator" scheme="https://www.webpages.show/tags/authenticator/"/>
+    <category term="authenticator" scheme="https://imszz.com/tags/authenticator/"/>
     
   </entry>
   
   <entry>
     <title>awk和sed截取nginx和tomcat时间段日志</title>
-    <link href="https://www.webpages.show/p/31397f6f/"/>
-    <id>https://www.webpages.show/p/31397f6f/</id>
+    <link href="https://imszz.com/p/31397f6f/"/>
+    <id>https://imszz.com/p/31397f6f/</id>
     <published>2020-11-25T12:46:25.000Z</published>
     <updated>2020-11-26T12:46:25.000Z</updated>
     
@@ -114,21 +114,21 @@
     
     
     
-    <category term="Nginx" scheme="https://www.webpages.show/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://imszz.com/categories/Nginx/"/>
     
-    <category term="linux" scheme="https://www.webpages.show/categories/Nginx/linux/"/>
+    <category term="linux" scheme="https://imszz.com/categories/Nginx/linux/"/>
     
     
-    <category term="awk" scheme="https://www.webpages.show/tags/awk/"/>
+    <category term="awk" scheme="https://imszz.com/tags/awk/"/>
     
-    <category term="sed" scheme="https://www.webpages.show/tags/sed/"/>
+    <category term="sed" scheme="https://imszz.com/tags/sed/"/>
     
   </entry>
   
   <entry>
     <title>如何注册谷歌账号，遇到“此电话号码无法用于进行验证”怎么办</title>
-    <link href="https://www.webpages.show/p/4b638dc2/"/>
-    <id>https://www.webpages.show/p/4b638dc2/</id>
+    <link href="https://imszz.com/p/4b638dc2/"/>
+    <id>https://imszz.com/p/4b638dc2/</id>
     <published>2020-10-25T13:25:23.000Z</published>
     <updated>2020-10-29T13:25:23.000Z</updated>
     
@@ -142,17 +142,17 @@
     
     
     
-    <category term="奇怪的知识点" scheme="https://www.webpages.show/categories/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <category term="奇怪的知识点" scheme="https://imszz.com/categories/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-    <category term="google" scheme="https://www.webpages.show/tags/google/"/>
+    <category term="google" scheme="https://imszz.com/tags/google/"/>
     
   </entry>
   
   <entry>
     <title>selenium基础-打开百度进行搜索</title>
-    <link href="https://www.webpages.show/p/1f7c743b/"/>
-    <id>https://www.webpages.show/p/1f7c743b/</id>
+    <link href="https://imszz.com/p/1f7c743b/"/>
+    <id>https://imszz.com/p/1f7c743b/</id>
     <published>2020-10-14T13:25:23.000Z</published>
     <updated>2020-10-15T05:25:23.000Z</updated>
     
@@ -175,17 +175,17 @@
     
     
     
-    <category term="python" scheme="https://www.webpages.show/categories/python/"/>
+    <category term="python" scheme="https://imszz.com/categories/python/"/>
     
     
-    <category term="python" scheme="https://www.webpages.show/tags/python/"/>
+    <category term="python" scheme="https://imszz.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>开往下一个世界 — 友链接力</title>
-    <link href="https://www.webpages.show/p/ba1e0fab/"/>
-    <id>https://www.webpages.show/p/ba1e0fab/</id>
+    <link href="https://imszz.com/p/ba1e0fab/"/>
+    <id>https://imszz.com/p/ba1e0fab/</id>
     <published>2020-09-01T16:46:25.000Z</published>
     <updated>2020-09-06T13:26:23.000Z</updated>
     
@@ -202,17 +202,17 @@
     
     
     
-    <category term="link" scheme="https://www.webpages.show/categories/link/"/>
+    <category term="link" scheme="https://imszz.com/categories/link/"/>
     
     
-    <category term="link" scheme="https://www.webpages.show/tags/link/"/>
+    <category term="link" scheme="https://imszz.com/tags/link/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 升级教程</title>
-    <link href="https://www.webpages.show/p/cb1e6c4f/"/>
-    <id>https://www.webpages.show/p/cb1e6c4f/</id>
+    <link href="https://imszz.com/p/cb1e6c4f/"/>
+    <id>https://imszz.com/p/cb1e6c4f/</id>
     <published>2020-09-01T13:25:23.000Z</published>
     <updated>2020-10-29T12:46:25.000Z</updated>
     
@@ -226,17 +226,17 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>修改脚底自定义标签</title>
-    <link href="https://www.webpages.show/p/8cad5570/"/>
-    <id>https://www.webpages.show/p/8cad5570/</id>
+    <link href="https://imszz.com/p/8cad5570/"/>
+    <id>https://imszz.com/p/8cad5570/</id>
     <published>2020-08-31T12:46:25.000Z</published>
     <updated>2020-09-01T13:26:23.000Z</updated>
     
@@ -253,17 +253,17 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Kubernetes 调度和驱逐</title>
-    <link href="https://www.webpages.show/p/761d0096/"/>
-    <id>https://www.webpages.show/p/761d0096/</id>
+    <link href="https://imszz.com/p/761d0096/"/>
+    <id>https://imszz.com/p/761d0096/</id>
     <published>2020-08-25T12:46:25.000Z</published>
     <updated>2020-09-07T12:46:25.000Z</updated>
     
@@ -279,27 +279,27 @@
     
     
     
-    <category term="Kubernetes" scheme="https://www.webpages.show/categories/Kubernetes/"/>
+    <category term="Kubernetes" scheme="https://imszz.com/categories/Kubernetes/"/>
     
     
-    <category term="Kubernetes" scheme="https://www.webpages.show/tags/Kubernetes/"/>
+    <category term="Kubernetes" scheme="https://imszz.com/tags/Kubernetes/"/>
     
-    <category term="nodeSelector" scheme="https://www.webpages.show/tags/nodeSelector/"/>
+    <category term="nodeSelector" scheme="https://imszz.com/tags/nodeSelector/"/>
     
-    <category term="nodeAffinity" scheme="https://www.webpages.show/tags/nodeAffinity/"/>
+    <category term="nodeAffinity" scheme="https://imszz.com/tags/nodeAffinity/"/>
     
-    <category term="podAntiAffinity" scheme="https://www.webpages.show/tags/podAntiAffinity/"/>
+    <category term="podAntiAffinity" scheme="https://imszz.com/tags/podAntiAffinity/"/>
     
-    <category term="podAffinity" scheme="https://www.webpages.show/tags/podAffinity/"/>
+    <category term="podAffinity" scheme="https://imszz.com/tags/podAffinity/"/>
     
-    <category term="nodeName" scheme="https://www.webpages.show/tags/nodeName/"/>
+    <category term="nodeName" scheme="https://imszz.com/tags/nodeName/"/>
     
   </entry>
   
   <entry>
     <title>查询DNS的记录 查看域名解析是否正常</title>
-    <link href="https://www.webpages.show/p/3d65889c/"/>
-    <id>https://www.webpages.show/p/3d65889c/</id>
+    <link href="https://imszz.com/p/3d65889c/"/>
+    <id>https://imszz.com/p/3d65889c/</id>
     <published>2020-08-23T13:25:23.000Z</published>
     <updated>2020-09-07T05:25:23.000Z</updated>
     
@@ -315,17 +315,17 @@
     
     
     
-    <category term="tools" scheme="https://www.webpages.show/categories/tools/"/>
+    <category term="tools" scheme="https://imszz.com/categories/tools/"/>
     
     
-    <category term="nslookup" scheme="https://www.webpages.show/tags/nslookup/"/>
+    <category term="nslookup" scheme="https://imszz.com/tags/nslookup/"/>
     
   </entry>
   
   <entry>
     <title>软著统计代码行数</title>
-    <link href="https://www.webpages.show/p/c2e90d73/"/>
-    <id>https://www.webpages.show/p/c2e90d73/</id>
+    <link href="https://imszz.com/p/c2e90d73/"/>
+    <id>https://imszz.com/p/c2e90d73/</id>
     <published>2020-08-16T16:46:25.000Z</published>
     <updated>2020-08-17T13:25:23.000Z</updated>
     
@@ -339,21 +339,21 @@
     
     
     
-    <category term="script" scheme="https://www.webpages.show/categories/script/"/>
+    <category term="script" scheme="https://imszz.com/categories/script/"/>
     
     
-    <category term="shell" scheme="https://www.webpages.show/tags/shell/"/>
+    <category term="shell" scheme="https://imszz.com/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>HTTrack - 克隆任意网站</title>
-    <link href="https://www.webpages.show/p/8a11f10a/"/>
-    <id>https://www.webpages.show/p/8a11f10a/</id>
+    <link href="https://imszz.com/p/8a11f10a/"/>
+    <id>https://imszz.com/p/8a11f10a/</id>
     <published>2020-08-15T12:46:25.000Z</published>
     <updated>2020-08-16T12:46:25.000Z</updated>
     
-    <content type="html"><![CDATA[<p>HTTrack可以克隆指定网站－把整个网站下载到本地。</p><p>可以用在离线浏览上，也可以用来收集信息（甚至有网站使用隐藏的密码文件）。</p><p>一些仿真度极高的伪网站（为了骗取用户密码），也是使用类似工具做的。<br>Linux默认安装了HTTrack. 如没有可以自行下载安装。<br>Liunx 安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum provides httrack</span><br><span class="line">yum install httrack</span><br></pre></td></tr></table></figure><p>MacOS zsh:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install httrack</span><br></pre></td></tr></table></figure><p>HTTrack帮助：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack --help</span><br></pre></td></tr></table></figure><p>使用示例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack https:&#x2F;&#x2F;www.webpages.show&#x2F;navi -O &#x2F;tmp</span><br></pre></td></tr></table></figure><p>上面命令克隆了网站路径下所有内容，不带路径克隆所有内容</p>]]></content>
+    <content type="html"><![CDATA[<p>HTTrack可以克隆指定网站－把整个网站下载到本地。</p><p>可以用在离线浏览上，也可以用来收集信息（甚至有网站使用隐藏的密码文件）。</p><p>一些仿真度极高的伪网站（为了骗取用户密码），也是使用类似工具做的。<br>Linux默认安装了HTTrack. 如没有可以自行下载安装。<br>Liunx 安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum provides httrack</span><br><span class="line">yum install httrack</span><br></pre></td></tr></table></figure><p>MacOS zsh:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install httrack</span><br></pre></td></tr></table></figure><p>HTTrack帮助：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack --help</span><br></pre></td></tr></table></figure><p>使用示例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack https:&#x2F;&#x2F;imszz.com&#x2F;navi -O &#x2F;tmp</span><br></pre></td></tr></table></figure><p>上面命令克隆了网站路径下所有内容，不带路径克隆所有内容</p>]]></content>
     
     
       
@@ -365,44 +365,44 @@
     
     
     
-    <category term="tools" scheme="https://www.webpages.show/categories/tools/"/>
+    <category term="tools" scheme="https://imszz.com/categories/tools/"/>
     
     
-    <category term="HTTrack" scheme="https://www.webpages.show/tags/HTTrack/"/>
+    <category term="HTTrack" scheme="https://imszz.com/tags/HTTrack/"/>
     
   </entry>
   
   <entry>
     <title>hexo修剪地址栏</title>
-    <link href="https://www.webpages.show/p/292fbf59/"/>
-    <id>https://www.webpages.show/p/292fbf59/</id>
+    <link href="https://imszz.com/p/292fbf59/"/>
+    <id>https://imszz.com/p/292fbf59/</id>
     <published>2020-08-15T12:46:25.000Z</published>
     <updated>2020-08-16T12:46:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h3><span id="前言">前言</span></h3><p>hexo文章链接默认的生成规则是：<code>:year/:month/:day/:title</code>是按照年、月、日、标题来生成的</p><p>比如默认生成：<code>https://www.webpages.show/2020/07/21/hello-world/</code></p><p>非常不利于阅读,中文也可能出现乱码,也影响收录。</p><p>一种解决方案是：使用<code>hexo-permalink-pinyin</code>插件，将中文转英文，好像是有缺陷</p><p>另一种方案: 使用 <code>hexo-abbrlink</code> 插件, 生成短链，且链接不会因为更新次数过多出现改动</p><h3><span id="安装插件">安装插件</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><h3><span id="配置">配置</span></h3><p>修改根目录站点配置文件<code>config.yml</code>，改为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;  # 注释或者删除</span><br><span class="line">permalink: p&#x2F;:abbrlink&#x2F;  # 此处可以自己设置，也可以直接使用 :&#x2F;abbrlink ，建议前面带目录，不然太乱</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32  #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex  #进制： dec(default) and hex</span><br></pre></td></tr></table></figure><p>生成的链接将会是这样的(官方样例)：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;65535.html</span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;1690090958.html</span><br></pre></td></tr></table></figure><h3><span id="使用">使用</span></h3><p>在文章的 <code>Front-matter</code> 内会增加<code>abbrlink</code> 字段，值为生成的ID 。这个字段确保了在我们修改了<code>Front-matter</code> 内的博客标题<code>title</code>或创建日期<code>date</code>字段之后而不会改变链接地址。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">categories:</span><br><span class="line"> -</span><br><span class="line">tags:</span><br><span class="line">-</span><br><span class="line">abbrlink:  #留空就好，会自动生成，并不会因下次更新文章而变动</span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3><span id="前言">前言</span></h3><p>hexo文章链接默认的生成规则是：<code>:year/:month/:day/:title</code>是按照年、月、日、标题来生成的</p><p>比如默认生成：<code>https://imszz.com/2020/07/21/hello-world/</code></p><p>非常不利于阅读,中文也可能出现乱码,也影响收录。</p><p>一种解决方案是：使用<code>hexo-permalink-pinyin</code>插件，将中文转英文，好像是有缺陷</p><p>另一种方案: 使用 <code>hexo-abbrlink</code> 插件, 生成短链，且链接不会因为更新次数过多出现改动</p><h3><span id="安装插件">安装插件</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><h3><span id="配置">配置</span></h3><p>修改根目录站点配置文件<code>config.yml</code>，改为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;  # 注释或者删除</span><br><span class="line">permalink: p&#x2F;:abbrlink&#x2F;  # 此处可以自己设置，也可以直接使用 :&#x2F;abbrlink ，建议前面带目录，不然太乱</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32  #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex  #进制： dec(default) and hex</span><br></pre></td></tr></table></figure><p>生成的链接将会是这样的(官方样例)：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;65535.html</span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https:&#x2F;&#x2F;post.zz173.com&#x2F;p&#x2F;1690090958.html</span><br></pre></td></tr></table></figure><h3><span id="使用">使用</span></h3><p>在文章的 <code>Front-matter</code> 内会增加<code>abbrlink</code> 字段，值为生成的ID 。这个字段确保了在我们修改了<code>Front-matter</code> 内的博客标题<code>title</code>或创建日期<code>date</code>字段之后而不会改变链接地址。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">categories:</span><br><span class="line"> -</span><br><span class="line">tags:</span><br><span class="line">-</span><br><span class="line">abbrlink:  #留空就好，会自动生成，并不会因下次更新文章而变动</span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
     <summary type="html">&lt;h3&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;hexo文章链接默认的生成规则是：&lt;code&gt;:year/:month/:day/:title&lt;/code&gt;是按照年、月、日、标题来生成的&lt;/p&gt;
-&lt;p&gt;比如默认生成：&lt;code&gt;https://www.web</summary>
+&lt;p&gt;比如默认生成：&lt;code&gt;https://imszz.c</summary>
       
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
-    <category term="abbrlink" scheme="https://www.webpages.show/tags/abbrlink/"/>
+    <category term="abbrlink" scheme="https://imszz.com/tags/abbrlink/"/>
     
   </entry>
   
   <entry>
     <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
-    <link href="https://www.webpages.show/p/6ea05e36/"/>
-    <id>https://www.webpages.show/p/6ea05e36/</id>
+    <link href="https://imszz.com/p/6ea05e36/"/>
+    <id>https://imszz.com/p/6ea05e36/</id>
     <published>2020-08-13T12:46:25.000Z</published>
     <updated>2020-09-07T12:46:25.000Z</updated>
     
@@ -421,17 +421,17 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>linux查看磁盘使用情况命令</title>
-    <link href="https://www.webpages.show/p/59ce9c6a/"/>
-    <id>https://www.webpages.show/p/59ce9c6a/</id>
+    <link href="https://imszz.com/p/59ce9c6a/"/>
+    <id>https://imszz.com/p/59ce9c6a/</id>
     <published>2020-08-13T12:46:25.000Z</published>
     <updated>2020-09-25T12:46:25.000Z</updated>
     
@@ -445,21 +445,21 @@
     
     
     
-    <category term="linux" scheme="https://www.webpages.show/categories/linux/"/>
+    <category term="linux" scheme="https://imszz.com/categories/linux/"/>
     
     
-    <category term="linux" scheme="https://www.webpages.show/tags/linux/"/>
+    <category term="linux" scheme="https://imszz.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Valine添加自定义邮件提醒</title>
-    <link href="https://www.webpages.show/p/c4492888/"/>
-    <id>https://www.webpages.show/p/c4492888/</id>
+    <link href="https://imszz.com/p/c4492888/"/>
+    <id>https://imszz.com/p/c4492888/</id>
     <published>2020-08-12T13:25:23.000Z</published>
     <updated>2020-09-09T05:25:23.000Z</updated>
     
-    <content type="html"><![CDATA[<h2><span id="绑定域名"> 绑定域名</span></h2><p>请先<a href="https://tab.leancloud.cn/login.html#/signin">登录</a>或<a href="https://tab.leancloud.cn/login.html#/signin">注册</a> <code>LeanCloud</code>, 进入控制台</p><p>首先需要域名绑定,并且你的域名需要备案</p><p>点击<code>设置</code>-&gt;<code>域名绑定</code>-&gt;<code>云引擎</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud2.jpg" alt="github--lena"></p><h3><span id="部署"> 部署</span></h3><p>点击<code>云引擎</code>-&gt;<code>部署</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud3.jpg" alt="github--lena"></p><div class="note default"><p>填上代码 由 <a href="https://github.com/zhaojun1998/Valine-Admin">zhaojun1998</a> 提供</p></div><div class="note success"><p>小康魔改</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;sviptzk&#x2F;Valine-Admin-Server.git</span><br></pre></td></tr></table></figure><p>到代码库中并部署到master，最后在日志中看到部署成功就行了</p><h3><span id="环境配置项"> 环境配置项</span></h3><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud4.jpg" alt="github--lena"></p><p>参数介绍</p><ul><li>SITE_NAME : 网站名称</li><li>SITE_URL : 网站地址, 最后不要加 /</li><li>SMTP_USER : SMTP 服务用户名，一般为邮箱地址（例如QQ 账号.qq.com）</li><li>SMTP_PASS : SMTP 密码，一般为授权码，而不是邮箱的登陆密码，请自行查询对应邮件服务商的获取方式</li><li>SMTP_PORT ： 465  #端口</li><li>SMTP_SERVICE : 邮件服务提供商，支持QQ、163、126、Gmail</li><li>SMTP_HOST : 提供邮件服务的支持方（例如QQ，就是smtp.qq.com</li><li>SENDER_NAME : 寄件人名称</li><li>SENDER_EMAIL : 收件的邮箱地址</li><li>TEMPLATE_NAME : 收到的邮件主题，不填则是默认，建议选rainbow效果在最后查看</li><li>ADMIN_URL ：定时唤醒机器，填写绑定的云引擎域名</li></ul><h3><span id="设置邮件模板"> 设置邮件模板</span></h3><p>进入<code>设置</code>-&gt;<code>邮件模板</code>填入以下代码，其中改掉相应的用户名为你自己的点击<code>保存</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hi, &#123;&#123;username&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">你在 &#123;&#123;appname&#125;&#125; 的评论收到了新的回复，请点击查看：</span><br><span class="line">&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.webpages.show&#x2F;&quot; style&#x3D;&quot;display: inline-block; padding: 10px 20px; border-radius: 4px; background-color: #3090e4; color: #fff; text-decoration: none;&quot;&gt;马上查看&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud5.jpg" alt="github--lena"></p><h3><span id="休眠定时唤醒"> 休眠定时唤醒</span></h3><p>需要说明的是：</p><p>免费版的 LeanCloud 容器，是有强制性休眠策略的，不能 24 小时运行：</p><blockquote><p>每天必须休眠 6 个小时<br>30 分钟内没有外部请求，则休眠。<br>休眠后如果有新的外部请求实例则马上启动（但激活时此次发送邮件会失败）</p></blockquote><p>如果不想付费的话，最佳使用方案就设置定时器，每天 7 - 23 点每 20 分钟访问一次，这样可以保持每天的绝大多数时间邮件服务是正常的。</p><p>点击<code>云引擎</code> - <code>定时任务</code>，新增定时器，按照图片上填写：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">创建定时任务</span><br><span class="line">定时检查 24 小时内漏发的邮件通知</span><br><span class="line">生产环境选择 resend_mails</span><br><span class="line">选择 Cron表达式时间自己调整 0 0 1 * * *</span><br><span class="line"></span><br><span class="line">自动唤醒</span><br><span class="line">生产环境选择 self_wake</span><br><span class="line">选择 Cron表达式时间自己调整 0 *&#x2F;20 7-23 * * ?</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud6.jpg" alt="github--lena"></p><p>在<code>云引擎</code>-<code>设置</code>-<code>自定义环境变量</code>中添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADMIN_URL : #添加绑定成功的云引擎域名 </span><br></pre></td></tr></table></figure><p><code>保存</code></p><h3><span id="切记"> 切记</span></h3><p>最重要的要在<code>云引擎</code> -&gt; <code>部署</code> 中点击 <code>重启</code></p><p>日志</p><p><code>云引擎的</code> - <code>日志</code> 中可以看到提示以及定时任务执行情况，会返回状态码</p>]]></content>
+    <content type="html"><![CDATA[<h2><span id="绑定域名"> 绑定域名</span></h2><p>请先<a href="https://tab.leancloud.cn/login.html#/signin">登录</a>或<a href="https://tab.leancloud.cn/login.html#/signin">注册</a> <code>LeanCloud</code>, 进入控制台</p><p>首先需要域名绑定,并且你的域名需要备案</p><p>点击<code>设置</code>-&gt;<code>域名绑定</code>-&gt;<code>云引擎</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud2.jpg" alt="github--lena"></p><h3><span id="部署"> 部署</span></h3><p>点击<code>云引擎</code>-&gt;<code>部署</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud3.jpg" alt="github--lena"></p><div class="note default"><p>填上代码 由 <a href="https://github.com/zhaojun1998/Valine-Admin">zhaojun1998</a> 提供</p></div><div class="note success"><p>小康魔改</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;sviptzk&#x2F;Valine-Admin-Server.git</span><br></pre></td></tr></table></figure><p>到代码库中并部署到master，最后在日志中看到部署成功就行了</p><h3><span id="环境配置项"> 环境配置项</span></h3><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud4.jpg" alt="github--lena"></p><p>参数介绍</p><ul><li>SITE_NAME : 网站名称</li><li>SITE_URL : 网站地址, 最后不要加 /</li><li>SMTP_USER : SMTP 服务用户名，一般为邮箱地址（例如QQ 账号.qq.com）</li><li>SMTP_PASS : SMTP 密码，一般为授权码，而不是邮箱的登陆密码，请自行查询对应邮件服务商的获取方式</li><li>SMTP_PORT ： 465  #端口</li><li>SMTP_SERVICE : 邮件服务提供商，支持QQ、163、126、Gmail</li><li>SMTP_HOST : 提供邮件服务的支持方（例如QQ，就是smtp.qq.com</li><li>SENDER_NAME : 寄件人名称</li><li>SENDER_EMAIL : 收件的邮箱地址</li><li>TEMPLATE_NAME : 收到的邮件主题，不填则是默认，建议选rainbow效果在最后查看</li><li>ADMIN_URL ：定时唤醒机器，填写绑定的云引擎域名</li></ul><h3><span id="设置邮件模板"> 设置邮件模板</span></h3><p>进入<code>设置</code>-&gt;<code>邮件模板</code>填入以下代码，其中改掉相应的用户名为你自己的点击<code>保存</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hi, &#123;&#123;username&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">你在 &#123;&#123;appname&#125;&#125; 的评论收到了新的回复，请点击查看：</span><br><span class="line">&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;imszz.com&#x2F;&quot; style&#x3D;&quot;display: inline-block; padding: 10px 20px; border-radius: 4px; background-color: #3090e4; color: #fff; text-decoration: none;&quot;&gt;马上查看&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud5.jpg" alt="github--lena"></p><h3><span id="休眠定时唤醒"> 休眠定时唤醒</span></h3><p>需要说明的是：</p><p>免费版的 LeanCloud 容器，是有强制性休眠策略的，不能 24 小时运行：</p><blockquote><p>每天必须休眠 6 个小时<br>30 分钟内没有外部请求，则休眠。<br>休眠后如果有新的外部请求实例则马上启动（但激活时此次发送邮件会失败）</p></blockquote><p>如果不想付费的话，最佳使用方案就设置定时器，每天 7 - 23 点每 20 分钟访问一次，这样可以保持每天的绝大多数时间邮件服务是正常的。</p><p>点击<code>云引擎</code> - <code>定时任务</code>，新增定时器，按照图片上填写：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">创建定时任务</span><br><span class="line">定时检查 24 小时内漏发的邮件通知</span><br><span class="line">生产环境选择 resend_mails</span><br><span class="line">选择 Cron表达式时间自己调整 0 0 1 * * *</span><br><span class="line"></span><br><span class="line">自动唤醒</span><br><span class="line">生产环境选择 self_wake</span><br><span class="line">选择 Cron表达式时间自己调整 0 *&#x2F;20 7-23 * * ?</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/LeanCloud6.jpg" alt="github--lena"></p><p>在<code>云引擎</code>-<code>设置</code>-<code>自定义环境变量</code>中添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADMIN_URL : #添加绑定成功的云引擎域名 </span><br></pre></td></tr></table></figure><p><code>保存</code></p><h3><span id="切记"> 切记</span></h3><p>最重要的要在<code>云引擎</code> -&gt; <code>部署</code> 中点击 <code>重启</code></p><p>日志</p><p><code>云引擎的</code> - <code>日志</code> 中可以看到提示以及定时任务执行情况，会返回状态码</p>]]></content>
     
     
       
@@ -471,19 +471,19 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
-    <category term="valine" scheme="https://www.webpages.show/tags/valine/"/>
+    <category term="valine" scheme="https://imszz.com/tags/valine/"/>
     
   </entry>
   
   <entry>
     <title>valine 评论和美化</title>
-    <link href="https://www.webpages.show/p/ffb5990d/"/>
-    <id>https://www.webpages.show/p/ffb5990d/</id>
+    <link href="https://imszz.com/p/ffb5990d/"/>
+    <id>https://imszz.com/p/ffb5990d/</id>
     <published>2020-08-12T13:25:23.000Z</published>
     <updated>2021-01-05T05:25:23.000Z</updated>
     
@@ -502,23 +502,23 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
-    <category term="valine" scheme="https://www.webpages.show/tags/valine/"/>
+    <category term="valine" scheme="https://imszz.com/tags/valine/"/>
     
   </entry>
   
   <entry>
     <title>hexo导航目录点击自动跳转</title>
-    <link href="https://www.webpages.show/p/a564d3b/"/>
-    <id>https://www.webpages.show/p/a564d3b/</id>
+    <link href="https://imszz.com/p/a564d3b/"/>
+    <id>https://imszz.com/p/a564d3b/</id>
     <published>2020-08-09T12:46:25.000Z</published>
     <updated>2020-08-10T12:46:25.000Z</updated>
     
-    <content type="html"><![CDATA[<p>建立page：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &#39;navi&#39;</span><br></pre></td></tr></table></figure><p>在<code>navi</code>下的<code>index.md</code>中加入如下代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;refresh&quot; content&#x3D;&quot;0;url&#x3D;https:&#x2F;&#x2F;navi.webpages.show&#x2F;&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br></pre></td></tr></table></figure><p>or</p><p>单页显示</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: &#x2F; || fas fa-home</span><br><span class="line">  导航: https:&#x2F;&#x2F;navi.webpages.show&#x2F; || fas fa-paper-plane</span><br><span class="line">  文章||fas fa-list:</span><br><span class="line">    - 时间轴 || &#x2F;archives&#x2F; || fas fa-archive</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>建立page：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &#39;navi&#39;</span><br></pre></td></tr></table></figure><p>在<code>navi</code>下的<code>index.md</code>中加入如下代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;refresh&quot; content&#x3D;&quot;0;url&#x3D;https:&#x2F;&#x2F;navi.imszz.com&#x2F;&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br></pre></td></tr></table></figure><p>or</p><p>单页显示</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: &#x2F; || fas fa-home</span><br><span class="line">  导航: https:&#x2F;&#x2F;navi.imszz.com&#x2F; || fas fa-paper-plane</span><br><span class="line">  文章||fas fa-list:</span><br><span class="line">    - 时间轴 || &#x2F;archives&#x2F; || fas fa-archive</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -529,17 +529,17 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo哔哩哔哩番剧页面插件</title>
-    <link href="https://www.webpages.show/p/8422e92e/"/>
-    <id>https://www.webpages.show/p/8422e92e/</id>
+    <link href="https://imszz.com/p/8422e92e/"/>
+    <id>https://imszz.com/p/8422e92e/</id>
     <published>2020-08-07T12:46:25.000Z</published>
     <updated>2020-08-16T12:46:25.000Z</updated>
     
@@ -553,12 +553,12 @@
     
     
     
-    <category term="hexo" scheme="https://www.webpages.show/categories/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.webpages.show/tags/hexo/"/>
+    <category term="hexo" scheme="https://imszz.com/tags/hexo/"/>
     
-    <category term="bilibili" scheme="https://www.webpages.show/tags/bilibili/"/>
+    <category term="bilibili" scheme="https://imszz.com/tags/bilibili/"/>
     
   </entry>
   

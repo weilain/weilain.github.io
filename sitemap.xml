@@ -361,13 +361,6 @@
 
   
   <url>
-    <loc>https://imszz.com/tags/OpenSSh/</loc>
-    <lastmod>2021-01-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://imszz.com/tags/jsDelivr/</loc>
     <lastmod>2021-01-22</lastmod>
     <changefreq>daily</changefreq>
@@ -376,6 +369,13 @@
   
   <url>
     <loc>https://imszz.com/tags/CDN/</loc>
+    <lastmod>2021-01-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/OpenSSh/</loc>
     <lastmod>2021-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -678,14 +678,14 @@
 
   
   <url>
-    <loc>https://imszz.com/categories/OpenSSH/</loc>
+    <loc>https://imszz.com/categories/Github/</loc>
     <lastmod>2021-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://imszz.com/categories/Github/</loc>
+    <loc>https://imszz.com/categories/OpenSSH/</loc>
     <lastmod>2021-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

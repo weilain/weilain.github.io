@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://imszz.com/music/index.html</loc>
+    
+    <lastmod>2021-01-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://imszz.com/p/38510659/</loc>
     
     <lastmod>2021-01-26</lastmod>
@@ -240,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/music/index.html</loc>
-    
-    <lastmod>2020-07-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://imszz.com/p/eee93e1e/</loc>
     
     <lastmod>2020-07-26</lastmod>
@@ -410,13 +410,6 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/tags/Gitlab/</loc>
-    <lastmod>2021-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://imszz.com/tags/jsDelivr/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
@@ -425,6 +418,13 @@
   
   <url>
     <loc>https://imszz.com/tags/CDN/</loc>
+    <lastmod>2021-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/Gitlab/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -508,6 +508,13 @@
   </url>
   
   <url>
+    <loc>https://imszz.com/tags/location/</loc>
+    <lastmod>2021-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://imszz.com/tags/Jenkins/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
@@ -516,13 +523,6 @@
   
   <url>
     <loc>https://imszz.com/tags/Nginx/</loc>
-    <lastmod>2021-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://imszz.com/tags/location/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -734,14 +734,14 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/categories/Gitlab/</loc>
+    <loc>https://imszz.com/categories/Github/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://imszz.com/categories/Github/</loc>
+    <loc>https://imszz.com/categories/Gitlab/</loc>
     <lastmod>2021-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -4737,7 +4737,7 @@ _:future,
   z-index: 22;
 }
 #waline-wrap textarea {
-  background: url("/image/comment_bg.png") 100% 100% no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/weilain/cdn-photo/Photo/valine.webp") 100% 100% no-repeat;
 }
 .fireworks {
   position: fixed;

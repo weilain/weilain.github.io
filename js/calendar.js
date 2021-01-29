@@ -379,3 +379,8 @@
         $('#calendar').aCalendar('zh-CN');//'zh-CN'请根据自己博客的语言选择
     });  
   }(jQuery));
+
+//   var full_page = document.getElementsByClassName("full_page");
+// if (full_page.length != 0) {
+//   full_page[0].style.background = "transparent";
+// }

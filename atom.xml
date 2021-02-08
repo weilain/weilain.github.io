@@ -44,6 +44,30 @@
   </entry>
   
   <entry>
+    <title>MySQL5.7 字符集设置</title>
+    <link href="https://imszz.com/p/38510659/"/>
+    <id>https://imszz.com/p/38510659/</id>
+    <published>2021-01-25T16:00:00.000Z</published>
+    <updated>2021-01-26T12:46:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL5-7-字符集设置"><a href="#MySQL5-7-字符集设置" class="headerlink" title="MySQL5.7 字符集设置"></a>MySQL5.7 字符集设置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; FALSE</span><br><span class="line">character-set-server &#x3D; utf8mb4</span><br><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br><span class="line">init_connect&#x3D;’SET NAMES utf8mb4’</span><br></pre></td></tr></table></figure><h1 id="character-set-client-handshake"><a href="#character-set-client-handshake" class="headerlink" title="character-set-client-handshake"></a>character-set-client-handshake</h1><p>用来控制客户端声明使用字符集和服务端声明使用的字符集在不一致的情况下的兼容性.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; false</span><br><span class="line"># 设置为 False, 在客户端字符集和服务端字符集不同的时候将拒绝连接到服务端执行任何操作</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 默认为 true</span><br><span class="line">character-set-client-handshake &#x3D; true</span><br><span class="line"># 设置为 True, 即使客户端字符集和服务端字符集不同, 也允许客户端连接</span><br></pre></td></tr></table></figure><h1 id="character-set-server"><a href="#character-set-server" class="headerlink" title="character-set-server"></a>character-set-server</h1><p>声明服务端的字符编码, 推荐使用utf8mb4 , 该字符虽然占用空间会比较大, 但是可以兼容 emoji 😈 表情的存储</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">character-set-server &#x3D; utf8mb4</span><br></pre></td></tr></table></figure><h1 id="collation-server"><a href="#collation-server" class="headerlink" title="collation-server"></a>collation-server</h1><p>声明服务端的字符集, 字符编码和字符集一一对应, 既然使用了utf8mb4的字符集, 就要声明使用对应的字符编码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure><h1 id="init-connect"><a href="#init-connect" class="headerlink" title="init_connect"></a>init_connect</h1><p><code>init_connect </code>是用户登录到数据库上之后, 在执行第一次查询之前执行里面的内容. 如果 <code>init_connect</code> 的内容有语法错误, 导致执行失败, 会导致用户无法执行查询, 从mysql 退出</p><p>使用 <code>init_connect</code> 执行 <code>SET NAMES utf8mb4</code> 意为:</p><p>声明自己(客户端)使用的是 utf8mb4 的字符编码<br>希望服务器返回给自己 utf8mb4 的查询结果</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init_connect &#x3D; &#39;SET NAMES utf8mb4&#39;</span><br></pre></td></tr></table></figure><h1 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; FALSE</span><br><span class="line">character-set-server &#x3D; utf8mb4</span><br><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br><span class="line">init_connect &#x3D; &#39;SET NAMES utf8mb4&#39;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;MySQL5-7-字符集设置&quot;&gt;&lt;a href=&quot;#MySQL5-7-字符集设置&quot; class=&quot;headerlink&quot; title=&quot;MySQL5.7 字符集设置&quot;&gt;&lt;/a&gt;MySQL5.7 字符集设置&lt;/h1&gt;&lt;figure class=&quot;highlight </summary>
+      
+    
+    
+    
+    <category term="Mysql" scheme="https://imszz.com/categories/Mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://imszz.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL5.7 高可用高性能配置调优 性能参数参考</title>
     <link href="https://imszz.com/p/2d27b747/"/>
     <id>https://imszz.com/p/2d27b747/</id>
@@ -59,30 +83,6 @@
 &lt;p&gt;MySQL5.7 在 5.6 版本的基础之上做了大量的优化, 本篇文章开篇将重点围绕经过优化的基于 GTID 的多线程复制和半同步复制的特性介绍, 后续会持续增加 MySQL5.7 的调优参数&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure c</summary>
-      
-    
-    
-    
-    <category term="Mysql" scheme="https://imszz.com/categories/Mysql/"/>
-    
-    
-    <category term="mysql" scheme="https://imszz.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL5.7 字符集设置</title>
-    <link href="https://imszz.com/p/38510659/"/>
-    <id>https://imszz.com/p/38510659/</id>
-    <published>2021-01-25T16:00:00.000Z</published>
-    <updated>2021-01-26T12:46:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MySQL5-7-字符集设置"><a href="#MySQL5-7-字符集设置" class="headerlink" title="MySQL5.7 字符集设置"></a>MySQL5.7 字符集设置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; FALSE</span><br><span class="line">character-set-server &#x3D; utf8mb4</span><br><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br><span class="line">init_connect&#x3D;’SET NAMES utf8mb4’</span><br></pre></td></tr></table></figure><h1 id="character-set-client-handshake"><a href="#character-set-client-handshake" class="headerlink" title="character-set-client-handshake"></a>character-set-client-handshake</h1><p>用来控制客户端声明使用字符集和服务端声明使用的字符集在不一致的情况下的兼容性.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; false</span><br><span class="line"># 设置为 False, 在客户端字符集和服务端字符集不同的时候将拒绝连接到服务端执行任何操作</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 默认为 true</span><br><span class="line">character-set-client-handshake &#x3D; true</span><br><span class="line"># 设置为 True, 即使客户端字符集和服务端字符集不同, 也允许客户端连接</span><br></pre></td></tr></table></figure><h1 id="character-set-server"><a href="#character-set-server" class="headerlink" title="character-set-server"></a>character-set-server</h1><p>声明服务端的字符编码, 推荐使用utf8mb4 , 该字符虽然占用空间会比较大, 但是可以兼容 emoji 😈 表情的存储</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">character-set-server &#x3D; utf8mb4</span><br></pre></td></tr></table></figure><h1 id="collation-server"><a href="#collation-server" class="headerlink" title="collation-server"></a>collation-server</h1><p>声明服务端的字符集, 字符编码和字符集一一对应, 既然使用了utf8mb4的字符集, 就要声明使用对应的字符编码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure><h1 id="init-connect"><a href="#init-connect" class="headerlink" title="init_connect"></a>init_connect</h1><p><code>init_connect </code>是用户登录到数据库上之后, 在执行第一次查询之前执行里面的内容. 如果 <code>init_connect</code> 的内容有语法错误, 导致执行失败, 会导致用户无法执行查询, 从mysql 退出</p><p>使用 <code>init_connect</code> 执行 <code>SET NAMES utf8mb4</code> 意为:</p><p>声明自己(客户端)使用的是 utf8mb4 的字符编码<br>希望服务器返回给自己 utf8mb4 的查询结果</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init_connect &#x3D; &#39;SET NAMES utf8mb4&#39;</span><br></pre></td></tr></table></figure><h1 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">character-set-client-handshake &#x3D; FALSE</span><br><span class="line">character-set-server &#x3D; utf8mb4</span><br><span class="line">collation-server &#x3D; utf8mb4_unicode_ci</span><br><span class="line">init_connect &#x3D; &#39;SET NAMES utf8mb4&#39;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;MySQL5-7-字符集设置&quot;&gt;&lt;a href=&quot;#MySQL5-7-字符集设置&quot; class=&quot;headerlink&quot; title=&quot;MySQL5.7 字符集设置&quot;&gt;&lt;/a&gt;MySQL5.7 字符集设置&lt;/h1&gt;&lt;figure class=&quot;highlight </summary>
       
     
     

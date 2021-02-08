@@ -526,31 +526,6 @@
     
     
     <entry>
-      <title>linux查看磁盘使用情况命令</title>
-      <link href="p/59ce9c6a/"/>
-      <url>p/59ce9c6a/</url>
-      
-        <content type="html"><![CDATA[<h3 id="统一磁盘整体情况，包括磁盘大小，已使用，可用"><a href="#统一磁盘整体情况，包括磁盘大小，已使用，可用" class="headerlink" title="统一磁盘整体情况，包括磁盘大小，已使用，可用"></a>统一磁盘整体情况，包括磁盘大小，已使用，可用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -hT</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -hT</span><br><span class="line">Filesystem     Type      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1      ext4       40G   28G   11G  73% &#x2F;</span><br><span class="line">devtmpfs       devtmpfs  7.8G     0  7.8G   0% &#x2F;dev</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;dev&#x2F;shm</span><br><span class="line">tmpfs          tmpfs     7.8G  1.8M  7.8G   1% &#x2F;run</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;sys&#x2F;fs&#x2F;cgroup</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;1002</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;0</span><br></pre></td></tr></table></figure><h3 id="查看指定目录"><a href="#查看指定目录" class="headerlink" title="查看指定目录"></a>查看指定目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h &#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -h &#x2F;usr&#x2F;</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1        40G   28G   11G  73% &#x2F;</span><br></pre></td></tr></table></figure><h3 id="具体查看文件夹的占用情况"><a href="#具体查看文件夹的占用情况" class="headerlink" title="具体查看文件夹的占用情况"></a>具体查看文件夹的占用情况</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du --max-depth&#x3D;1 -h</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du --max-depth&#x3D;1 -h</span><br><span class="line">8.0K.&#x2F;.docker</span><br><span class="line">688M.&#x2F;logs</span><br><span class="line">12K.&#x2F;.oracle_jre_usage</span><br><span class="line">12K.&#x2F;.ssh</span><br><span class="line">16K.&#x2F;.local</span><br><span class="line">2.3G.&#x2F;.m2</span><br><span class="line">40K.&#x2F;.java</span><br><span class="line">2.5G</span><br></pre></td></tr></table></figure><h3 id="计算文件夹大小"><a href="#计算文件夹大小" class="headerlink" title="计算文件夹大小"></a>计算文件夹大小</h3><p>快算显示目录整体占用大小,想查看指定目录，直接在命令后根目录即可.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du -sh &#x2F;usr&#x2F;</span><br><span class="line">5.1G&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><blockquote><p>注：其中<code>df -h</code>和<code>du -sh</code>使用较多，一个统计整体磁盘情况，一个看单独目录点用情况.<br>命令<code>du --max-depth=1 -h</code>查看了目录下文件夹占用情况，使用较少，可以用<code>du -sh</code>代替.</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
       <link href="p/6ea05e36/"/>
       <url>p/6ea05e36/</url>
@@ -568,6 +543,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux查看磁盘使用情况命令</title>
+      <link href="p/59ce9c6a/"/>
+      <url>p/59ce9c6a/</url>
+      
+        <content type="html"><![CDATA[<h3 id="统一磁盘整体情况，包括磁盘大小，已使用，可用"><a href="#统一磁盘整体情况，包括磁盘大小，已使用，可用" class="headerlink" title="统一磁盘整体情况，包括磁盘大小，已使用，可用"></a>统一磁盘整体情况，包括磁盘大小，已使用，可用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -hT</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -hT</span><br><span class="line">Filesystem     Type      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1      ext4       40G   28G   11G  73% &#x2F;</span><br><span class="line">devtmpfs       devtmpfs  7.8G     0  7.8G   0% &#x2F;dev</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;dev&#x2F;shm</span><br><span class="line">tmpfs          tmpfs     7.8G  1.8M  7.8G   1% &#x2F;run</span><br><span class="line">tmpfs          tmpfs     7.8G     0  7.8G   0% &#x2F;sys&#x2F;fs&#x2F;cgroup</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;1002</span><br><span class="line">tmpfs          tmpfs     1.6G     0  1.6G   0% &#x2F;run&#x2F;user&#x2F;0</span><br></pre></td></tr></table></figure><h3 id="查看指定目录"><a href="#查看指定目录" class="headerlink" title="查看指定目录"></a>查看指定目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h &#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# df -h &#x2F;usr&#x2F;</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">&#x2F;dev&#x2F;vda1        40G   28G   11G  73% &#x2F;</span><br></pre></td></tr></table></figure><h3 id="具体查看文件夹的占用情况"><a href="#具体查看文件夹的占用情况" class="headerlink" title="具体查看文件夹的占用情况"></a>具体查看文件夹的占用情况</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du --max-depth&#x3D;1 -h</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du --max-depth&#x3D;1 -h</span><br><span class="line">8.0K.&#x2F;.docker</span><br><span class="line">688M.&#x2F;logs</span><br><span class="line">12K.&#x2F;.oracle_jre_usage</span><br><span class="line">12K.&#x2F;.ssh</span><br><span class="line">16K.&#x2F;.local</span><br><span class="line">2.3G.&#x2F;.m2</span><br><span class="line">40K.&#x2F;.java</span><br><span class="line">2.5G</span><br></pre></td></tr></table></figure><h3 id="计算文件夹大小"><a href="#计算文件夹大小" class="headerlink" title="计算文件夹大小"></a>计算文件夹大小</h3><p>快算显示目录整体占用大小,想查看指定目录，直接在命令后根目录即可.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@campus ~]# du -sh &#x2F;usr&#x2F;</span><br><span class="line">5.1G&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure><blockquote><p>注：其中<code>df -h</code>和<code>du -sh</code>使用较多，一个统计整体磁盘情况，一个看单独目录点用情况.<br>命令<code>du --max-depth=1 -h</code>查看了目录下文件夹占用情况，使用较少，可以用<code>du -sh</code>代替.</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
       

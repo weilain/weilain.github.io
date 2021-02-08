@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://imszz.com/7c2bc85f0ac92269448e6f8103684b42.html</loc>
+    
+    <lastmod>2021-02-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://imszz.com/cd27e8a694c4105c2221c0afd377fb17.html</loc>
     
     <lastmod>2021-02-08</lastmod>
@@ -508,20 +515,6 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/tags/Jenkins/</loc>
-    <lastmod>2021-02-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://imszz.com/tags/Nginx/</loc>
-    <lastmod>2021-02-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://imszz.com/tags/nginx/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
@@ -530,6 +523,20 @@
   
   <url>
     <loc>https://imszz.com/tags/location/</loc>
+    <lastmod>2021-02-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/Jenkins/</loc>
+    <lastmod>2021-02-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/Nginx/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -627,13 +634,6 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/</loc>
-    <lastmod>2021-02-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://imszz.com/tags/nslookup/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
@@ -641,14 +641,14 @@
   </url>
   
   <url>
-    <loc>https://imszz.com/tags/python/</loc>
+    <loc>https://imszz.com/tags/%E8%BF%94%E5%9B%9E%E7%A0%81/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://imszz.com/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
+    <loc>https://imszz.com/tags/python/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -663,6 +663,13 @@
   
   <url>
     <loc>https://imszz.com/tags/link/</loc>
+    <lastmod>2021-02-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
     <lastmod>2021-02-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

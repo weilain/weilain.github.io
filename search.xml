@@ -526,31 +526,6 @@
     
     
     <entry>
-      <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
-      <link href="p/6ea05e36/"/>
-      <url>p/6ea05e36/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo默认会对<code>/source/</code>里的所有页面应用主题模板渲染，但有一些前端作品或demo页我们不希望经过渲染，而是能保持完全自定义的样子</p><p>例如：</p><ol><li>主题内渲染，添加的模块仍在主题内，主题头部信息依然存在，仅仅是在特定区域进行渲染（适合添加 about 页面）</li><li>完全页面渲染，在主题内点击对应链接跳转到一个完全崭新的页面（我需要的）</li></ol><h3 id="hexo-的执行逻辑"><a href="#hexo-的执行逻辑" class="headerlink" title="hexo 的执行逻辑"></a>hexo 的执行逻辑</h3><p>source 文件夹下存放了待被转化的 markdown 文件，在执行<code>hexo g</code>命令时，source 目录下的文件将被转化为 html 文件。</p><h2 id="介绍两种方法："><a href="#介绍两种方法：" class="headerlink" title="介绍两种方法："></a>介绍两种方法：</h2><h3 id="使用Hexo提供的跳过渲染配置，适用于整个目录的设置。"><a href="#使用Hexo提供的跳过渲染配置，适用于整个目录的设置。" class="headerlink" title="使用Hexo提供的跳过渲染配置，适用于整个目录的设置。"></a>使用Hexo提供的跳过渲染配置，适用于整个目录的设置。</h3><p>具体步骤，打开博客根目录<code>_config.yml</code>，找到其中<code>skip_render</code>项，这个项目用来配置<code>/source/</code>中需要跳过渲染的文件或目录，</p><p>例如希望跳过<code>/source/navi/</code>里的所有文件渲染（这样我们就可以将自己的作品放在这个文件夹中，然后可以通过自己的网址/navi/…访问了)</p><p>可以配置为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: navi&#x2F;**</span><br></pre></td></tr></table></figure><ul><li><code>source/navi/</code>目录下添加「工具盒」源文件</li><li>在站点配置文件<code>_config.yml</code>中配置<code>skin_render</code>项，如：<code>skip_render: navi/**</code>，这样projects文件夹下的所以文件内容将不会转化为 html，直接被 copy 到 public 文件夹</li><li>在「工具盒」文件夹下添加 index.html 文件用于渲染自定义页面</li></ul><p>完成以上步骤即可点击「工具盒」菜单导航，完成自定义页面的展示。</p><p>修改了配置但生成出来的内容不一定及时应用了新配置，最好在生成之前执行一下<code>hexo clean</code>命令，清除掉旧的生成文件和缓存。</p><h3 id="给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。"><a href="#给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。" class="headerlink" title="给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。"></a>给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。</h3><p>例如我们要使 <code>about</code> 页面跳过渲染，创建 <code>/source/about/index.md</code>，将这个页面的相关 HTML 代码写进<code>.md</code>文件并保存，然后在 <code>index.md</code> 的头部写入：，</p><p>避免渲染的办法就是在文件头部<code>Front-matter </code>里添加如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br><span class="line">&#123;% raw %&#125;</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">xx HTML代码 xx</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>PS：<code>Front-matter</code> 是 <code>.md</code> 文件最上方以 — 分隔的区域，用于指定个别文件的变量，官方文档：<a href="https://hexo.io/docs/front-matter">https://hexo.io/docs/front-matter</a><br><code>.md</code>文件中的 HTML 代码要用 <code>` 和 `</code> 包起来，使其能正确编译里面的代码　　</p></blockquote><p>这样，这个文件就不会经过模板渲染，最终发布到<code>/public/</code>里的文件就是去掉标记后的文件的样子。</p><p>但是这种未尝试！ 推荐第一种</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>linux查看磁盘使用情况命令</title>
       <link href="p/59ce9c6a/"/>
       <url>p/59ce9c6a/</url>
@@ -568,6 +543,31 @@
         <tags>
             
             <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 添加自定义单静态页面 跳过hexo渲染</title>
+      <link href="p/6ea05e36/"/>
+      <url>p/6ea05e36/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo默认会对<code>/source/</code>里的所有页面应用主题模板渲染，但有一些前端作品或demo页我们不希望经过渲染，而是能保持完全自定义的样子</p><p>例如：</p><ol><li>主题内渲染，添加的模块仍在主题内，主题头部信息依然存在，仅仅是在特定区域进行渲染（适合添加 about 页面）</li><li>完全页面渲染，在主题内点击对应链接跳转到一个完全崭新的页面（我需要的）</li></ol><h3 id="hexo-的执行逻辑"><a href="#hexo-的执行逻辑" class="headerlink" title="hexo 的执行逻辑"></a>hexo 的执行逻辑</h3><p>source 文件夹下存放了待被转化的 markdown 文件，在执行<code>hexo g</code>命令时，source 目录下的文件将被转化为 html 文件。</p><h2 id="介绍两种方法："><a href="#介绍两种方法：" class="headerlink" title="介绍两种方法："></a>介绍两种方法：</h2><h3 id="使用Hexo提供的跳过渲染配置，适用于整个目录的设置。"><a href="#使用Hexo提供的跳过渲染配置，适用于整个目录的设置。" class="headerlink" title="使用Hexo提供的跳过渲染配置，适用于整个目录的设置。"></a>使用Hexo提供的跳过渲染配置，适用于整个目录的设置。</h3><p>具体步骤，打开博客根目录<code>_config.yml</code>，找到其中<code>skip_render</code>项，这个项目用来配置<code>/source/</code>中需要跳过渲染的文件或目录，</p><p>例如希望跳过<code>/source/navi/</code>里的所有文件渲染（这样我们就可以将自己的作品放在这个文件夹中，然后可以通过自己的网址/navi/…访问了)</p><p>可以配置为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: navi&#x2F;**</span><br></pre></td></tr></table></figure><ul><li><code>source/navi/</code>目录下添加「工具盒」源文件</li><li>在站点配置文件<code>_config.yml</code>中配置<code>skin_render</code>项，如：<code>skip_render: navi/**</code>，这样projects文件夹下的所以文件内容将不会转化为 html，直接被 copy 到 public 文件夹</li><li>在「工具盒」文件夹下添加 index.html 文件用于渲染自定义页面</li></ul><p>完成以上步骤即可点击「工具盒」菜单导航，完成自定义页面的展示。</p><p>修改了配置但生成出来的内容不一定及时应用了新配置，最好在生成之前执行一下<code>hexo clean</code>命令，清除掉旧的生成文件和缓存。</p><h3 id="给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。"><a href="#给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。" class="headerlink" title="给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。"></a>给单个文件添加不应用模板的标记，适用于个别特殊文件的处理。</h3><p>例如我们要使 <code>about</code> 页面跳过渲染，创建 <code>/source/about/index.md</code>，将这个页面的相关 HTML 代码写进<code>.md</code>文件并保存，然后在 <code>index.md</code> 的头部写入：，</p><p>避免渲染的办法就是在文件头部<code>Front-matter </code>里添加如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br><span class="line">&#123;% raw %&#125;</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">xx HTML代码 xx</span><br><span class="line">xxxxxxxxxxxxx</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>PS：<code>Front-matter</code> 是 <code>.md</code> 文件最上方以 — 分隔的区域，用于指定个别文件的变量，官方文档：<a href="https://hexo.io/docs/front-matter">https://hexo.io/docs/front-matter</a><br><code>.md</code>文件中的 HTML 代码要用 <code>` 和 `</code> 包起来，使其能正确编译里面的代码　　</p></blockquote><p>这样，这个文件就不会经过模板渲染，最终发布到<code>/public/</code>里的文件就是去掉标记后的文件的样子。</p><p>但是这种未尝试！ 推荐第一种</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       

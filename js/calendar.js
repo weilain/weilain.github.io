@@ -378,7 +378,6 @@
     $(document).ready(function () {
         $('#calendar').aCalendar('zh-CN');//'zh-CN'请根据自己博客的语言选择
     });  
-  <script type="text/javascript"> var infolinks_pid = 3310543; var infolinks_wsid = 0; </script>
   }(jQuery));
 //   var full_page = document.getElementsByClassName("full_page");
 // if (full_page.length != 0) {

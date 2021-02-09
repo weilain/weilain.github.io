@@ -15,4 +15,3 @@ var OriginTitle = document.title;
      }
  });
 
-<script type="text/javascript"> var infolinks_pid = 3310385; var infolinks_wsid = 0; </script>

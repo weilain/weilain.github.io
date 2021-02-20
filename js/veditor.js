@@ -4,11 +4,11 @@ $("#veditor").blur(function(){
       $(this).css("background-image","url(https://cdn.jsdelivr.net/gh/weilain/cdn-photo/Photo/valine.webp)");
    }
 );
-var infolinks_pid = 3310543;
-var infolinks_wsid = 0;
+// var infolinks_pid = 3310543;
+// var infolinks_wsid = 0;
 
-var infolinks_pid = 3310385; 
-var infolinks_wsid = 0;
+// var infolinks_pid = 3310385; 
+// var infolinks_wsid = 0;
 
 
 

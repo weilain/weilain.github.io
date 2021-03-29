@@ -6,7 +6,7 @@
   <link href="https://imszz.com/atom.xml" rel="self"/>
   
   <link href="https://imszz.com/"/>
-  <updated>2021-02-08T16:48:26.000Z</updated>
+  <updated>2021-03-28T16:26:23.000Z</updated>
   <id>https://imszz.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>删除mac启动台launchpad中的无效图标</title>
+    <link href="https://imszz.com/p/c1a54034/"/>
+    <id>https://imszz.com/p/c1a54034/</id>
+    <published>2021-03-28T16:25:23.000Z</published>
+    <updated>2021-03-28T16:26:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="第一种情况"><a href="#第一种情况" class="headerlink" title="第一种情况"></a>第一种情况</h3><p>在Mac上安装Photoshop CS6的后， 启动台(LaunchPad)莫名其妙的多出了几个”Adobe xxxx…”的图标， 而且无法删除，在访达里面应用程序内也找不到， 非常讨厌。</p><p>在网上搜索了试过终端删除，app删除，找到程序文件夹删除等各种方法，但都失败了。。。</p><p>最后重点来了，我找到了一个终极解决办法：</p><p>重建 启动台(LaunchPad) 内的图标来解决.</p><h4 id="方法如下"><a href="#方法如下" class="headerlink" title="方法如下:"></a>方法如下:</h4><p>打开应用程序- 实用工具 - 终端. 以此出入如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock ResetLaunchPad -bool true</span><br><span class="line"></span><br><span class="line">killall Dock</span><br></pre></td></tr></table></figure><p>再次打开 LaunchPad 的时候, 所有图标会被重建。</p><blockquote><p>如果发现启动台(LaunchPad)里面出现了一个新的相关文件夹，并且是原来Adobe之类的程序， 那么需要再次打开<code>访达-&gt;应用程序-&gt;实用工具</code> 内找到对应相关文件程序删掉即可。</p></blockquote><p>最后，你会发现重置之后之前的所有设置都会丢失. 没有特殊情况不要使用哦. 以免丢失之前的排列方式与文件夹.</p><h3 id="第二种情况"><a href="#第二种情况" class="headerlink" title="第二种情况"></a>第二种情况</h3><p>有些应用程序（比如说虚拟机），安装之后会在启动台生成文件夹或其它图标，但是卸载了应用之后，这个文件夹依然会保留下来，简直逼死强迫症。</p><h4 id="方法如下-1"><a href="#方法如下-1" class="headerlink" title="方法如下:"></a>方法如下:</h4><p>卸载应用程序之后，一般其在启动台生成的文件夹是不会被删除的，不过这个文件夹里面是空的。如果执意要删除的话，可以从<code>Finder</code>（访达）里面入手。具体操作为，打开访达，按下快捷键<code>「commond」+「shift」+「H」</code>，之后页面会自动跳转到用户的主页。打开<code>「应用程序文件夹」</code>，里面的都是launchpad的内容，找到你要删除的目标将其删除即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;第一种情况&quot;&gt;&lt;a href=&quot;#第一种情况&quot; class=&quot;headerlink&quot; title=&quot;第一种情况&quot;&gt;&lt;/a&gt;第一种情况&lt;/h3&gt;&lt;p&gt;在Mac上安装Photoshop CS6的后， 启动台(LaunchPad)莫名其妙的多出了几个”Adobe xxx</summary>
+      
+    
+    
+    
+    <category term="奇怪的知识点" scheme="https://imszz.com/categories/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    
+    <category term="Mac" scheme="https://imszz.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>如何注册PropellerAds账号</title>
@@ -511,32 +535,6 @@
     
     
     <category term="shell" scheme="https://imszz.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTrack - 克隆任意网站</title>
-    <link href="https://imszz.com/p/8a11f10a/"/>
-    <id>https://imszz.com/p/8a11f10a/</id>
-    <published>2020-08-15T12:46:25.000Z</published>
-    <updated>2020-08-16T12:46:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>HTTrack可以克隆指定网站－把整个网站下载到本地。</p><p>可以用在离线浏览上，也可以用来收集信息（甚至有网站使用隐藏的密码文件）。</p><p>一些仿真度极高的伪网站（为了骗取用户密码），也是使用类似工具做的。<br>Linux默认安装了HTTrack. 如没有可以自行下载安装。<br>Liunx 安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum provides httrack</span><br><span class="line">yum install httrack</span><br></pre></td></tr></table></figure><p>MacOS zsh:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install httrack</span><br></pre></td></tr></table></figure><p>HTTrack帮助：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack --help</span><br></pre></td></tr></table></figure><p>使用示例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httrack https:&#x2F;&#x2F;imszz.com&#x2F;navi -O &#x2F;tmp</span><br></pre></td></tr></table></figure><p>上面命令克隆了网站路径下所有内容，不带路径克隆所有内容</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;HTTrack可以克隆指定网站－把整个网站下载到本地。&lt;/p&gt;
-&lt;p&gt;可以用在离线浏览上，也可以用来收集信息（甚至有网站使用隐藏的密码文件）。&lt;/p&gt;
-&lt;p&gt;一些仿真度极高的伪网站（为了骗取用户密码），也是使用类似工具做的。&lt;br&gt;Linux默认安装了HTTrack. 如没</summary>
-      
-    
-    
-    
-    <category term="tools" scheme="https://imszz.com/categories/tools/"/>
-    
-    
-    <category term="HTTrack" scheme="https://imszz.com/tags/HTTrack/"/>
     
   </entry>
   

@@ -188,13 +188,13 @@ if (fontSizeVal !== undefined) {
 <blockquote>
 <p>说明：<br>以上规则会按优先顺序进行评估，优先顺序为： <code>canary-by-header -&gt; canary-by-cookie -&gt; canary-weight</code>。<br>当 Ingress 被标记为 Canary Ingress 时，除了 <code>nginx.ingress.kubernetes.io/load-balance</code> 和 <code>nginx.ingress.kubernetes.io/upstream-hash-by</code> 外，所有其他非 Canary 注释都将被忽略。</p>
 </blockquote>
-<p>我们可以把以上的四个 <code>annotation</code> 流量切分方式：</p>
+<p>可以把以上的四个 <code>annotation</code> 分为三类：</p>
 <ol>
 <li>基于Request Header的流量切分，适用于灰度发布以及AB测试场景</li>
 <li>基于Cookie的流量切分，适用于灰度发布以及AB测试场景</li>
 <li>基于服务权重的流量切分，适用于蓝绿发布场景</li>
 </ol>
-<p>规则可以总体划分为以下两大类：</p>
+<p>总体划分为以下两大类：</p>
 <ol>
 <li><p>基于权重的 Canary 规则<br><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/img/Canary-weight.jpg" alt="github--lena"></p>
 </li>

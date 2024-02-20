@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>查看LINUX发行版的名称及其版本号</title>
+      <link href="p/2399c152/"/>
+      <url>p/2399c152/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Linux 系统中 xfs 分区挂载错误：</strong></p><p><strong>错误提示：</strong></p><p><code>mount: /mnt: wrong fs type, bad option, bad superblock on /dev/vdc1, missing codepage or helper program, or other error.</code></p><p><strong>主要场景：</strong></p><p>该错误通常在挂载 xfs 类型分区时发生，尤其是在要挂载的磁盘与已挂载磁盘（例如系统盘或数据盘）的磁盘 ID（UUID）冲突时。</p><p><strong>解决办法：</strong></p><p><strong>1. 检查 UUID 冲突</strong></p><p>使用以下命令查询系统日志以检查 UUID 冲突：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dmesg | tail</span><br></pre></td></tr></table></figure><p>如果出现以下提示，则表明存在 UUID 冲突：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XFS (vdc1): Filesystem has duplicate UUID 60d67439-baf0-4c8b-94a3-3f10a362e8fe - can&#39;t mount</span><br></pre></td></tr></table></figure><p><strong>2. 使用 nouuid 选项进行临时挂载</strong></p><p>如果存在 UUID 冲突，可以使用 <code>nouuid</code> 选项进行临时挂载：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o nouuid /dev/vdc1 /abc</span><br></pre></td></tr></table></figure><p>其中，<code>/dev/vdc1</code> 是要挂载的磁盘分区，<code>/abc</code> 是挂载点。</p><p>此操作将成功挂载磁盘分区，但重启后挂载会失效。</p><p><strong>3. 永久挂载</strong></p><p>要永久挂载，需要使用 <code>xfs_admin</code> 命令为新分区分配一个新的 UUID：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xfs_admin -U generate /dev/vdc1</span><br></pre></td></tr></table></figure><p>其中，<code>/dev/vdc1</code> 是要更改其 UUID 的磁盘分区。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ceph运维操作</title>
       <link href="p/3e15b5bb/"/>
       <url>p/3e15b5bb/</url>

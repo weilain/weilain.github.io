@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://imszz.com/p/f1160bc8/</loc>
+    
+    <lastmod>2024-05-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://imszz.com/p/b1f8a123/</loc>
     
     <lastmod>2024-02-20</lastmod>
@@ -899,6 +906,20 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://imszz.com/tags/kubernetes/</loc>
+    <lastmod>2024-05-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/tags/skywalking/</loc>
+    <lastmod>2024-05-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -1022,6 +1043,13 @@
   
   <url>
     <loc>https://imszz.com/categories/ceph/Kubernetes/</loc>
+    <lastmod>2024-05-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://imszz.com/categories/kubernetes/</loc>
     <lastmod>2024-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

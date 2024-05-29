@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>K8s强制删除命名空间（namespace）</title>
+      <link href="p/3ee01430/"/>
+      <url>p/3ee01430/</url>
+      
+        <content type="html"><![CDATA[<h4 id="查看命名空间列表："><a href="#查看命名空间列表：" class="headerlink" title="查看命名空间列表："></a>查看命名空间列表：</h4><p>命名空间 <code>keda</code> 一直处于<code>Terminating</code> 状态</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns</span><br><span class="line"></span><br><span class="line">NAME               STATUS        AGE</span><br><span class="line">default            Active        87d</span><br><span class="line">dev                Active        21d</span><br><span class="line">ingress-nginx      Active        126m</span><br><span class="line">keda               Terminating   126m</span><br><span class="line">kube-flannel       Active        87d</span><br><span class="line">kube-node-lease    Active        87d</span><br><span class="line">kube-public        Active        87d</span><br><span class="line">kube-system        Active        87d</span><br><span class="line">openfaas           Active        87d</span><br><span class="line">openfaas-fn        Active        87d</span><br><span class="line">openfunction       Active        28h</span><br><span class="line">tekton-pipelines   Active        126m</span><br></pre></td></tr></table></figure><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>将无法删除命名空间的json格式配置文件导出：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns keda -o json &gt; keda.json</span><br></pre></td></tr></table></figure><p>编辑<code>json</code>配置文件的<code>&quot;spec&quot;</code>配置，将<code>&quot;finalizers&quot;</code>清空：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;spec&quot;: &#123;</span><br><span class="line">    &quot;finalizers&quot;: [</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>根据修改后的<code>json</code>配置<code>replace</code>掉原来的ns配置：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl replace --raw &quot;/api/v1/namespaces/keda/finalize&quot; -f ./keda.json</span><br></pre></td></tr></table></figure><h4 id="再度查看："><a href="#再度查看：" class="headerlink" title="再度查看："></a>再度查看：</h4><p>已成功删除</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns</span><br><span class="line"></span><br><span class="line">NAME               STATUS   AGE</span><br><span class="line">default            Active   87d</span><br><span class="line">dev                Active   21d</span><br><span class="line">ingress-nginx      Active   144m</span><br><span class="line">kube-flannel       Active   87d</span><br><span class="line">kube-node-lease    Active   87d</span><br><span class="line">kube-public        Active   87d</span><br><span class="line">kube-system        Active   87d</span><br><span class="line">openfaas           Active   87d</span><br><span class="line">openfaas-fn        Active   87d</span><br><span class="line">openfunction       Active   28h</span><br><span class="line">tekton-pipelines   Active   144m</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Kubernetes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kubernetes </tag>
+            
+            <tag> namespace </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>XFS文件系统挂载报错</title>
       <link href="p/b1f8a123/"/>
       <url>p/b1f8a123/</url>

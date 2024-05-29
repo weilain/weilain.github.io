@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>hermoso</title>
+  <title>Anonymous</title>
   
   
   <link href="https://imszz.com/atom.xml" rel="self"/>
   
   <link href="https://imszz.com/"/>
-  <updated>2024-02-20T08:00:00.000Z</updated>
+  <updated>2025-05-29T02:30:25.000Z</updated>
   <id>https://imszz.com/</id>
   
   <author>
-    <name>Hermoso</name>
+    <name>Anonymous</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>K8s强制删除命名空间（namespace）</title>
+    <link href="https://imszz.com/p/3ee01430/"/>
+    <id>https://imszz.com/p/3ee01430/</id>
+    <published>2024-05-29T02:00:25.000Z</published>
+    <updated>2025-05-29T02:30:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="查看命名空间列表："><a href="#查看命名空间列表：" class="headerlink" title="查看命名空间列表："></a>查看命名空间列表：</h4><p>命名空间 <code>keda</code> 一直处于<code>Terminating</code> 状态</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns</span><br><span class="line"></span><br><span class="line">NAME               STATUS        AGE</span><br><span class="line">default            Active        87d</span><br><span class="line">dev                Active        21d</span><br><span class="line">ingress-nginx      Active        126m</span><br><span class="line">keda               Terminating   126m</span><br><span class="line">kube-flannel       Active        87d</span><br><span class="line">kube-node-lease    Active        87d</span><br><span class="line">kube-public        Active        87d</span><br><span class="line">kube-system        Active        87d</span><br><span class="line">openfaas           Active        87d</span><br><span class="line">openfaas-fn        Active        87d</span><br><span class="line">openfunction       Active        28h</span><br><span class="line">tekton-pipelines   Active        126m</span><br></pre></td></tr></table></figure><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>将无法删除命名空间的json格式配置文件导出：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns keda -o json &gt; keda.json</span><br></pre></td></tr></table></figure><p>编辑<code>json</code>配置文件的<code>&quot;spec&quot;</code>配置，将<code>&quot;finalizers&quot;</code>清空：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;spec&quot;: &#123;</span><br><span class="line">    &quot;finalizers&quot;: [</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>根据修改后的<code>json</code>配置<code>replace</code>掉原来的ns配置：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl replace --raw &quot;/api/v1/namespaces/keda/finalize&quot; -f ./keda.json</span><br></pre></td></tr></table></figure><h4 id="再度查看："><a href="#再度查看：" class="headerlink" title="再度查看："></a>再度查看：</h4><p>已成功删除</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl get ns</span><br><span class="line"></span><br><span class="line">NAME               STATUS   AGE</span><br><span class="line">default            Active   87d</span><br><span class="line">dev                Active   21d</span><br><span class="line">ingress-nginx      Active   144m</span><br><span class="line">kube-flannel       Active   87d</span><br><span class="line">kube-node-lease    Active   87d</span><br><span class="line">kube-public        Active   87d</span><br><span class="line">kube-system        Active   87d</span><br><span class="line">openfaas           Active   87d</span><br><span class="line">openfaas-fn        Active   87d</span><br><span class="line">openfunction       Active   28h</span><br><span class="line">tekton-pipelines   Active   144m</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;查看命名空间列表：&quot;&gt;&lt;a href=&quot;#查看命名空间列表：&quot; class=&quot;headerlink&quot; title=&quot;查看命名空间列表：&quot;&gt;&lt;/a&gt;查看命名空间列表：&lt;/h4&gt;&lt;p&gt;命名空间 &lt;code&gt;keda&lt;/code&gt; 一直处于&lt;code&gt;Terminati</summary>
+      
+    
+    
+    
+    <category term="Kubernetes" scheme="https://imszz.com/categories/Kubernetes/"/>
+    
+    
+    <category term="Kubernetes" scheme="https://imszz.com/tags/Kubernetes/"/>
+    
+    <category term="namespace" scheme="https://imszz.com/tags/namespace/"/>
+    
+  </entry>
   
   <entry>
     <title>XFS文件系统挂载报错</title>
@@ -509,31 +535,6 @@
     
     
     <category term="linux" scheme="https://imszz.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决github图片不显示问题</title>
-    <link href="https://imszz.com/p/32e6fc54/"/>
-    <id>https://imszz.com/p/32e6fc54/</id>
-    <published>2021-01-13T16:00:00.000Z</published>
-    <updated>2021-01-14T02:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>修改hosts</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Windows</span><br><span class="line"></span><br><span class="line">C:\Windows\System32\drivers\etc\hosts</span><br><span class="line"></span><br><span class="line">Mac</span><br><span class="line"></span><br><span class="line">vim &#x2F;etc&#x2F;hosts</span><br></pre></td></tr></table></figure><p>在文件末尾添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># GitHub Start </span><br><span class="line">192.30.253.112    Build software better, together </span><br><span class="line">192.30.253.119    gist.github.com</span><br><span class="line">151.101.184.133    assets-cdn.github.com</span><br><span class="line">151.101.184.133    raw.githubusercontent.com</span><br><span class="line">151.101.184.133    gist.githubusercontent.com</span><br><span class="line">151.101.184.133    cloud.githubusercontent.com</span><br><span class="line">151.101.184.133    camo.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars0.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars1.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars2.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars3.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars4.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars5.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars6.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars7.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars8.githubusercontent.com</span><br><span class="line"></span><br><span class="line"># GitHub End</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;修改hosts&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;</summary>
-      
-    
-    
-    
-    <category term="Github" scheme="https://imszz.com/categories/Github/"/>
-    
-    
-    <category term="Github" scheme="https://imszz.com/tags/Github/"/>
     
   </entry>
   
